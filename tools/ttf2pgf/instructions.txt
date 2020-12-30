@@ -1,0 +1,4 @@
+1. Place your original font (.ttf) in this folder. 
+2. Run the makefonts.bat and a new font will appear.
+eg: you put pricedown.ttf in this folder ran makefonts.bat you will get another file named pricedown.pgf.
+3. Rename the pricedown.pgf or whatever font you have converted to ltn0.pgf

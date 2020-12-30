@@ -1,0 +1,56 @@
+[OPTIONS]
+Compiled file=LuaDEV.chm
+Compatibility=1.1
+Full-text search=Yes
+Contents file=index.hhc
+Default Window=main
+Default topic=index.html
+Index file=index.hhk
+Language=0x40A Spanish(Traditional Sort)
+Title=LuaDEV r0
+
+[WINDOWS]
+main="LuaDEV r0","index.hhc","index.hhk","index.html","index.html",,,,,0x23520,,0x10387e,,,,,,,,0
+
+[FILES]
+index.html
+pages.html
+corutinas_8lua-example.html
+todo.html
+group___b_a_t_t.html
+group___c_a_m.html
+group___c_h_i_p_m_u_n_k.html
+group___c_o_l_o_r.html
+group___c_o_n_t_r_o_l_s.html
+group___c_o_r_o_u_t_i_n_e.html
+group___d_r_a_w.html
+group___f_i_l_e_s.html
+group___f_o_n_t.html
+group___h_p_r_m.html
+group___h_t_t_p.html
+group___i_m_a_g_e.html
+group___i_n_i.html
+group___i_o.html
+group___m_a_t_h.html
+group___o_s.html
+group___p_o_w_e_r.html
+group___s_c_r_e_e_n.html
+group___s_o_u_n_d.html
+group___s_t_r_i_n_g.html
+group___t_a_b_l_e.html
+group___t_h_r_e_a_d_m_a_n.html
+group___t_i_m_e_r.html
+group___u_s_b.html
+group___w_l_a_n.html
+group___n_o_m_o_d.html
+modules.html
+examples.html
+tabs.css
+tab_a.png
+tab_b.png
+tab_h.png
+tab_s.png
+nav_h.png
+nav_f.png
+open.gif
+closed.gif

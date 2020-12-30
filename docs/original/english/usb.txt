@@ -1,0 +1,40 @@
+﻿USB: USB connection.
+Functions
+
+nil usb.on ()
+  Enable usb driver.
+
+nil usb.off ()
+  Disable usb driver.
+
+usb.status boolean ()
+  USB driver status.
+
+usb.state table ()
+  Determines the status of the connection to the USB.
+************************************************** ******************************
+Function Documentation
+
+nil usb.on ()
+  Enable usb driver.
+  Returns:
+  Nothing.
+
+nil usb.off ()
+  Disable usb driver.
+  Returns:
+  Nothing.
+
+usb.status boolean ()
+  USB driver status.
+  Being activated means that if you connect the USB cable, the connection is established, but does not mean it is actually connected.
+  Returns:
+  Usb status.
+  Exceptions:
+  - Even returning true, maybe the usb is not connected, see usb :: state ().
+
+usb.state table ()
+  Determines the status of the connection to the USB.
+  To see if the USB connection has been established will use the "established".
+  Returns:
+  A table with the following fields: "activated", "connected" and "established". All Boolean value.

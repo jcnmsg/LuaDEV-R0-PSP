@@ -1,0 +1,94 @@
+﻿HPRM: HPRM Management (remote)
+Functions
+
+hprm.headphones boolean ()
+ Helmets online.
+
+hprm.microphone boolean ()
+ Microphone connected.
+
+hprm.remote boolean ()
+ Remote connected.
+
+nil hprm.read ()
+ Reading performs controls.
+
+hprm.playpause boolean ()
+ Play / Pause.
+
+hprm.forward boolean ()
+ Forward button.
+
+hprm.back boolean ()
+ Back Button.
+
+hprm.hold boolean ()
+ Hold switch.
+
+hprm.press boolean (string key)
+ Freshly pressed button.
+
+hprm.release boolean (string key)
+ Newly released button.
+************************************************** ******************************
+Function Documentation
+
+hprm.headphones boolean ()
+ Helmets online.
+ Returns:
+ true / false, depending on whether headphones are connected.
+
+hprm.microphone boolean ()
+ Microphone connected.
+ Returns:
+ true / false, as if the microphone is connected.
+
+hprm.remote boolean ()
+ Remote connected.
+ Returns:
+ true / false, depending on whether the remote is connected.
+
+nil hprm.read ()
+ Reading performs controls.
+ Returns:
+ Nothing.
+
+hprm.playpause boolean ()
+ Play / Pause.
+ Returns:
+ true / false, depending on whether the button is pressed.
+
+hprm.forward boolean ()
+ Forward button.
+ Returns:
+ true / false, depending on whether the button is pressed.
+
+hprm.back boolean ()
+ Back Button.
+ Returns:
+ true / false, depending on whether the button is pressed.
+
+hprm.hold boolean ()
+ Hold switch.
+ Returns:
+ true / false, as if on the hold.
+
+hprm.press boolean (string key)
+ Freshly pressed button.
+ Parameters:
+ One of the following key: "PLAYPAUSE" - Play / Pause.
+ "Forward" - Forward button.
+ "Back" - Back button.
+ "Hold" - Hold switch.
+ Returns:
+ true / false, as if you're just down the button.
+
+hprm.release boolean (string key)
+ Newly released button.
+ Parameters:
+ One of the following key: "PLAYPAUSE" - Play / Pause.
+ "Forward" - Forward button.
+ "Back" - Back button.
+ "Hold" - Hold switch.
+ Returns:
+ true / false, as if you're just releasing the button.

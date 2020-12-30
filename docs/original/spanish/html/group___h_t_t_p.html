@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: http : Peticiones http.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>http : Peticiones http.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_t_t_p.html#gaf359eb9248780e35a796becab4e8e515">http.get</a> (string url, int size)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza una petición GET. Devolución en string.  <a href="#gaf359eb9248780e35a796becab4e8e515"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_t_t_p.html#ga71ee860632e2f15b8d0e36c8e11c79d6">http.get</a> (string url, string file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza una petición GET. Guardar a archivo.  <a href="#ga71ee860632e2f15b8d0e36c8e11c79d6"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con peticiones HTTP.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Tareas pendientes:</a></b></dt><dd>Método POST.</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gaf359eb9248780e35a796becab4e8e515"></a><!-- doxytag: member="http.get" ref="gaf359eb9248780e35a796becab4e8e515" args="(string url, int size)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string http.get </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>size</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Realiza una petición GET. Devolución en string. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>url</em>&nbsp;</td><td>Dirección del archivo a pedir. Ejemplos de urls: </p>
+<ul>
+<li>Estilo "http://host.com/path/file.ext" </li>
+<li>Estilo "http://host.com/path/" </li>
+<li>Estilo "http://host.com" </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>size</em>&nbsp;</td><td>Tamaño en bytes a recibir. (OPCIONAL) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Los datos descargados, en string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga71ee860632e2f15b8d0e36c8e11c79d6"></a><!-- doxytag: member="http.get" ref="ga71ee860632e2f15b8d0e36c8e11c79d6" args="(string url, string file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil http.get </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>file</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Realiza una petición GET. Guardar a archivo. </p>
+<p>Usado con un parámetro string de segundo argumento, se ejecutará el diálogo por defecto de LuaDEV, con una barra de progreso, y descargará el archivo al lugar especificado por <em>file</em> . </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>url</em>&nbsp;</td><td>Dirección del archivo a pedir. Ejemplos de urls: </p>
+<ul>
+<li>Estilo "http://host.com/path/file.ext" </li>
+<li>Estilo "http://host.com/path/" </li>
+<li>Estilo "http://host.com" </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>file</em>&nbsp;</td><td>Ruta del archivo a guardar. Ejemplo "file.htm" </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

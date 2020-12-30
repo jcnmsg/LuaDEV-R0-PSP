@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: math : Funciones matemáticas.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<h1>math : Funciones matemáticas.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga0e082f685813ac05e1030a9572969ee1">math.ceil</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Redondear hacia arriba.  <a href="#ga0e082f685813ac05e1030a9572969ee1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga1a98b0530097f80e63fb2a9a679cdb4b">math.floor</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Redondear hacia abajo.  <a href="#ga1a98b0530097f80e63fb2a9a679cdb4b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga5ef97e0aaacc80e0c6ea9c0679b78d8f">math.max</a> (number...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elegir el más grande.  <a href="#ga5ef97e0aaacc80e0c6ea9c0679b78d8f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gabfe135909ece02886a20bf12d560a1d8">math.min</a> (number...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elegir el más pequeño.  <a href="#gabfe135909ece02886a20bf12d560a1d8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga580e6d9e0ca155c1e00008f04298fee7">math.random</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aleatorio entre 0 y 1. (con decimales).  <a href="#ga580e6d9e0ca155c1e00008f04298fee7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gadb712c633c4586fb4b73cb1ad83ae256">math.random</a> (int m)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aleatorio entre 1 y m. (entero).  <a href="#gadb712c633c4586fb4b73cb1ad83ae256"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gacbc2444671a489ee52aa817562db59ea">math.random</a> (int m, int n)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aleatorio entre m y n. (entero).  <a href="#gacbc2444671a489ee52aa817562db59ea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaa181a5db7a03f816c63d8b418c16daaa">math.randomseed</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia la semilla del generador de números pseudoaleatorios.  <a href="#gaa181a5db7a03f816c63d8b418c16daaa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gae285ca3a838c5468cfd2f5fae7689dbf">math.abs</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Valor absoluto.  <a href="#gae285ca3a838c5468cfd2f5fae7689dbf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga12f0358c37106cf5776d092961968890">math.pow</a> (number x, number y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Potencia.  <a href="#ga12f0358c37106cf5776d092961968890"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga333b54194b012df60f4c97a353be734c">math.sqrt</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Raíz cuadrada de x.  <a href="#ga333b54194b012df60f4c97a353be734c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaabbc2acf8fb295dd9d1eb920925023db">math.log</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Logaritmo natural.  <a href="#gaabbc2acf8fb295dd9d1eb920925023db"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga3e8f8e0e81b11138e0fc77e26f3e308a">math.log10</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Logaritmo decimal.  <a href="#ga3e8f8e0e81b11138e0fc77e26f3e308a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gadc3e1227f5fc3b57a125e0dfbe54d19d">math.exp</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Número de Euler elevado a x.  <a href="#gadc3e1227f5fc3b57a125e0dfbe54d19d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga52c2661f94352ad307f611e72ff0c97c">math.modf</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Separar en entero y fraccional.  <a href="#ga52c2661f94352ad307f611e72ff0c97c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaeca1d9d8d396532337343be1fdefe844">math.fmod</a> (number x, number y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resto de una división.  <a href="#gaeca1d9d8d396532337343be1fdefe844"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga1f6e8717b0e95ea6a3d527892163db35">math.frexp</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">x = m*(2^e)  <a href="#ga1f6e8717b0e95ea6a3d527892163db35"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaa1bc5efba169561e617ab620736da315">math.ldexp</a> (number m, int e)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">m*(2^e)  <a href="#gaa1bc5efba169561e617ab620736da315"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaef5f633f7c92515f6f57c6e49cdc5f09">math.deg</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conversor ángulo radianes &gt; grados.  <a href="#gaef5f633f7c92515f6f57c6e49cdc5f09"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga3531828379cee31656b69fd5f3e16f50">math.rad</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conversor ángulo grados &gt; radianes.  <a href="#ga3531828379cee31656b69fd5f3e16f50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga73ced2ddf46c34a81b140699614f2299">math.cos</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Coseno.  <a href="#ga73ced2ddf46c34a81b140699614f2299"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga1feb1c2bbbe188b483dce45c8894d80f">math.acos</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Arco coseno.  <a href="#ga1feb1c2bbbe188b483dce45c8894d80f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga9f824bff8a83adc80adad529e971e004">math.cosh</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Coseno hiperbólico.  <a href="#ga9f824bff8a83adc80adad529e971e004"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga7782c1e18552992e85afbc5b0b672a43">math.sin</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Seno.  <a href="#ga7782c1e18552992e85afbc5b0b672a43"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaa80987b6f6e47bf639d4805d9054b108">math.asin</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Arco seno.  <a href="#gaa80987b6f6e47bf639d4805d9054b108"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gad684d6a6db9679b2833a516c2b0665f4">math.sinh</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Seno hiperbólico.  <a href="#gad684d6a6db9679b2833a516c2b0665f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga446061d266b59ae0f161af2e45ac367a">math.tan</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tangente.  <a href="#ga446061d266b59ae0f161af2e45ac367a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga70e7c02d93a1a173899ae4468fad4ed3">math.atan</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Arco tangente.  <a href="#ga70e7c02d93a1a173899ae4468fad4ed3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga5a36e50ce4de179f33a7acbf3cbf0063">math.atan2</a> (number y, number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Arco tangente.  <a href="#ga5a36e50ce4de179f33a7acbf3cbf0063"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga532f0556d022796c1a240b19e9023eb4">math.tanh</a> (number x)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tangente hiperbólica.  <a href="#ga532f0556d022796c1a240b19e9023eb4"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaf663a5e94ad81b19bc5a18ddcd6f790c"></a><!-- doxytag: member="MATH.huge" ref="gaf663a5e94ad81b19bc5a18ddcd6f790c" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gaf663a5e94ad81b19bc5a18ddcd6f790c">math.huge</a> = HUGE_VAL</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">El valor más grande que cualquier otro. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafcf276f43bb3b9ba21b8c38ab326f7b7"></a><!-- doxytag: member="MATH.pi" ref="gafcf276f43bb3b9ba21b8c38ab326f7b7" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gafcf276f43bb3b9ba21b8c38ab326f7b7">math.pi</a> = 3.14159</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">El valor de pi. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga9b71eefe95b85001921ed24467f08c20"></a><!-- doxytag: member="MATH.e" ref="ga9b71eefe95b85001921ed24467f08c20" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#ga9b71eefe95b85001921ed24467f08c20">math.e</a> = 2.71828</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">El valor e (Número de Euler). <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gae469b486ccc66e5836dfb23fd8f647d2"></a><!-- doxytag: member="MATH.g" ref="gae469b486ccc66e5836dfb23fd8f647d2" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___m_a_t_h.html#gae469b486ccc66e5836dfb23fd8f647d2">math.g</a> = 9.81</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aceleración de la gravedad (m/s<sup>2</sup>). <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Bla bla </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga0e082f685813ac05e1030a9572969ee1"></a><!-- doxytag: member="math.ceil" ref="ga0e082f685813ac05e1030a9572969ee1" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int math.ceil </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Redondear hacia arriba. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El entero más pequeño, pero mayor o igual que x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1a98b0530097f80e63fb2a9a679cdb4b"></a><!-- doxytag: member="math.floor" ref="ga1a98b0530097f80e63fb2a9a679cdb4b" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int math.floor </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Redondear hacia abajo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El entero más grande, pero menor o igual que x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5ef97e0aaacc80e0c6ea9c0679b78d8f"></a><!-- doxytag: member="math.max" ref="ga5ef97e0aaacc80e0c6ea9c0679b78d8f" args="(number...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.max </td>
+          <td>(</td>
+          <td class="paramtype">number...&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Elegir el más grande. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>Varios argumentos, del tipo número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El argumento más grande, de entre los argumentos recibidos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabfe135909ece02886a20bf12d560a1d8"></a><!-- doxytag: member="math.min" ref="gabfe135909ece02886a20bf12d560a1d8" args="(number...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.min </td>
+          <td>(</td>
+          <td class="paramtype">number...&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Elegir el más pequeño. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>Varios argumentos, del tipo número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El argumento más pequeño, de entre los argumentos recibidos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga580e6d9e0ca155c1e00008f04298fee7"></a><!-- doxytag: member="math.random" ref="ga580e6d9e0ca155c1e00008f04298fee7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.random </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Aleatorio entre 0 y 1. (con decimales). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un número que cumple: 0 &lt;= x &lt; 1 </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadb712c633c4586fb4b73cb1ad83ae256"></a><!-- doxytag: member="math.random" ref="gadb712c633c4586fb4b73cb1ad83ae256" args="(int m)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int math.random </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Aleatorio entre 1 y m. (entero). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>Un número entero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un número entero entre 1 y m. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacbc2444671a489ee52aa817562db59ea"></a><!-- doxytag: member="math.random" ref="gacbc2444671a489ee52aa817562db59ea" args="(int m, int n)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int math.random </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>n</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Aleatorio entre m y n. (entero). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>Un número entero. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>Un número entero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un número entero entre m y n. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa181a5db7a03f816c63d8b418c16daaa"></a><!-- doxytag: member="math.randomseed" ref="gaa181a5db7a03f816c63d8b418c16daaa" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil math.randomseed </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cambia la semilla del generador de números pseudoaleatorios. </p>
+<p>Iguales semillas producirán iguales secuencias de números pseudoaleatorios.<br/>
+ En LuaDEV no es necesario dar al inicio una semilla nueva, pues al iniciarse automáticamente se genera una semilla nueva. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae285ca3a838c5468cfd2f5fae7689dbf"></a><!-- doxytag: member="math.abs" ref="gae285ca3a838c5468cfd2f5fae7689dbf" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.abs </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Valor absoluto. </p>
+<p>Fórmula matemática: |x| </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El valor absoluto de x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga12f0358c37106cf5776d092961968890"></a><!-- doxytag: member="math.pow" ref="ga12f0358c37106cf5776d092961968890" args="(number x, number y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.pow </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Potencia. </p>
+<p>Fórmula matemática: x^y </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Un número </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve x^y. (También se puede usar la expresión x^y para calcular este valor) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga333b54194b012df60f4c97a353be734c"></a><!-- doxytag: member="math.sqrt" ref="ga333b54194b012df60f4c97a353be734c" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.sqrt </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Raíz cuadrada de x. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve la raíz cuadrada de x. También se puede usar x^0.5 para calcular este valor) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaabbc2acf8fb295dd9d1eb920925023db"></a><!-- doxytag: member="math.log" ref="gaabbc2acf8fb295dd9d1eb920925023db" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.log </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Logaritmo natural. </p>
+<p>Fórmula matemática: log(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El logaritmo natural de x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3e8f8e0e81b11138e0fc77e26f3e308a"></a><!-- doxytag: member="math.log10" ref="ga3e8f8e0e81b11138e0fc77e26f3e308a" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.log10 </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Logaritmo decimal. </p>
+<p>Fórmula matemática: log10(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El logaritmo decimal (base 10) de x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadc3e1227f5fc3b57a125e0dfbe54d19d"></a><!-- doxytag: member="math.exp" ref="gadc3e1227f5fc3b57a125e0dfbe54d19d" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.exp </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Número de Euler elevado a x. </p>
+<p>Fórmula matemática: e^x </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El número de Euler elevado a la potencia de x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga52c2661f94352ad307f611e72ff0c97c"></a><!-- doxytag: member="math.modf" ref="ga52c2661f94352ad307f611e72ff0c97c" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.modf </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Separar en entero y fraccional. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve dos números, las partes entera y fraccional de x. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaeca1d9d8d396532337343be1fdefe844"></a><!-- doxytag: member="math.fmod" ref="gaeca1d9d8d396532337343be1fdefe844" args="(number x, number y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.fmod </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Resto de una división. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El resto de dividir x por y. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1f6e8717b0e95ea6a3d527892163db35"></a><!-- doxytag: member="math.frexp" ref="ga1f6e8717b0e95ea6a3d527892163db35" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.frexp </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>x = m*(2^e) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve m y e, tales que x=m*(2^e). e es un entero y el valor absoluto de m está en el intervalo [0.5,1) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa1bc5efba169561e617ab620736da315"></a><!-- doxytag: member="math.ldexp" ref="gaa1bc5efba169561e617ab620736da315" args="(number m, int e)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.ldexp </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>e</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>m*(2^e) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>Un número. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>e</em>&nbsp;</td><td>Un entero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve m*(2^e) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaef5f633f7c92515f6f57c6e49cdc5f09"></a><!-- doxytag: member="math.deg" ref="gaef5f633f7c92515f6f57c6e49cdc5f09" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.deg </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Conversor ángulo radianes &gt; grados. </p>
+<p>Fórmula matemática: (x * 180) / PI </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El ángulo, en grados. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3531828379cee31656b69fd5f3e16f50"></a><!-- doxytag: member="math.rad" ref="ga3531828379cee31656b69fd5f3e16f50" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.rad </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Conversor ángulo grados &gt; radianes. </p>
+<p>Fórmula matemática: (x * PI) / 180 </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en grados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El ángulo, en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga73ced2ddf46c34a81b140699614f2299"></a><!-- doxytag: member="math.cos" ref="ga73ced2ddf46c34a81b140699614f2299" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.cos </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Coseno. </p>
+<p>Fórmula matemática: cos(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El coseno de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1feb1c2bbbe188b483dce45c8894d80f"></a><!-- doxytag: member="math.acos" ref="ga1feb1c2bbbe188b483dce45c8894d80f" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.acos </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Arco coseno. </p>
+<p>Fórmula matemática: acos(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El arco coseno de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga9f824bff8a83adc80adad529e971e004"></a><!-- doxytag: member="math.cosh" ref="ga9f824bff8a83adc80adad529e971e004" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.cosh </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Coseno hiperbólico. </p>
+<p>Fórmula matemática: cosh(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El coseno hiperbólico de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7782c1e18552992e85afbc5b0b672a43"></a><!-- doxytag: member="math.sin" ref="ga7782c1e18552992e85afbc5b0b672a43" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.sin </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Seno. </p>
+<p>Fórmula matemática: sin(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El seno de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa80987b6f6e47bf639d4805d9054b108"></a><!-- doxytag: member="math.asin" ref="gaa80987b6f6e47bf639d4805d9054b108" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.asin </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Arco seno. </p>
+<p>Fórmula matemática: asin(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El arco seno de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad684d6a6db9679b2833a516c2b0665f4"></a><!-- doxytag: member="math.sinh" ref="gad684d6a6db9679b2833a516c2b0665f4" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.sinh </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Seno hiperbólico. </p>
+<p>Fórmula matemática: sinh(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El seno hiperbólico de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga446061d266b59ae0f161af2e45ac367a"></a><!-- doxytag: member="math.tan" ref="ga446061d266b59ae0f161af2e45ac367a" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.tan </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tangente. </p>
+<p>Fórmula matemática: tan(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>La tangente de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga70e7c02d93a1a173899ae4468fad4ed3"></a><!-- doxytag: member="math.atan" ref="ga70e7c02d93a1a173899ae4468fad4ed3" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.atan </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Arco tangente. </p>
+<p>Fórmula matemática: atan(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El arco tangente de x en radianes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5a36e50ce4de179f33a7acbf3cbf0063"></a><!-- doxytag: member="math.atan2" ref="ga5a36e50ce4de179f33a7acbf3cbf0063" args="(number y, number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.atan2 </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Arco tangente. </p>
+<p>Fórmula matemática: atan(y/x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Un número. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Un número. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el arco tangente de y/x (en radianes), pero usa los signos de ambos argumentos para determinar el cuadrante del resultado. (También maneja correctamente el caso en que x es cero.) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga532f0556d022796c1a240b19e9023eb4"></a><!-- doxytag: member="math.tanh" ref="ga532f0556d022796c1a240b19e9023eb4" args="(number x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number math.tanh </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tangente hiperbólica. </p>
+<p>Fórmula matemática: tanh(x) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>El ángulo, en radianes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>La tangente hiperbólica de x en radianes. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

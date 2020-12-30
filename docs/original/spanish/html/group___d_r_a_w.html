@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: draw : Dibujo de formas y líneas.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>draw : Dibujo de formas y líneas.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#ga278dd5edcb663cf4b987f3df5e87066d">draw.line</a> (int x1, int y1, int x2, int y2, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja una linea de (x1,y1) a (x2,y2).  <a href="#ga278dd5edcb663cf4b987f3df5e87066d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#ga5c96190b9aa5f4b38378a908e1c81b71">draw.gradline</a> (int x1, int y1, int x2, int y2, color c1, color c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja una linea de (x1,y1) a (x2,y2) con gradiente.  <a href="#ga5c96190b9aa5f4b38378a908e1c81b71"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#ga39bb861f3b1f5217d7824a514b479557">draw.rect</a> (int x, int y, int w, int h, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja un rectángulo vacío. (Sólo el borde).  <a href="#ga39bb861f3b1f5217d7824a514b479557"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#ga54aa9ce3d4c17761a5eb9265fd080bf1">draw.fillrect</a> (int x, int y, int w, int h, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja un rectángulo.  <a href="#ga54aa9ce3d4c17761a5eb9265fd080bf1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#gabe50cd2924a1dd791ceb5c4646f835c7">draw.gradrect</a> (int x, int y, int w, int h, color c1, color c2, color c3, color c4)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja un rectángulo pintado con gradientes.  <a href="#gabe50cd2924a1dd791ceb5c4646f835c7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___d_r_a_w.html#ga8bd32acb048a0fd312033a72816517df">draw.pbar</a> (int x, int y, int w, int h, color borde, color relleno, int valor, int max)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja una barra de progreso simple.  <a href="#ga8bd32acb048a0fd312033a72816517df"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Tareas pendientes:</a></b></dt><dd><p class="startdd">Dibujar a imágen. </p>
+<p>Dibujar formas libres. </p>
+<p class="enddd">Añadir más formas.</p>
+</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga278dd5edcb663cf4b987f3df5e87066d"></a><!-- doxytag: member="draw.line" ref="ga278dd5edcb663cf4b987f3df5e87066d" args="(int x1, int y1, int x2, int y2, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.line </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja una linea de (x1,y1) a (x2,y2). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x1</em>&nbsp;</td><td>Posición X punto 1. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y1</em>&nbsp;</td><td>Posición Y punto 1. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x2</em>&nbsp;</td><td>Posición X punto 2. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y2</em>&nbsp;</td><td>Posición Y punto 2. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color de la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5c96190b9aa5f4b38378a908e1c81b71"></a><!-- doxytag: member="draw.gradline" ref="ga5c96190b9aa5f4b38378a908e1c81b71" args="(int x1, int y1, int x2, int y2, color c1, color c2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.gradline </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja una linea de (x1,y1) a (x2,y2) con gradiente. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x1</em>&nbsp;</td><td>Posición X punto 1. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y1</em>&nbsp;</td><td>Posición Y punto 1. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x2</em>&nbsp;</td><td>Posición X punto 2. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y2</em>&nbsp;</td><td>Posición Y punto 2. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Color punto 1. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Color punto 2. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga39bb861f3b1f5217d7824a514b479557"></a><!-- doxytag: member="draw.rect" ref="ga39bb861f3b1f5217d7824a514b479557" args="(int x, int y, int w, int h, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.rect </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja un rectángulo vacío. (Sólo el borde). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color de la línea. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga54aa9ce3d4c17761a5eb9265fd080bf1"></a><!-- doxytag: member="draw.fillrect" ref="ga54aa9ce3d4c17761a5eb9265fd080bf1" args="(int x, int y, int w, int h, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.fillrect </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja un rectángulo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color del rectángulo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabe50cd2924a1dd791ceb5c4646f835c7"></a><!-- doxytag: member="draw.gradrect" ref="gabe50cd2924a1dd791ceb5c4646f835c7" args="(int x, int y, int w, int h, color c1, color c2, color c3, color c4)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.gradrect </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c4</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja un rectángulo pintado con gradientes. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Color arriba-izquierda. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Color arriba-derecha. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c3</em>&nbsp;</td><td>Color abajo-izquierda. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c4</em>&nbsp;</td><td>Color abajo-derecha. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8bd32acb048a0fd312033a72816517df"></a><!-- doxytag: member="draw.pbar" ref="ga8bd32acb048a0fd312033a72816517df" args="(int x, int y, int w, int h, color borde, color relleno, int valor, int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil draw.pbar </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>borde</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>relleno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>valor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>max</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja una barra de progreso simple. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>borde</em>&nbsp;</td><td>Color del borde. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>relleno</em>&nbsp;</td><td>Color de la barra. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>valor</em>&nbsp;</td><td>Valor actual. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>max</em>&nbsp;</td><td>Valor máximo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

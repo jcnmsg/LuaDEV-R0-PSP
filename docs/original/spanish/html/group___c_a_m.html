@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: cam : Funciones de la cámara (Go! Cam)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>cam : Funciones de la cámara (Go! Cam)</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gab8c3741d9368edac8359da43f7f706b7">cam.on</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa el driver de la cámara.  <a href="#gab8c3741d9368edac8359da43f7f706b7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gaf2fc81e883f1a6457eb98e2ebeb66b20">cam.off</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desactiva el driver de la cámara.  <a href="#gaf2fc81e883f1a6457eb98e2ebeb66b20"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gae52fdb29c2c83ea82285ef114d43b228">cam.status</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Estado del driver de la cámara.  <a href="#gae52fdb29c2c83ea82285ef114d43b228"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#ga03b351678bd985568e05bd8c31b74476">cam.state</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Estado de la conexión con la cámara.  <a href="#ga03b351678bd985568e05bd8c31b74476"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#ga5e1cfe9b79b7d382065e6e70a6e4943a">cam.start</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Comienza a tomar video de la cámara.  <a href="#ga5e1cfe9b79b7d382065e6e70a6e4943a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#ga2582daf1c798f4169cba9de4642bf780">cam.vmirrored</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espejado vertical.  <a href="#ga2582daf1c798f4169cba9de4642bf780"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gac883d8e141c2b782480b3ff692bd660e">cam.hmirrored</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espejado horizontal.  <a href="#gac883d8e141c2b782480b3ff692bd660e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gac0d1fb4443e8f7dbabc07b5c72642e10">cam.direction</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dirección de la cámara.  <a href="#gac0d1fb4443e8f7dbabc07b5c72642e10"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gaa28f55e9150b4548d51aba6bb5e1b8d2">cam.toimage</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Obtiene una copia de la imágen actual en la cámara.  <a href="#gaa28f55e9150b4548d51aba6bb5e1b8d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_a_m.html#gaebf1978a8ef62666918ad958468b6863">cam.blit</a> (int x, int y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra en pantalla la imágen actual que vé la cámara.  <a href="#gaebf1978a8ef62666918ad958468b6863"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con la cámara de la PSP (Go! CAM).</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Tareas pendientes:</a></b></dt><dd><p class="startdd">Poder seleccionar resolucion de la cámara. </p>
+<p>Poder aplicar efectos a la imágen tomada. (Blanco y negro, inverso, etc...) </p>
+<p class="enddd">Otras funciones.</p>
+</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gab8c3741d9368edac8359da43f7f706b7"></a><!-- doxytag: member="cam.on" ref="gab8c3741d9368edac8359da43f7f706b7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil cam.on </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa el driver de la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf2fc81e883f1a6457eb98e2ebeb66b20"></a><!-- doxytag: member="cam.off" ref="gaf2fc81e883f1a6457eb98e2ebeb66b20" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil cam.off </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Desactiva el driver de la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae52fdb29c2c83ea82285ef114d43b228"></a><!-- doxytag: member="cam.status" ref="gae52fdb29c2c83ea82285ef114d43b228" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean cam.status </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Estado del driver de la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false. Según si está activado el driver. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga03b351678bd985568e05bd8c31b74476"></a><!-- doxytag: member="cam.state" ref="ga03b351678bd985568e05bd8c31b74476" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table cam.state </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Estado de la conexión con la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla de estado, igual que <em><a class="el" href="group___u_s_b.html#ga14d7dfcfb68ce149b235112def305734" title="Determina el estado de la conexión con el USB. ">usb.state()</a></em> . </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5e1cfe9b79b7d382065e6e70a6e4943a"></a><!-- doxytag: member="cam.start" ref="ga5e1cfe9b79b7d382065e6e70a6e4943a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil cam.start </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Comienza a tomar video de la cámara. </p>
+<p>Para que la cam funcione correctamente, hemos de iniciar la captura de imágenes, una vez esté conectada, y el driver activo. Véase el ejemplo para iniciar correctamente la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2582daf1c798f4169cba9de4642bf780"></a><!-- doxytag: member="cam.vmirrored" ref="ga2582daf1c798f4169cba9de4642bf780" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean cam.vmirrored </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Espejado vertical. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está activado el espejado vertical. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac883d8e141c2b782480b3ff692bd660e"></a><!-- doxytag: member="cam.hmirrored" ref="gac883d8e141c2b782480b3ff692bd660e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean cam.hmirrored </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Espejado horizontal. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está activado el espejado horizontal. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac0d1fb4443e8f7dbabc07b5c72642e10"></a><!-- doxytag: member="cam.direction" ref="gac0d1fb4443e8f7dbabc07b5c72642e10" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cam.direction </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dirección de la cámara. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número representando la dirección de la cámara. <ul>
+<li>0 - Hacia detrás. </li>
+<li>1 - Hacia delante. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa28f55e9150b4548d51aba6bb5e1b8d2"></a><!-- doxytag: member="cam.toimage" ref="gaa28f55e9150b4548d51aba6bb5e1b8d2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen cam.toimage </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Obtiene una copia de la imágen actual en la cámara. </p>
+<p>Esta imágen es una copia de lo que se vé en la cámara en el momento de llamar a la función. Esta imagen <b>debe</b> ser liberada en cuanto se acabe su uso. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una copia de la imágen actual. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaebf1978a8ef62666918ad958468b6863"></a><!-- doxytag: member="cam.blit" ref="gaebf1978a8ef62666918ad958468b6863" args="(int x, int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil cam.blit </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra en pantalla la imágen actual que vé la cámara. </p>
+<p>Esta imágen no debe ser liberada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición en X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición en Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

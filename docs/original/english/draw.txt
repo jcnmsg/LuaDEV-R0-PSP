@@ -1,0 +1,123 @@
+
+draw : Drawing shapes and lines.
+Functions
+
+nil draw.line(int x1, int y1, int x2, int y2, color col)
+ Draw a line from (x1,y1) to (x2,y2).
+
+nil draw.gradline(int x1, int y1, int x2, int y2, color c1, color c2)
+ Draw a line from (x1,y1) to (x2,y2) gradient.
+
+nil draw.rect(int x, int y, int w, int h, color col)
+ Draw an empty rectangle. (Only the edge).
+
+nil draw.fillrect(int x, int y, int w, int h, color col)
+ Draw a rectangle.
+
+nil draw.gradrect(int x, int y, int w, int h, color c1, color c2, color c3, color c4)
+ Draw a rectangle painted with gradients.
+
+nil draw.poly(int x, int y, table points, color c)
+ Draw a closed polygon with no padding.
+
+nil draw.pbar(int x, int y, int w, int h, color borde, color relleno, int valor, int max)
+ Draw a simple progress bar.
+********************************************************************************
+Function documentation.
+
+nil draw.line(int x1, int y1, int x2, int y2, color col)
+ Draw a line from (x1,y1) t (x2,y2).
+ Parameters:
+ x1 Position X point 1.
+ y1 Position Y point 1.
+ x2 Position X point 2.
+ y2 Position Y point 2.
+ col Color the line.
+ Returns:
+ Nothing.
+
+nil draw.gradline(int x1, int y1, int x2, int y2, color c1, color c2)
+ Draw a line from (x1,y1) to (x2,y2) gradient.
+ Parameters:
+ x1 Position X point 1.
+ y1 Position Y point 1.
+ x2 Position X point 2.
+ y2 Position Y point 2.
+ c1 Color point 1.
+ c2 Color point 2.
+ Returns:
+ Nothing.
+
+nil draw.rect(int x, int y, int w, int h, color col)
+ Draw an empty rectangle. (Only the edge).
+ Parameters:
+ x Position X.
+ y Position Y.
+ w Width.
+ h Height.
+ col Color the line.
+ Returns:
+ Nothing.
+
+nil draw.fillrect(int x, int y, int w, int h, color col)
+ Draw a rectangle.
+ Parameters:
+ x Position X.
+ y Position Y.
+ w Width.
+ h Height.
+ col Color the rectangle.
+ Returns:
+ Nothing.
+
+nil draw.gradrect(int x,int y, int w, int h, color c1, color c2, color c3, color c4)
+ Draw a rectangle painted with gradients.
+ Parameters:
+ x Position X.
+ y Position Y.
+ w Width.
+ h Height.
+ c1 Color top-left.
+ c2 Color top-right.
+ c3 Color bottom-left.
+ c4 Color bottom-right.
+ Returns:
+ Nothing.
+
+nil draw.poly(int x, int y, table points, color c)
+ Draws closed a polygon, with no padding.
+ Parameters:
+ x Position X.
+ y Position Y.
+ points Table containing tables of the entries, {x,y}.
+ Example: {{0,0}, {1,1}, {1,0}}.
+ c Color of lines.
+ Returns:
+ Nothing.
+
+nil draw.pbar(int x, int y, int w, int h, color border, color filler, int value, int max)
+ Draw a simple progress bar.
+ Parameters:
+ x Position X.
+ y Position Y.
+ w Width.
+ h Height.
+ border Border edge color.
+ filler Color filler bar.
+ value Present value.
+ max Maximum value.
+ Returns:
+ Nothing.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+﻿No module, basic functions
+Functions
+
+nil assert (chunk v, string message)
+ Enables an Error Message When its argument is false.
+
+collectgarbage nil (string option, int longitude)
+ Management releasing memory.
+
+... dofile (string file)
+ Run the file as a Lua file.
+
+nil Error (string message, int level)
+ Invoke Lua mistake.
+
+loadstring chunk (string code, string number)
+ Similar to load, but gets the chunk of the specified string.
+************************************************** ******************************
+Function documentation
+
+nil assert (chunk v, string message)
+ Enables an Error Message When its argument is false.
+ Otherwise returns all its arguments. The default error message is: "assertion failed". This command is often used in conjunction with loadstring, loadfile to load and run Lua code snippets.
+ To execute code also be used at the end of assert parentheses to ensure your call.
+ Example:
+ assert (loadstring ("myvar = 23")) ();
+ Parameters:
+ v piece of code.
+ The message the error message, if not specified will use the default error message.
+ Returns:
+ Nothing.
+ Example:
+ savedatas.lua.
+
+collectgarbage nil (string option, int length)
+ Handling garbage collector.
+ The garbage collector runs automatically at any Lua application, use these commands only if you need to have extreme control of the release of memory. (This only affects Lua variables and objects, objects manually LuaDEV be released as part).
+ Parameters:
+ One of the following option:
+ "Stop": stops the garbage collector.
+ "Restart": restarts the garbage collector.
+ "Collect": performs a full memory release.
+ "Step": performs a step of freeing memory. The step size must experimentally tune. Returns true if the step just full release cycle.
+ "Steppause": Sets the size argument as pause / 100.
+ "Setstepmul": Sets as step size multiplier / 100.
+ length Size for options "step", "steppause" and "setstepmul".
+ Returns:
+ Nothing or true, if "step".
+
+... dofile (string file)
+ Run the file as a Lua file.
+ When run without arguments, executes the contents of the standard input stdin.
+ If the file to run, contains a return with arguments, they will be returned by dofile.
+ Parameters:
+ File to run. (Optional)
+ Returns:
+ Returns all arguments returned by the piece of code.
+
+nil Error (string message, int level)
+ Invoke Lua mistake.
+ Finish the called function, establishing message as the error message. The level changes the pointer to the error line.
+ Level 1 (default) points to the line where you called mistake.
+ Level 2 points to the function call that contained errors.
+ Higher levels indicate calls that executed the function that contained errors and so on.
+ Parameters:
+ The message the error message.
+ level The level where the error was found.
+ Returns:
+ Nothing.
+
+loadstring chunk (string code, string number)
+ Similar to load, but gets the chunk of the specified string.
+ Parameters:
+ Lua code code.
+ name Name to identify the chunk in the errors. OPTIONAL.
+ Returns:
+ The "chunk" resulting from past code.
+ Example:
+ savedatas.lua and strings.lua.
+
+************************************************** ******************************
+EncryptFile function (penc)
+SRCF = io.open (penc, "rb")
+srcs = SRCF: seek ("end")
+SRCF: seek ("set", 0)
+ENCF = io.open (penc.. "enc", "wb")
+encd = string.reverse (SRCF: read ("* a"))
+ for a = 1, srcs do
+ encr = sb (string.sub (encd, a, a))
+ encr if> 127 then
+ if encr-(mf (encr / 2) * 2) == 0 then
+ ENCF: write (sch (encr-127)) - 1 <127
+ else
+ ENCF: write (sch (encr-1)) - 128 <254
+ end
+ else
+ if encr-(mf (encr / 2) * 2) == 0 then
+ ENCF: write (sch (255-encr)) - 129 <255
+ else
+ ENCF: write (sch (127-encr)) - 0 <126
+ end
+ end
+ end
+ENCF: close ()
+SRCF: close ()
+encd = nil
+ENCF = nil
+SRCF = nil
+srcs = nil
+end
+
+DecryptFile function (pdec)
+SRCF = io.open (pdec, "rb")
+srcs = SRCF: seek ("end")
+SRCF: seek ("set", 0)
+decf = io.open (pdec.. "dec", "wb")
+decd = string.reverse (SRCF: read ("* a"))
+ for a = 1, srcs do
+ decr = sb (string.sub (decd, a, a))
+ if decr-(mf (decr / 2) * 2) == 0 then
+ if decr> 127 then
+ decf: write (sch (decr +1))
+ else
+ decf: write (sch (127-decr))
+ end
+ else
+ if decr> 127 then
+ decf: write (sch (255-decr))
+ else
+ decf: write (sch (decr +127))
+ end
+ end
+ end
+decf: close ()
+SRCF: close ()
+decd = nil
+ENCF = nil
+SRCF = nil
+srcs = nil
+end

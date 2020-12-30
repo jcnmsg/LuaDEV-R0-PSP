@@ -1,0 +1,60 @@
+﻿http: http requests.
+Functions
+
+http.get string (string url, int size)
+ Make a GET request. Return to string.
+
+http.get nil (string url, string file)
+ Make a GET request. Save to File.
+
+http.post string (string url, string data, int size)
+ Make a POST request. Return to string.
+
+http.post nil (string url, string data, string file)
+ Make a POST request. Save to File.
+************************************************** ******************************
+Function Documentation
+
+http.get string (string url, int size)
+ Make a GET request. Return to string.
+ Parameters:
+ url address to request file. Examples of urls: Style "http://host.com/path/file.ext"
+ Style "http://host.com/path/"
+ Style "http://host.com"
+ size Size in bytes to receive. (OPTIONAL)
+ Returns:
+ The downloaded data in string.
+
+http.get nil (string url, string file)
+ Make a GET request. Save to File.
+ Used with a parameter string second argument will run LuaDEV default dialog with a progress bar, and download the file to the location specified by file.
+ Parameters:
+ url address to request file. Examples of urls: Style "http://host.com/path/file.ext"
+ Style "http://host.com/path/"
+ Style "http://host.com"
+ file path of the file to save. Example "file.htm"
+ Returns:
+ Nothing.
+
+http.post string (string url, string data, int size)
+ Make a POST request. Return to string.
+ Parameters:
+ url address to request file. Examples of urls: Style "http://host.com/path/file.ext"
+ Style "http://host.com/path/"
+ Style "http://host.com"
+ Data to send data using the POST method.
+ size Size in bytes to receive. (OPTIONAL)
+ Returns:
+ The downloaded data in string.
+
+http.post nil (string url, string data, string file)
+ Make a POST request. Save to File.
+ Used with a parameter string third argument, will run LuaDEV default dialog with a progress bar, and download the file to the location specified by file.
+ Parameters:
+ url address to request file. Examples of urls: Style "http://host.com/path/file.ext"
+ Style "http://host.com/path/"
+ Style "http://host.com"
+ Data to send data using the POST method.
+ file path of the file to save. Example "file.htm"
+ Returns:
+ Nothing.

@@ -1,0 +1,80 @@
+﻿coroutine: multitasking functions.
+Functions
+
+coroutine.create thread (function f)
+ Create a new corutina.
+ ... coroutine.resume (corutina thread, ....)
+ Resume or start to run a corutina.
+
+coroutine.running thread ()
+ Returns the corutina that is currently running.
+ coroutine.status string (thread corutina)
+ A corutina state.
+
+ coroutine.wrap function (function f)
+ Create a new corutina, converted to function.
+ ... coroutine.yield (....)
+ Suspends the execution of a corutina.
+************************************************** ******************************
+Function Documentation
+
+coroutine.create thread (function f)
+ Create a new corutina.
+ Parameters:
+ Function f from which to create the new corutina.
+ Returns:
+ The corutina created.
+ Example:
+ corutinas.lua.
+ ... coroutine.resume (corutina thread, ....)
+ Resume or start to run a corutina.
+ Starts running corutina function, passing as arguments,
+ given extra arguments to resume. Corutina if already initiated, the
+ extra arguments given in the resume, will be returned as a result to their
+
+coroutine.yield ()
+ Parameters:
+ Corutina corutina summarize / start.
+ ... Optional extra arguments to pass coroutine.yield () or f.
+ Returns:
+ A boolean + coroutine.yield received extra arguments (). If corutina runs without error, it returns true plus any arguments passed to coroutine.yield.
+ If corutina has errors, returns false plus the error message
+ Example:
+ corutinas.lua.
+
+coroutine.running thread ()
+ Returns the corutina that is currently running.
+ Returns:
+ Returns the corutina that is currently running or "nil" if it is within any corutina.
+
+coroutine.status string (thread corutina)
+ A corutina state.
+ Parameters:
+ corutina Corutina to get the status.
+ Returns:
+ Returns a string with corutina status, it may be "running" - is running now.
+ "Suspended" - is on hold or has just been created.
+ "Normal" - is active but not running (called another corutina)
+ "Dead" - has done, or has an error.
+ Example:
+ corutinas.lua.
+
+coroutine.wrap function (function f)
+ Create a new corutina, converted to function.
+ Parameters:
+ Function f from which to create the new corutina.
+ Returns:
+ A function that, when called, will make a corutina summarized. Any extra arguments given in this returned function will be passed as extra arguments in the resume. Summarizing returns the same, but without the first boolean. On error, the error is propagated.
+ Example:
+ corutinas.lua.
+ ... coroutine.yield (....)
+ Suspends the execution of a corutina.
+ The arguments passed to coroutine.yield () be the function results
+
+ coroutine.resume ()
+ Parameters:
+ ... Optional Extra parameters to pass coroutine.resume ()
+ Returns:
+ Returns received from coroutine.resume extra arguments ()
+ Example:
+ corutinas.lua.

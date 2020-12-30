@@ -1,0 +1,1 @@
+for /f "delims=." %%x in ('dir /b *.ttf') do @ttf2pgf "%%x.ttf" "%%x.pgf" 

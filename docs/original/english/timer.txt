@@ -1,0 +1,15 @@
+﻿
+timer: timers.
+Functions
+
+new timer (int c)
+ Create a timer.
+************************************************** ******************************
+Documentation of the functions
+
+Timer timer :: new (int c)
+ Create a timer.
+ Parameters:
+ c blah.
+ Returns:
+ Nothing.

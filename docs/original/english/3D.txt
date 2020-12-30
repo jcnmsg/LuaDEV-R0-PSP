@@ -1,0 +1,60 @@
+ model.load ("path") - loads a. obj with the respective mtl (textures and colors)
+ model.position (x, y, z) - coordinates x, y, z
+ model.rotation (x, y, z) - angle of rotation x, y, z in radians (math.rad to convert from degrees to radians)
+ model.blit () - blitea the model on screen (does not need parameter) 
+
+  ---------------- Load model--------------------------
+ model = model.load ("folder / modelo.obj")
+
+Remember to load a model from a folder otherwise it will crash.
+
+ ------------------ To use it:-----------------------------
+ model position (x, y, z)
+ model rotation (x, y, z)
+ model blit () 
+
+ world.lightenabled (N, ENABLED) - turns off light.  N = 1-4.  ENABLED = true / false.  (4 lights)
+ world.lightambient (N, COLOR) - color of the component "environmental" light number N.
+ world.lightdiffuse (N, COLOR) - Color component "diffuse" light number N.
+ world.lightspecular (N, COLOR) - Color component "specular" light number N.
+ world.lightype (N, TYPE) - Change type of light number N.  Types: 1, directional.  2 light point.  3 focus.
+ world.lightcomponent (N, COMPONENTS) - Change light components.  1 + diff amb.  2 diff + spec.  3 unknown.
+ world.lightspotlight (N, EXPONENT, CUT) - Only foci.  Change angle cutting power and focus.
+ world.lightdirection (4, X, Y, Z) - Direction light N.  (Only directional or focus).  (Vector UNIT)
+ world.lightposition (N, X, Y, Z) - Position of light N.
+ world.ambient (COLOR) - Change the ambient color.
+ world.specular (COLOR) - Changes the specular color.
+ world.viewat (TAB1, TAB2, TAB3) - Changes the position of the camera.
+ world.perspective (fovy, ratio, near, far) - 3D perspective mode (default).
+ world.ortho (left, right, bottom, top) - 3D orthogonal mode.
+ world.fog (near, far, color) - Fog.
+ world.update () - updates changes in the lights / other changes in the module
+
+  
+
+-------------Notes: ------------------------------
+
+ Vector UNIT means: root (X ^ 2 + Y ^ 2 + Z ^ 2) == 1. 
+ TAB1 = {x, y, z} (position of the camera) 
+ TAB2 = {x, y, z} (point I looked) 
+ TAB3 = {x, y, z} (where the ceiling (camera rotation)).  (Usually {0, 1, 0}) 
+
+ When you go in / out mean units.  For example in the 
+  fog, near and far is where you begin to see fog, and which does not look 
+  a damn.  (And the color of the fog light).  With far = 0, fog 
+  off. 
+
+ For all commands, WITHOUT arguments (except for those with 
+  number of light in these, just pass the argument N), returned 
+  the current value.  Or sease: world.fog () returns 3 values. 
+  world.lighttype (1) return the type of light from the light number 1. 
+  world.ambient () returns the current ambient color. 
+
+ To play with the 3D math must be something claritas ... 
+  for example, normalize a vector ...  (X, Y, Z).  (Do unit) 
+
+ (34.21, 224.23, 12.45) would be ...  we square ...  ( 
+  1170.3241, 50279.0929, 155.0025) ...  adding ...  51604.4195 ...  root 
+  square ...  227.16606150567474237336239880841 dividing each 
+  separate component for this value ...  daria: 
+ (0.15, 0.98, 0.05) <- now it is a unit vector, pointing to the same site, but has module = 1. 

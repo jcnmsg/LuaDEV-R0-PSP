@@ -1,0 +1,288 @@
+﻿
+sound : sound objects.
+Functions
+
+sound sound.load(string filename)
+ Load a sound (Only MP3, AT3, BGM and WAV).
+
+nil sound.play(sound object)
+ Play a sound object in the default channel.
+
+nil sound.play(sonido object, int channel)
+ Play a sound object.
+
+nil sound.pause(sound object, int mode)
+ Pause a sound object.
+
+number sound.volume(sound object)
+ Volume of a sound.
+
+nil sound.volume(sound object, int volume)
+ Sets the volume of a sound.
+
+nil sound.volume(sonido object, int volumeL, int volumeR)
+ Sets the volume of a sound channel separately.
+
+nil sound.stop(sound object)
+ Stop a sound object.
+
+nil sound.free(sound object)
+ Free a sound object.
+
+boolean sound.playing(sound object)
+ Returns whether a sound is playing or not.
+
+nil sound.loop()
+ Stop the sound loop mode.
+
+nil sound.loop(string path)
+ Play a file in loop mode.
+
+table sound.id3(string path)
+ ID3 (MP3 only).
+
+image sound.cover(string path)
+ Cover ID3 (MP3 only).
+
+number sound.position(sound object)
+ Position of a sound. (MP3 only, [developing other formats]).
+
+number sound.duration(sound object)
+ Duration of a sound. (MP3 only, [developing other formats]).
+
+number sound.percent(sound object)
+ Returns the percentage played of a sound.
+
+nil sound.percent(sound object, number percent)
+ Sets the percentage played of a sound (Change the position).
+
+table sound.vis(sound object)
+ Internal interface of the visualizer.
+
+table sound.fft(sound object)
+ Internal interface of the FFT (Fast Fourier Transform).
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color base)
+ Draw a waveform or spectrometer (Winamp bars).
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color above, color below, color peak)
+ Draw a spectrometer, but with gradients.
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color fondo_above, color fondo_below, color bar_above, color bar_below, color peak, number spacing)
+ Draw a spectrometer with bars. (Winamp style).
+********************************************************************************
+Function documentation
+
+sound sound.load(string filename)
+ Load a sound (Only MP3, AT3, BGM and WAV).
+ Parameters:
+ filename Path of file to load.
+ Returns:
+ A sound object type.
+
+nil sound.play(sound object)
+ Play a sound object in the default channel.
+ Parameters:
+ object Sound object to play.
+ Returns:
+ Nothing.
+
+nil sound.play(sound object, int channel)
+ Play a sound object.
+ Parameters:
+ object Sound object to play.
+ channel Which channel to play. Channels a 1 to 8.
+ Returns:
+ Nothing.
+
+nil sound.pause(sound object, int mode)
+ Pause a sound object.
+ Parameters:
+ object Sound object to pause.
+ mode Pause mode type, one of the following:
+ -1 - Automatic. If not paused it pauses, if paused it resumes.
+ 0 - Resume the sound (if paused).
+ 1 - Pause the sound (if playing). 
+Returns:
+ Nothing.
+
+number sound.volume(sound object)
+ Volume of a sound.
+ Parameters:
+ object Sound object.
+ Returns:
+ 2 numbers. Left channel volume and right channel volume.
+
+nil sound.volume(sound object, int volume)
+ Set the volume of a sound.
+ Parameters:
+ object Sound object.
+ volume A number. Between 0 and 199.
+ Returns:
+ Nothing.
+
+nil sound.volume(sound object, int volumeL, int volumeR)
+ Set the volume of a sound channel separately.
+ Parameters:
+ object Sound object.
+ volumeL Left channel volume. A number. Between 0 and 199.
+ volumeR Right channel volume. A number. Between 0 and 199.
+ Returns:
+ Nothing.
+
+nil sound.stop(sound object)
+ Stop a sound object.
+ Parameters:
+ object Sound object to stop.
+ Returns:
+ Nothing.
+
+nil sound.free(sound object)
+ Free a sound object.
+ Parameters:
+ object Sound object to free.
+ Returns:
+ Nothing.
+
+boolean sound.playing(sound object)
+ Returns whether the sound is playing or not.
+ Parameters:
+ object Sound object.
+ Returns:
+ true if the sound is playing, otherwise false.
+
+nil sound.loop()
+ Stop the sound loop mode.
+ Returns:
+ Nothing.
+
+nil sound.loop(string path)
+ Play a file in loop mode.
+ Parameters:
+ path The file path to play as a loop.
+ Returns:
+ Nothing.
+
+table sound.id3(string path)
+ ID3 (MP3 only).
+ Parameters:
+ path The file path of the MP3.
+ Returns:
+ A table, with the following:
+ title (string)
+ artist (string)
+ album (string)
+ year (string)
+ comment (string)
+ genrecode (string)
+ genre (string)
+ track (string)
+ tracknumber (number)
+ length (number) (in seconds)
+ cover (boolean) (whether or not there is an image)
+ imagetype (string) [ "JPG" \ "PNG" ]
+ image sound.cover ( string path )
+ Cover ID3 (MP3 only).
+ Parameters:
+ path The file path of the MP3.
+ Returns:
+ An image if it exists, or nil.
+
+number sound.position(sound object)
+ Position of a sound. (MP3 only, [developing other formats]).
+ Parameters:
+ object Sound object.
+ Returns:
+ A number. Indicating the position in seconds.
+
+number sound.duration(sound object)
+ Duration of a sound. (MP3 only, [developing other formats]).
+ Parameters:
+ object Sound object.
+ Returns:
+ A number. Indicating the duration in seconds.
+
+number sound.percent(sound object)
+ Returns the percentage of sound played.
+ Parameters:
+ object Sound object.
+ Returns:
+ A number. Indicating the percentage.
+
+nil sound.percent(sound object, number percent)
+ Set the percentage played of a sound (Change the position).
+ Parameters:
+ object Sound object.
+ percent A number. Indicating the percentage.
+ Returns:
+ Nothing.
+
+tabla sound.vis(sound object)
+ Internal interface of the visualizer.
+ Parameters:
+ object Sound object.
+ Returns:
+ A table with the values of the waveform.
+
+table sound.fft(sound object)
+ Internal interface of the FFT (Fast Fourier Tranform).
+ Parameters:
+ object Sound object.
+ Returns:
+ A table with the values of power at separate frequencies. (16 ranges).
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color base)
+ Draw a waveform or spectrometer (Winamp bars).
+ Parameters:
+ object Sound object.
+ type One of the following:
+ "wave" - Waveform (type KIT, de el coche fantástico)
+ "waveline" - Waveform (just the line, type Winamp)
+ "spectrum_lines" - Spectrometer.
+ x Position of X.
+ y Position of Y.
+ w Width in pixels.
+ h Height in pixels.
+ base Color of the waveform in the spectrometer.
+ Returns:
+ Nothing.
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color above, color below, color peak)
+ Draw a spectrometer, but with gradients.
+ Parameters:
+ object Sound object.
+ type One of the following:
+ "spectrum_gradlines" - Waveform (type KIT, de el coche fantástico)
+ x Position of X.
+ y Position of Y.
+ w Width in pixels.
+ h Height in pixels.
+ above Color of the bar above.
+ below Color of the bar below.
+ peak Color of the peak.
+ Returns:
+ Nothing.
+
+nil sound.blit(sound object, string type, number x, number y, number w, number h, color fond_above, color fond_below, color bar_above, color bar_below, color peak, number spacing)
+ Draw a spectrometer with bars. (Winamp style).
+ Dibuja un espectómetro de barras. (Estilo Winamp).
+ Parameters:
+ object Sound object.
+ type One of the following:
+ "spectrum_bars" - Waveform (type KIT, de el coche fantástico)
+ x Position of X.
+ y Position of Y.
+ w Width in pixels.
+ h Height in pixels.
+ fond_above Color of the bar del fondo above.
+ fond_below Color of the bar del fondo below.
+ bar_above Color of the bar above.
+ bar_below Color of the bar below.
+ peak Color of the peak.
+ spacing Vertical spacing (to create squares).
+ Returns:
+ Nothing.
+
+
+
+

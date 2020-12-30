@@ -1,0 +1,20 @@
+
+Functions
+
+Socket.connect socket (server, port pair, local port) - Creates a new Socket with TCP / IP.  If not specified local port opens a random port.
+ 
+socket.udp socket (server, port pair, local port) - Creates a new Socket with UDP protocol.  If not specified local port opens a random port.
+ 
+socket.free nil (socket) - Closes and removes the Socket.
+
+boolean socket.isconnected (socket) - Make sure the socket is connected.
+
+socket.localport number (socket) - Returns the local port.
+
+socket.peerport number (socket) - Returns the port pair.
+
+socket.packetslost number (socket) - Returns the number of lost packets.
+
+socket.recv string (socket, byte) - Read data received from the socket.  The number of bytes is optional
+
+Socket.Send number (socket, string) - Send a string through the socket connection.  

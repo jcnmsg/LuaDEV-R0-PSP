@@ -1,0 +1,24 @@
+font: Sources
+Functions
+
+font.load source (string path)
+  Load a font PGF.
+
+nil font.free (font f)
+  Free a font.
+************************************************** ******************************
+Function documentation.
+
+font.load font (string path)
+  Load a font PGF.
+  parameters:
+  Walking path where the file pgf
+  Returns:
+  A font.
+
+nil font.free (font f)
+  Free a font.
+  parameters:
+  Font f to free.
+  Returns:
+  Nothing.

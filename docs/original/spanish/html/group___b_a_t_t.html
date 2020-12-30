@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: batt : Manejo de la batería.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>batt : Manejo de la batería.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#gae567e4b57134f18e8c13253a55e35b12">batt.exists</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bateria conectada (dentro de la PSP).  <a href="#gae567e4b57134f18e8c13253a55e35b12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#gad52bb4b3cdd7d91b0aa6b24a47fe17b2">batt.charging</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bateria cargando.  <a href="#gad52bb4b3cdd7d91b0aa6b24a47fe17b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#ga4ed007649ca02e63b4cf028340912636">batt.chargingstatus</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Estado de carga de la batería.  <a href="#ga4ed007649ca02e63b4cf028340912636"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#ga11136cf8a7d1dfff4d25a7e1783d6a6a">batt.islow</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Batería baja.  <a href="#ga11136cf8a7d1dfff4d25a7e1783d6a6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#ga83b74e985d2ab6de9f0d05ae1c37199e">batt.percent</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Porcentaje restante.  <a href="#ga83b74e985d2ab6de9f0d05ae1c37199e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#ga2fee88144a363606f08401ca14b3c7c0">batt.time</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Duración estimada.  <a href="#ga2fee88144a363606f08401ca14b3c7c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#gaea662898b57641715822cc549ba2e492">batt.temp</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Temperatura de la batería.  <a href="#gaea662898b57641715822cc549ba2e492"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___b_a_t_t.html#ga2c81aa17b2238711d3523de46e45996d">batt.volt</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Voltaje de la batería.  <a href="#ga2c81aa17b2238711d3523de46e45996d"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas la batería. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gae567e4b57134f18e8c13253a55e35b12"></a><!-- doxytag: member="batt.exists" ref="gae567e4b57134f18e8c13253a55e35b12" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean batt.exists </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bateria conectada (dentro de la PSP). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false , según si la batería está presente. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad52bb4b3cdd7d91b0aa6b24a47fe17b2"></a><!-- doxytag: member="batt.charging" ref="gad52bb4b3cdd7d91b0aa6b24a47fe17b2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean batt.charging </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bateria cargando. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false , según si la batería está cargando. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga4ed007649ca02e63b4cf028340912636"></a><!-- doxytag: member="batt.chargingstatus" ref="ga4ed007649ca02e63b4cf028340912636" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number batt.chargingstatus </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Estado de carga de la batería. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de x a xx, indicando el estado de carga. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga11136cf8a7d1dfff4d25a7e1783d6a6a"></a><!-- doxytag: member="batt.islow" ref="ga11136cf8a7d1dfff4d25a7e1783d6a6a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean batt.islow </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Batería baja. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false , según si la batería está baja. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga83b74e985d2ab6de9f0d05ae1c37199e"></a><!-- doxytag: member="batt.percent" ref="ga83b74e985d2ab6de9f0d05ae1c37199e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number batt.percent </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Porcentaje restante. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>[0-100], porcentaje de la batería restante. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2fee88144a363606f08401ca14b3c7c0"></a><!-- doxytag: member="batt.time" ref="ga2fee88144a363606f08401ca14b3c7c0" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number batt.time </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Duración estimada. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Número de minutos de batería estimada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaea662898b57641715822cc549ba2e492"></a><!-- doxytag: member="batt.temp" ref="gaea662898b57641715822cc549ba2e492" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number batt.temp </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Temperatura de la batería. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Temperatura de la batería en grados xxx. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2c81aa17b2238711d3523de46e45996d"></a><!-- doxytag: member="batt.volt" ref="ga2c81aa17b2238711d3523de46e45996d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number batt.volt </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Voltaje de la batería. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Voltaje de la batería en voltios. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

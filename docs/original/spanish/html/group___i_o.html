@@ -1,0 +1,484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: io : Entrada / salida, manejo de archivos.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>io : Entrada / salida, manejo de archivos.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">file&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#gac2efb39d5be14ced260decefe866773f">io.open</a> (string path, string mode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Abrir archivo en cualquier modo.  <a href="#gac2efb39d5be14ced260decefe866773f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">file&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#gaea26e5f0e52621df4a0847744cfea43e">io.open</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Abrir archivo en modo lectura.  <a href="#gaea26e5f0e52621df4a0847744cfea43e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga2d637909e6b6e94ff8adacd345601f97">io.close</a> (file fd)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cierra un archivo.  <a href="#ga2d637909e6b6e94ff8adacd345601f97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga47707210b603e40c879f0ef3727340db">io.read</a> (file fd, string format)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lee datos desde un archivo.  <a href="#ga47707210b603e40c879f0ef3727340db"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga8b7d67f036aee2b9cb7ca9a3d8670acc">io.read</a> (file fd)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lee una línea desde un archivo.  <a href="#ga8b7d67f036aee2b9cb7ca9a3d8670acc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">function&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#gaf89a55e18ce430cef48c9d25021f869d">io.lines</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Función iteradora, linea a linea.  <a href="#gaf89a55e18ce430cef48c9d25021f869d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#gaf67b9b5563720fea34715b104f254bdf">io.write</a> (file fd,....)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Escribe datos en un archivo.  <a href="#gaf67b9b5563720fea34715b104f254bdf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga9f74868de1ddb0bc00462ea6aaa8cd4d">io.flush</a> (file fd)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Salva los datos escritos en el archivo.  <a href="#ga9f74868de1ddb0bc00462ea6aaa8cd4d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga371026462f311b83558785308bc4d263">io.seek</a> (file fd, string donde)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setea o devuelve la posición actual del puntero en un archivo.  <a href="#ga371026462f311b83558785308bc4d263"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#gaf806e78b85ac8977091a64f446b6366d">io.seek</a> (file fd, string donde, int desplazamiento)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mueve el puntero de posición en un archivo.  <a href="#gaf806e78b85ac8977091a64f446b6366d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_o.html#ga6c3b0ffbddb4152cadb5172f28aab2e0">io.setvbuf</a> (file fd, string modo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Establece el modo en cómo se escribiran los datos en un archivo.  <a href="#ga6c3b0ffbddb4152cadb5172f28aab2e0"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Manejo de archivos. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gac2efb39d5be14ced260decefe866773f"></a><!-- doxytag: member="io.open" ref="gac2efb39d5be14ced260decefe866773f" args="(string path, string mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">file io.open </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>mode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Abrir archivo en cualquier modo. </p>
+<p><b>Notas:</b><br/>
+ Si abres en modo lectura/escritura, no es recomendado escribir inmediatamente después de leer, ni viceversa, sería conveniente interponer un seek de por medio.<br/>
+</p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta del archivo a abrir. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><em>"r"</em> - Modo lectura. (Por defecto) </li>
+<li><em>"w"</em> - Modo escritura. </li>
+<li><em>"a"</em> - Modo adición. </li>
+<li><em>"r+"</em> - Lectura/Escritura. Puntero al inicio, los datos pre-existentes se conservan. </li>
+<li><em>"w+"</em> - Lectura/Escritura. Puntero al inicio, los datos pre-existentes se eliminan. </li>
+<li><em>"a+"</em> - Lectura/Escritura. Puntero al final del archivo, los datos pre-existentes se conservan. </li>
+<li><em>"rb"</em> - Lectura, datos del tipo binario (datos de archivos). </li>
+<li><em>"wb"</em> - Escritura, datos del tipo binario (datos de archivos). </li>
+<li><em>"ab"</em> - Adición, datos del tipo binario (datos de archivos). </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un descriptor de archivo, o nil en caso de error, más un mensaje de error. </dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a3">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="gaea26e5f0e52621df4a0847744cfea43e"></a><!-- doxytag: member="io.open" ref="gaea26e5f0e52621df4a0847744cfea43e" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">file io.open </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Abrir archivo en modo lectura. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta del archivo a abrir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un descriptor de archivo, o nil en caso de error, más un mensaje de error. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2d637909e6b6e94ff8adacd345601f97"></a><!-- doxytag: member="io.close" ref="ga2d637909e6b6e94ff8adacd345601f97" args="(file fd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.close </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cierra un archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga47707210b603e40c879f0ef3727340db"></a><!-- doxytag: member="io.read" ref="ga47707210b603e40c879f0ef3727340db" args="(file fd, string format)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string io.read </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>format</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lee datos desde un archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>Tipo de datos a leer, uno de los siguientes: </p>
+<ul>
+<li><em>"*n"</em> - Lee un número. Usando este formato se devuelve un valor tipo number, no string. </li>
+<li><em>"*a"</em> - Lee el resto del fichero completo, comenzando desde la posición actual. </li>
+<li><em>"*l"</em> - Lee la siguiente linea. Éste es el formato por defecto. </li>
+<li><em>Un</em> número - Si se especifica un número, se leerán ésta cantidad de bytes o carácteres. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Los datos leídos, o nil si no se pudieron leer datos o no quedan más datos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8b7d67f036aee2b9cb7ca9a3d8670acc"></a><!-- doxytag: member="io.read" ref="ga8b7d67f036aee2b9cb7ca9a3d8670acc" args="(file fd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string io.read </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lee una línea desde un archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Los datos leídos, o nil si no se pudieron leer datos o no quedan más datos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf89a55e18ce430cef48c9d25021f869d"></a><!-- doxytag: member="io.lines" ref="gaf89a55e18ce430cef48c9d25021f869d" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function io.lines </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función iteradora, linea a linea. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta del archivo a abrir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una función iteradora, para usar en construcciones tipo for xxx in io.lines("ruta") </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf67b9b5563720fea34715b104f254bdf"></a><!-- doxytag: member="io.write" ref="gaf67b9b5563720fea34715b104f254bdf" args="(file fd,....)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.write </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">....&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Escribe datos en un archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>Cantidad variable de argumentos extra, que pueden ser números o strings. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a6">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga9f74868de1ddb0bc00462ea6aaa8cd4d"></a><!-- doxytag: member="io.flush" ref="ga9f74868de1ddb0bc00462ea6aaa8cd4d" args="(file fd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.flush </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Salva los datos escritos en el archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga371026462f311b83558785308bc4d263"></a><!-- doxytag: member="io.seek" ref="ga371026462f311b83558785308bc4d263" args="(file fd, string donde)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.seek </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>donde</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Setea o devuelve la posición actual del puntero en un archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>donde</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><em>"set"</em> - Setea la posición al inicio, y devuelve 0. </li>
+<li><em>"cur"</em> - Devuelve la posición actual desde el inicio del archivo. </li>
+<li><em>"end"</em> - Setea la posición al final, y devuelve el tamaño del archivo. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Depende de sus argumentos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf806e78b85ac8977091a64f446b6366d"></a><!-- doxytag: member="io.seek" ref="gaf806e78b85ac8977091a64f446b6366d" args="(file fd, string donde, int desplazamiento)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.seek </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>donde</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>desplazamiento</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mueve el puntero de posición en un archivo. </p>
+<p>Por ejemplo, si se usa io.seek(archivo,"set",20), colocará el puntero 20 bytes de distancia desde el inicio. ( Se saltará los primeros 20 bytes ). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>donde</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><em>"set"</em> - Desde el inicio. </li>
+<li><em>"cur"</em> - Desde la posición actual. </li>
+<li><em>"end"</em> - Desde el final del archivo. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>desplazamiento</em>&nbsp;</td><td>Desplazamiento a tener en cuenta, desde "donde". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve la posición dónde haya quedado el puntero, contada desde el inicio del archivo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6c3b0ffbddb4152cadb5172f28aab2e0"></a><!-- doxytag: member="io.setvbuf" ref="ga6c3b0ffbddb4152cadb5172f28aab2e0" args="(file fd, string modo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil io.setvbuf </td>
+          <td>(</td>
+          <td class="paramtype">file&nbsp;</td>
+          <td class="paramname"> <em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>modo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Establece el modo en cómo se escribiran los datos en un archivo. </p>
+<p>Para asegurarse de que los datos se escriben, y no tener en cuenta los búffers de escritura, es correcto utilizar io.flush(archivo); </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fd</em>&nbsp;</td><td>Descriptor de archivo previamente abierto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><em>"no"</em> - Sin búffer, los datos son escritos inmediatamente. </li>
+<li><em>"full"</em> - Sólo se escriben cuando se llena el búffer de escritura. </li>
+<li><em>"line"</em> - Sólo se escribe cada vez que alcanza una nueva línea "\n". </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

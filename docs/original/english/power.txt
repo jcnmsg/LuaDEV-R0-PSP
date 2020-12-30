@@ -1,0 +1,79 @@
+﻿Power: Power System.
+Functions
+
+power.plugged boolean ()
+ Cable connected.
+
+nil power.lock ()
+ Lock the power switch.
+
+nil power.unlock ()
+ Unlock the power switch.
+
+nil power.standby ()
+ Put the PSP in "stand-by".
+
+nil power.suspend ()
+ Put the PSP in sleep mode.
+
+nil power.tick ()
+ Prevents the PSP is set to "stand-by".
+
+nil power.tick (int mode)
+ Prevents the PSP is set to "stand-by".
+
+Variables
+
+const number power.tick.all
+ Constants for use power.tick joint ().
+
+const number power.tick.display
+ Constants for use power.tick joint ().
+
+const number power.tick.suspend
+ Constants for use power.tick joint ().
+************************************************** ******************************
+Function Documentation
+
+power.plugged boolean ()
+ Cable connected.
+ Returns:
+ true / false. Depending on whether the cable is connected.
+
+nil power.lock ()
+ Lock the power switch.
+ Returns:
+ Nothing.
+
+nil power.unlock ()
+ Unlock the power switch.
+ Returns:
+ Nothing.
+
+nil power.standby ()
+ Put the PSP in "stand-by".
+ Returns:
+ Nothing.
+
+nil power.suspend ()
+ Put the PSP in sleep mode.
+ Returns:
+ Nothing.
+
+nil power.tick ()
+ Prevents the PSP is set to "stand-by".
+ The tick is necessary to send from time to time, so that the PSP is not going to "stand-by" automatically.
+ Also, if the user presses any key, the timer "stand-by" back to 0. (As with this feature).
+ Returns:
+ Nothing.
+
+nil power.tick (int mode)
+ Prevents the PSP is set to "stand-by".
+ The tick is necessary to send from time to time, so that the PSP is not going to "stand-by" automatically.
+ Also, if the user presses any key, the timer "stand-by" back to 0. (As with this feature).
+ Parameters:
+ One of the following way: power.tick.all - Prevents the PSP off display and go to suspension.
+ power.tick.display - Prevents the PSP off the screen.
+ power.tick.suspend - Prevents the PSP go to suspension.
+ Returns:
+ Nothing.

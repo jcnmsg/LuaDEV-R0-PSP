@@ -1,0 +1,11 @@
+﻿chipmunk: Dimensional physics engine. (Physical 2D)
+Functions
+
+nil chipmunk.init ()
+  Starts and prepare the physics engine, essential before using any other function of Chipmunk.
+************************************************** ******************************
+Function Documentation
+nil chipmunk.init ()
+  Starts and prepare the physics engine, essential before using any other function of Chipmunk.
+  Returns:
+  Nothing.

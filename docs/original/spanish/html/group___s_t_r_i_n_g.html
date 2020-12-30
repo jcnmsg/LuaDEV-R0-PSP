@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: string : Funciones para el manejo de textos.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>string : Funciones para el manejo de textos.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gae0cac66c9fca8e4e1f3010b56bb4f58a">string_byte</a> (string str)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65).  <a href="#gae0cac66c9fca8e4e1f3010b56bb4f58a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gae42ee437a1b26645152d1918994a1df3">string_byte</a> (string str, int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65).  <a href="#gae42ee437a1b26645152d1918994a1df3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gafd4309880190f2b1436579fd86e81fe6">string_byte</a> (string str, int i, int j)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65).  <a href="#gafd4309880190f2b1436579fd86e81fe6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga64244acbd4d5a700c28092d645e9e9ef">string_char</a> (int...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Función inversa a string.byte(). Recibe 0 o más enteros.  <a href="#ga64244acbd4d5a700c28092d645e9e9ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga54253b88d28afe7dbd4616f19be81cc4">string_find</a> (string str, string patron)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Función de búsqueda usando patrones.  <a href="#ga54253b88d28afe7dbd4616f19be81cc4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gae80e9f967acd1ea19282a64450da95e8">string_find</a> (string str, string patron, int i)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Función de búsqueda usando patrones, comenzando en una posición determinada.  <a href="#gae80e9f967acd1ea19282a64450da95e8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga242b4a17b4c6b1204f53f0d419b4c41a">string_find</a> (string str, string patron, int i, boolean plano)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Función de búsqueda usando texto plano, comenzando en una posición determinada.  <a href="#ga242b4a17b4c6b1204f53f0d419b4c41a"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Manejo de strings (cadenas de carácteres). </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gae0cac66c9fca8e4e1f3010b56bb4f58a"></a><!-- doxytag: member="string.byte" ref="gae0cac66c9fca8e4e1f3010b56bb4f58a" args="(string str)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.byte </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de carácteres. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>(Longitud) números. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae42ee437a1b26645152d1918994a1df3"></a><!-- doxytag: member="string.byte" ref="gae42ee437a1b26645152d1918994a1df3" args="(string str, int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.byte </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65). </p>
+<p>Pero en este caso comenzando en el carácter número i. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de carácteres. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>Carácter en el cual empezar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>(Longitud - i) números. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gafd4309880190f2b1436579fd86e81fe6"></a><!-- doxytag: member="string.byte" ref="gafd4309880190f2b1436579fd86e81fe6" args="(string str, int i, int j)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.byte </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>j</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pasa de carácter ASCII a su código numérico interno. (Ejemplo: A = 65). </p>
+<p>Pero en este caso comenzando en el carácter número i y terminando en el carácter número j. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de carácteres. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>Carácter en el cual empezar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>j</em>&nbsp;</td><td>Carácter en el que terminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>(j-i) números. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga64244acbd4d5a700c28092d645e9e9ef"></a><!-- doxytag: member="string.char" ref="ga64244acbd4d5a700c28092d645e9e9ef" args="(int...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string string.char </td>
+          <td>(</td>
+          <td class="paramtype">int...&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función inversa a string.byte(). Recibe 0 o más enteros. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>0 o más enteros. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una cadena de texto de longitud igual al número de enteros recibidos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga54253b88d28afe7dbd4616f19be81cc4"></a><!-- doxytag: member="string.find" ref="ga54253b88d28afe7dbd4616f19be81cc4" args="(string str, string patron)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.find </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>patron</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función de búsqueda usando patrones. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>patron</em>&nbsp;</td><td>Patron a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>En caso de encontrar el patrón, devuelve dos números. Dónde comienza y dónde acaba el patrón. En caso contrario, devuelve nil. Si el patrón tiene capturas, despues de los dos índices, se retornaran estas capturas. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae80e9f967acd1ea19282a64450da95e8"></a><!-- doxytag: member="string.find" ref="gae80e9f967acd1ea19282a64450da95e8" args="(string str, string patron, int i)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.find </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>patron</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función de búsqueda usando patrones, comenzando en una posición determinada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>patron</em>&nbsp;</td><td>Patron a buscar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>Carácter a partir de dónde se buscará el patrón. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>En caso de encontrar el patrón, devuelve dos números. Dónde comienza y dónde acaba el patrón. En caso contrario, devuelve nil. Si el patrón tiene capturas, despues de los dos índices, se retornaran estas capturas. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga242b4a17b4c6b1204f53f0d419b4c41a"></a><!-- doxytag: member="string.find" ref="ga242b4a17b4c6b1204f53f0d419b4c41a" args="(string str, string patron, int i, boolean plano)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... string.find </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>patron</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&nbsp;</td>
+          <td class="paramname"> <em>plano</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Función de búsqueda usando texto plano, comenzando en una posición determinada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>Cadena de texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>patron</em>&nbsp;</td><td>Patron a buscar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>i</em>&nbsp;</td><td>Carácter a partir de dónde se buscará el patrón. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>plano</em>&nbsp;</td><td>Indicar verdadero como cuarto parámetro para desactivar la búsqueda de patrones. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>En caso de encontrar el texto, devuelve dos números. Dónde comienza y dónde acaba el texto encontrado. En caso contrario, devuelve nil. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

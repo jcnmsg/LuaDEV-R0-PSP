@@ -1,0 +1,111 @@
+﻿color: Color and texture creation.
+Functions
+
+Color.new Color (int R, int G, int B, int A)
+ Create a new color from its components.
+
+color.blend colored (color c1, color c2)
+ Mix two colors.
+
+color.mix colored (color c1, c2 colored, int P1, int P2)
+ Mix two colors, using percentages.
+
+color.add colored (color c1, color c2)
+ Adds two colors.
+
+color.sub colored (color c1, color c2)
+ Adds two colors.
+
+color.R int (color c1)
+ Component A.
+
+color.G int (color c1)
+ Component G.
+
+color.B int (color c1)
+ Component B.
+
+color.A int (color c1)
+ Component A.
+************************************************** ******************************
+Function Documentation
+
+Color.new Color (int R, int G, int B, int A)
+ Create a new color from its components.
+ Parameters:
+ R Value of your red component (0-255).
+ G value of their green component (0-255).
+ B value of its blue component (0-255).
+ A transparency value (0-255). OPTIONAL. If not specified the default is 255.
+ Returns:
+ The color created.
+
+color.blend colored (color c1, color c2)
+ Mix two colors.
+ Parameters:
+ A color c1.
+ Another color c2.
+ Returns:
+ Returns the resulting color mixing c1 and c2.
+
+color.mix colored (color c1, c2 colored, int P1, int P2)
+ Mix two colors, using percentages.
+ Parameters:
+ A color c1.
+ Another color c2.
+ Percentage p1 color 1 [0-100].
+ Percentage p2 Colour 2 [0-100].
+ Returns:
+ Returns the resulting color mixing c1 and c2, using percentages.
+
+color.add colored (color c1, color c2)
+ Adds two colors.
+ Example:
+ Black (0,0,0) + Red (255,0,0) = Red (255,0,0)
+ Green (0,255,0) + Red (255,0,0) = Yellow (255,255,0)
+ White (255,255,255) + Black (0,0,0) = White (255,255,255)
+ Parameters:
+ A color c1.
+ Another color c2.
+ Returns:
+ Returns the result of adding color, two colors.
+
+color.sub colored (color c1, color c2)
+ Adds two colors.
+ Example:
+ Black (0,0,0) - Red (255,0,0) = Black (0,0,0)
+ Green (0,255,0) - Red (255,0,0) = Green (255,0,0)
+ White (255,255,255) - Red (0,0,0) = Cyan (0,255,255)
+ Parameters:
+ A color c1.
+ Another color c2.
+ Returns:
+ Returns the result of subtracting color, two colors.
+
+color.R int (color c1)
+ Component A.
+ Parameters:
+ A color c1.
+ Returns:
+ Returns the value of the red component.
+
+int color.G (color c)
+ Component G.
+ Parameters:
+ A color c1.
+ Returns:
+ Returns the value of the green component.
+
+color.B int (color c1)
+ Component B.
+ Parameters:
+ A color c1.
+ Returns:
+ Returns the value of the blue component.
+
+color.A int (color c1)
+ Component A.
+ Parameters:
+ A color c1.
+ Returns:
+ Returns the value of the component of transparency.

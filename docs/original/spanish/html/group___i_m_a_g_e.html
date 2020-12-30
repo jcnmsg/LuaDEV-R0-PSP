@@ -1,0 +1,1150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: image : Manejo de imágenes.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>image : Manejo de imágenes.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga78d1003b50f19ee55c4875d49486551a">image.load</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carga una imagen.  <a href="#ga78d1003b50f19ee55c4875d49486551a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga060da21153193abe8fd8dcbe9b072d12">image.loadsprite</a> (string filename, int width, int height)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carga una imágen, y la divide en "cuadros" o "sprites".  <a href="#ga060da21153193abe8fd8dcbe9b072d12"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga66b3eaab9609bf561ad7b4bd7a6f904b">image.loadfrommemory</a> (string data, string filetype)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carga una imágen, desde datos en memoria.  <a href="#ga66b3eaab9609bf561ad7b4bd7a6f904b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga25a01e62a3597eb910d0e02dbec2aee1">image.create</a> (int width, int height, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una imagen nueva.  <a href="#ga25a01e62a3597eb910d0e02dbec2aee1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gab2c8597049af2853a8e5c3db71fd3d40">image.clear</a> (imagen img, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limpia una imagen. (La rellena de un color).  <a href="#gab2c8597049af2853a8e5c3db71fd3d40"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga8ba9b7720f53c45e2caf03399f265041">image.blit</a> (imagen img, number x, number y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra en pantalla una imágen (entera).  <a href="#ga8ba9b7720f53c45e2caf03399f265041"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga507e1d6db331c18f599828fcc8f121bc">image.blit</a> (imagen img, number x, number y, number ximage, number yimage, number width, number height)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra en pantalla una imágen (parte de la imágen).  <a href="#ga507e1d6db331c18f599828fcc8f121bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gae6c425dd193e215f9168f82a76b94ebf">image.blitsprite</a> (imagen img, number x, number y, int frame, int alfa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra en pantalla un sprite.  <a href="#gae6c425dd193e215f9168f82a76b94ebf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga6db413cbcb3d9c09591ab89b0acc5887">image.setframe</a> (imagen img, int frame)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elegir el frame en un sprite.  <a href="#ga6db413cbcb3d9c09591ab89b0acc5887"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gad7780a701a9efd36db778348ac3f79ae">image.blend</a> (imagen img, number x, number y, int alfa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Igual que el blit básico, pero con transparencia.  <a href="#gad7780a701a9efd36db778348ac3f79ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga5fbc44e893df485aec0534c90db1dbb4">image.fxadd</a> (imagen img, number x, number y, int alfa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Igual que el blit básico, pero con efecto suma de colores.  <a href="#ga5fbc44e893df485aec0534c90db1dbb4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gad9340af68a9eaf1b76c008994b8fe91a">image.fxsub</a> (imagen img, number x, number y, int alfa)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Igual que el blit básico, pero con efecto resta de colores.  <a href="#gad9340af68a9eaf1b76c008994b8fe91a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gab854e30c52c0fbf87fd83a65973e260d">image.fxtint</a> (imagen img, number x, number y, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Igual que el blit básico, pero con efecto de tintado de imágen.  <a href="#gab854e30c52c0fbf87fd83a65973e260d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga0e9df4fe28da3e4dfcdac6fed58d8b8c">image.resize</a> (imagen img, int width, int height)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reescala una imágen.  <a href="#ga0e9df4fe28da3e4dfcdac6fed58d8b8c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga89f2d758a678ae0b6ac7bb369d4d1b98">image.rotate</a> (imagen img, number angulo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rota una imágen sobre su centro.  <a href="#ga89f2d758a678ae0b6ac7bb369d4d1b98"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gabf6998b153bb355c7545f168bf7802cc">image.rotate</a> (imagen img, number x, number y, number angulo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Rota una imágen sobre un punto.  <a href="#gabf6998b153bb355c7545f168bf7802cc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gabfa71a6c18194c525c60a02f9eac4623">image.factorscale</a> (imagen img, number factor)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Escala una imágen, proporcionalmente a un factor de reescalado.  <a href="#gabfa71a6c18194c525c60a02f9eac4623"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gae9f480e4be2f1e91a0dbff04036d563c">image.pixel</a> (imagen img, number x, number y, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia el color de un pixel en una imágen.  <a href="#gae9f480e4be2f1e91a0dbff04036d563c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gae8a94ddfac4b714c61aa3fda1a58d323">image.pixel</a> (imagen img, number x, number y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el color de un píxel en una imágen.  <a href="#gae8a94ddfac4b714c61aa3fda1a58d323"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga075eb85151f286c679cb42ce4bd2d384">image.save</a> (imagen img, string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Guarda un objeto de imágen en un archivo PNG.  <a href="#ga075eb85151f286c679cb42ce4bd2d384"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gae74e163b1405bc5f0db7757b5c5e0d23">image.width</a> (imagen img)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ancho de una imágen.  <a href="#gae74e163b1405bc5f0db7757b5c5e0d23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gaa6eff53da480a51acd28a975ca65360f">image.height</a> (imagen img)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Alto de una imágen.  <a href="#gaa6eff53da480a51acd28a975ca65360f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga59bcd7eea7cdc0606f3073cedf80c149">image.center</a> (imagen img, number x, number y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Especifica el centro de una imágen.  <a href="#ga59bcd7eea7cdc0606f3073cedf80c149"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#gad215eeed77f16870ca690b5843ace1f1">image.reset</a> (imagen img)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resetea las propiedades modificadas. (Escala, rotación...).  <a href="#gad215eeed77f16870ca690b5843ace1f1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_m_a_g_e.html#ga2ae8ac9dbb279414eddf93f7916c0f52">image.free</a> (imagen img)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Libera un objeto de imágen.  <a href="#ga2ae8ac9dbb279414eddf93f7916c0f52"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Con este módulo se cargarán y manejarán las imágenes en LuaDEV.<br/>
+ Formatos soportados: <em> JPG, PNG, GIF </em></p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Tareas pendientes:</a></b></dt><dd>De imágen a imágen. (Mejorar y documentar)</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga78d1003b50f19ee55c4875d49486551a"></a><!-- doxytag: member="image.load" ref="ga78d1003b50f19ee55c4875d49486551a" args="(string filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen image.load </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga una imagen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Ruta del archivo a cargar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga060da21153193abe8fd8dcbe9b072d12"></a><!-- doxytag: member="image.loadsprite" ref="ga060da21153193abe8fd8dcbe9b072d12" args="(string filename, int width, int height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen image.loadsprite </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga una imágen, y la divide en "cuadros" o "sprites". </p>
+<p>Ideal para personajes, o iconos, puesto que en una misma imagen se introducen todas las posturas o efectos.<br/>
+<br/>
+ <b>Ejemplo:</b> <br/>
+<br/>
+ <code>testimage = image.load("test.png",10,10);</code><br/>
+<br/>
+ Carga la imagen test.png, y la divide en cuadros de 10x10 pixeles. De derecha a izquierda y de arriba a abajo. Al dibujar esta imagen, se dibujará sólo uno de los cuadros, no la imagen completa. Para cambiar de cuadro, usar image.setframe();</p>
+<p><b>Aviso:</b> <br/>
+ El cuadro se trata como si fuera una imagen, por lo tanto cualquier reescalado, rotación o demás, afectará solo al cuadro. Independientemente de cual cojamos.</p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Ruta de la imagen a cargar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Ancho del cuadro a cortar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Alto del cuadro a cortar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga66b3eaab9609bf561ad7b4bd7a6f904b"></a><!-- doxytag: member="image.loadfrommemory" ref="ga66b3eaab9609bf561ad7b4bd7a6f904b" args="(string data, string filetype)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen image.loadfrommemory </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filetype</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga una imágen, desde datos en memoria. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>Datos de la imagen, formato JPG, PNG o GIF. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>filetype</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><em>"JPG"</em> - Los datos són una imágen JPG. </li>
+<li><em>"PNG"</em> - Los datos són una imágen PNG. </li>
+<li><em>"GIF"</em> - Los datos són una imágen GIF. Este parámetro es opcional. Por defecto es "PNG". </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga25a01e62a3597eb910d0e02dbec2aee1"></a><!-- doxytag: member="image.create" ref="ga25a01e62a3597eb910d0e02dbec2aee1" args="(int width, int height, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen image.create </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea una imagen nueva. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Ancho de la imágen en píxeles. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Alto de la imágen en píxeles. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color inicial de la imágen. Opcional. Por defecto es negro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab2c8597049af2853a8e5c3db71fd3d40"></a><!-- doxytag: member="image.clear" ref="gab2c8597049af2853a8e5c3db71fd3d40" args="(imagen img, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.clear </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Limpia una imagen. (La rellena de un color). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Imagen a limpiar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color a usar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8ba9b7720f53c45e2caf03399f265041"></a><!-- doxytag: member="image.blit" ref="ga8ba9b7720f53c45e2caf03399f265041" args="(imagen img, number x, number y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.blit </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra en pantalla una imágen (entera). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga507e1d6db331c18f599828fcc8f121bc"></a><!-- doxytag: member="image.blit" ref="ga507e1d6db331c18f599828fcc8f121bc" args="(imagen img, number x, number y, number ximage, number yimage, number width, number height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.blit </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>ximage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>yimage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra en pantalla una imágen (parte de la imágen). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ximage</em>&nbsp;</td><td>Coordenada X en la imagen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>yimage</em>&nbsp;</td><td>Coordenada Y en la imagen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Ancho a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Alto a mostrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae6c425dd193e215f9168f82a76b94ebf"></a><!-- doxytag: member="image.blitsprite" ref="gae6c425dd193e215f9168f82a76b94ebf" args="(imagen img, number x, number y, int frame, int alfa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.blitsprite </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>alfa</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra en pantalla un sprite. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>frame</em>&nbsp;</td><td>Número del frame a mostrar. ( De 0 a NUMFRAMES ) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alfa</em>&nbsp;</td><td>Transparencia. Opcional. Por defecto 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6db413cbcb3d9c09591ab89b0acc5887"></a><!-- doxytag: member="image.setframe" ref="ga6db413cbcb3d9c09591ab89b0acc5887" args="(imagen img, int frame)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.setframe </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>frame</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Elegir el frame en un sprite. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>frame</em>&nbsp;</td><td>Número de frame a elegir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad7780a701a9efd36db778348ac3f79ae"></a><!-- doxytag: member="image.blend" ref="gad7780a701a9efd36db778348ac3f79ae" args="(imagen img, number x, number y, int alfa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.blend </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>alfa</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Igual que el blit básico, pero con transparencia. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alfa</em>&nbsp;</td><td>Transparencia. Opcional. Por defecto 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5fbc44e893df485aec0534c90db1dbb4"></a><!-- doxytag: member="image.fxadd" ref="ga5fbc44e893df485aec0534c90db1dbb4" args="(imagen img, number x, number y, int alfa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.fxadd </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>alfa</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Igual que el blit básico, pero con efecto suma de colores. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alfa</em>&nbsp;</td><td>Transparencia. Opcional. Por defecto 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad9340af68a9eaf1b76c008994b8fe91a"></a><!-- doxytag: member="image.fxsub" ref="gad9340af68a9eaf1b76c008994b8fe91a" args="(imagen img, number x, number y, int alfa)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.fxsub </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>alfa</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Igual que el blit básico, pero con efecto resta de colores. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alfa</em>&nbsp;</td><td>Transparencia. Opcional. Por defecto 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab854e30c52c0fbf87fd83a65973e260d"></a><!-- doxytag: member="image.fxtint" ref="gab854e30c52c0fbf87fd83a65973e260d" args="(imagen img, number x, number y, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.fxtint </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Igual que el blit básico, pero con efecto de tintado de imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y en la pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color a usar en el tintado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0e9df4fe28da3e4dfcdac6fed58d8b8c"></a><!-- doxytag: member="image.resize" ref="ga0e9df4fe28da3e4dfcdac6fed58d8b8c" args="(imagen img, int width, int height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.resize </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reescala una imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Nuevo ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Nuevo alto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga89f2d758a678ae0b6ac7bb369d4d1b98"></a><!-- doxytag: member="image.rotate" ref="ga89f2d758a678ae0b6ac7bb369d4d1b98" args="(imagen img, number angulo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.rotate </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>angulo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Rota una imágen sobre su centro. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>angulo</em>&nbsp;</td><td>Ángulo en grados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabf6998b153bb355c7545f168bf7802cc"></a><!-- doxytag: member="image.rotate" ref="gabf6998b153bb355c7545f168bf7802cc" args="(imagen img, number x, number y, number angulo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.rotate </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>angulo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Rota una imágen sobre un punto. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición del centro en X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición del centro en Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>angulo</em>&nbsp;</td><td>Ángulo en grados. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabfa71a6c18194c525c60a02f9eac4623"></a><!-- doxytag: member="image.factorscale" ref="gabfa71a6c18194c525c60a02f9eac4623" args="(imagen img, number factor)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.factorscale </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>factor</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Escala una imágen, proporcionalmente a un factor de reescalado. </p>
+<p>Ejemplos: factor 200 = 200% del tamaño. (el doble) factor 50 = 50% del tamaño. (la mitad) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>factor</em>&nbsp;</td><td>Factor, en %. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae9f480e4be2f1e91a0dbff04036d563c"></a><!-- doxytag: member="image.pixel" ref="gae9f480e4be2f1e91a0dbff04036d563c" args="(imagen img, number x, number y, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.pixel </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cambia el color de un pixel en una imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición del píxel en X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición del píxel en Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Nuevo color para el píxel. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae8a94ddfac4b714c61aa3fda1a58d323"></a><!-- doxytag: member="image.pixel" ref="gae8a94ddfac4b714c61aa3fda1a58d323" args="(imagen img, number x, number y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color image.pixel </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve el color de un píxel en una imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición del píxel en X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición del píxel en Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El color del píxel en esa posición. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga075eb85151f286c679cb42ce4bd2d384"></a><!-- doxytag: member="image.save" ref="ga075eb85151f286c679cb42ce4bd2d384" args="(imagen img, string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.save </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Guarda un objeto de imágen en un archivo PNG. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta del archivo destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae74e163b1405bc5f0db7757b5c5e0d23"></a><!-- doxytag: member="image.width" ref="gae74e163b1405bc5f0db7757b5c5e0d23" args="(imagen img)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number image.width </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Ancho de una imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el ancho de la imágen en píxeles. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa6eff53da480a51acd28a975ca65360f"></a><!-- doxytag: member="image.height" ref="gaa6eff53da480a51acd28a975ca65360f" args="(imagen img)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number image.height </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Alto de una imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el alto de la imágen en píxeles. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga59bcd7eea7cdc0606f3073cedf80c149"></a><!-- doxytag: member="image.center" ref="ga59bcd7eea7cdc0606f3073cedf80c149" args="(imagen img, number x, number y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.center </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Especifica el centro de una imágen. </p>
+<p>Si no se especifican ni x, ni y, se utilizará el centro de la imágen. Por defecto, una imagen viene centrada en 0,0. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición del centro en X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición del centro en Y. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad215eeed77f16870ca690b5843ace1f1"></a><!-- doxytag: member="image.reset" ref="gad215eeed77f16870ca690b5843ace1f1" args="(imagen img)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.reset </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Resetea las propiedades modificadas. (Escala, rotación...). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2ae8ac9dbb279414eddf93f7916c0f52"></a><!-- doxytag: member="image.free" ref="ga2ae8ac9dbb279414eddf93f7916c0f52" args="(imagen img)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil image.free </td>
+          <td>(</td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>img</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Libera un objeto de imágen. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>img</em>&nbsp;</td><td>Objeto de imágen a liberar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,90 @@
+﻿cam: Camera functions (Go! Cam)
+Functions
+nil cam.on ()
+ Activate the camera driver.
+
+nil cam.off ()
+ Disables the camera driver.
+
+cam.status boolean ()
+ State of the camera driver.
+
+cam.state table ()
+ Status of the connection with the camera.
+
+nil cam.start ()
+ Start taking video of the camera.
+
+cam.vmirrored boolean ()
+ Vertical Mirrored.
+
+cam.hmirrored boolean ()
+ Mirrored horizontally.
+
+cam.direction int ()
+ Camera direction.
+
+cam.toimage image ()
+ Gets a copy of the current image in the camera.
+
+cam.blit nil (int x, int y)
+ Displays the current image the camera sees.
+************************************************** ******************************
+Function Documentation
+nil cam.on ()
+ Activate the camera driver.
+ Returns:
+ Nothing
+
+nil cam.off ()
+ Disables the camera driver.
+ Returns:
+ Nothing
+
+cam.status boolean ()
+ State of the camera driver.
+ Returns:
+ true / false. Depending on whether the driver is enabled.
+
+cam.state table ()
+ Status of the connection with the camera.
+ Returns:
+ A state table as usb.state ().
+
+nil cam.start ()
+ Start taking video of the camera.
+ For the cam to work properly, we have to start capturing images, once connected, and active driver. See the example to start the camera correctly.
+ Returns:
+ Nothing.
+
+cam.vmirrored boolean ()
+ Vertical Mirrored.
+ Returns:
+ true / false. As if mirroring is enabled vertically.
+
+cam.hmirrored boolean ()
+ Mirrored horizontally.
+ Returns:
+ true / false. As if mirroring is enabled horizontally.
+
+cam.direction int ()
+ Camera direction.
+ Returns:
+ A number representing the direction of the camera.
+ 0 - Toward the back.
+ 1 - The Way Forward.
+
+cam.toimage image ()
+ Gets a copy of the current image in the camera.
+ This image is a copy of what you see on the camera at the time of the function call. This image must be released as soon as they finish their use.
+ Returns:
+ A copy of the current image.
+
+cam.blit nil (int x, int y)
+ Displays the current image the camera sees.
+ This image should not be released.
+ Parameters:
+ x position X.
+ and position Y.
+ Returns:
+ Nothing.

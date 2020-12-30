@@ -1,0 +1,1112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: os : Propiedades y funciones del sistema operativo.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<h1>os : Propiedades y funciones del sistema operativo.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga1a1b5118bc72e19d7ab7059fcec23860">os.clock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tiempo desde que LuaDEV se inició en segundos.  <a href="#ga1a1b5118bc72e19d7ab7059fcec23860"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gadedecc40fef96d031bf190bfdcd502dd">os.time</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tiempo actual en segundos (Desde 1990).  <a href="#gadedecc40fef96d031bf190bfdcd502dd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gafd3487dab63930ab9fa55f954738168e">os.time</a> (tabla fecha)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tiempo en segundos de la fecha especificada.  <a href="#gafd3487dab63930ab9fa55f954738168e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga82b4bcdd9432dabbbc77d55469e676fc">os.date</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fecha y hora.  <a href="#ga82b4bcdd9432dabbbc77d55469e676fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga7ab88e6231eae7dca3de259247bffc7d">os.date</a> (string formato)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fecha y hora con formato.  <a href="#ga7ab88e6231eae7dca3de259247bffc7d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga619dc96a03d1f7adb58d9be313035755">os.date</a> (string formato)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fecha y hora en tabla.  <a href="#ga619dc96a03d1f7adb58d9be313035755"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga39346175ce10868be9223986ea3f6794">os.date</a> (string formato, number tiempo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Formatear un tiempo (no el actual).  <a href="#ga39346175ce10868be9223986ea3f6794"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga6bd80bab39e6f249374f60bf93267f1c">os.date</a> (string formato, number tiempo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Formatear un tiempo en tabla (no el actual).  <a href="#ga6bd80bab39e6f249374f60bf93267f1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga4912dfdf9b0501f5c58199ff62a5ac57">os.difftime</a> (number tiempo2, number tiempo1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Diferencia de tiempos.  <a href="#ga4912dfdf9b0501f5c58199ff62a5ac57"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga381a22609b6f7753a1b2e2b2ddd374c2">os.tmpfile</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Archivo temporal.  <a href="#ga381a22609b6f7753a1b2e2b2ddd374c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga2afc15d86033bb9cd51878cd2cfd8f54">os.remove</a> (string ruta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acceso directo a <em><a class="el" href="group___f_i_l_e_s.html#ga9090bf8978edca58f29b3f6725f9007d" title="Elimina un archivo o carpeta.">files.remove()</a></em> . Elimina un archivo / carpeta.  <a href="#ga2afc15d86033bb9cd51878cd2cfd8f54"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga18b5176987a30dfe547f167ecbf67d32">os.rename</a> (string origen, string destino)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acceso directo a <em><a class="el" href="group___f_i_l_e_s.html#ga8d76e23fd9c8dc85c6741c14471d164b" title="Renombra un archivo / carpeta.">files.rename()</a></em> . Cambia el nombre a un archivo / carpeta.  <a href="#ga18b5176987a30dfe547f167ecbf67d32"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga7a28da0ba7d0f25a31563229a47236c1">os.getenv</a> (cualquier_tipo variable)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Valor asignado a la variable de entorno variable.  <a href="#ga7a28da0ba7d0f25a31563229a47236c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gac825f15b76d88cec01c3a2a6b60e77c6">os.quit</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Salir al XMB.  <a href="#gac825f15b76d88cec01c3a2a6b60e77c6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga0d1c8212ee16f5f4ac4ccc619fb21057">os.exit</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acceso directo a <em><a class="el" href="group___o_s.html#gac825f15b76d88cec01c3a2a6b60e77c6" title="Salir al XMB.">os.quit()</a></em>.  <a href="#ga0d1c8212ee16f5f4ac4ccc619fb21057"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gacd61ffe4848c0658696c52af09f10665">os.cpu</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Velocidad actual de la cpu.  <a href="#gacd61ffe4848c0658696c52af09f10665"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga23cd61ee2932b8cb81588ab06f7e3e70">os.cpu</a> (int speed)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambiar velocidad de la cpu.  <a href="#ga23cd61ee2932b8cb81588ab06f7e3e70"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gacebc8a77b73e1c9fc3575f02537d8ccc">os.autofps</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desactiva el auto-ajuste de la cpu.  <a href="#gacebc8a77b73e1c9fc3575f02537d8ccc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga372249f44af4cc5af4779b1f157965cf">os.autofps</a> (int fps)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa el auto-ajuste de la cpu, para mantener un framerate constante.  <a href="#ga372249f44af4cc5af4779b1f157965cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gaac2a2c83ef26c9f7458dac907257f592">os.runeboot</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta otro EBOOT.PBP. (En HBL esta función devuelve -1).  <a href="#gaac2a2c83ef26c9f7458dac907257f592"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gaef853e64537c2f27dd47cc32b6958d49">os.runiso</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta una ISO o una CSO. (En HBL esta función devuelve -1).  <a href="#gaef853e64537c2f27dd47cc32b6958d49"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga6e005d89d309da3f920e10f274f11a03">os.startPSX</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta un juego de PSX. (En HBL esta función devuelve -1).  <a href="#ga6e005d89d309da3f920e10f274f11a03"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gaaf8f8b9976eeba06f549d41f4e9691ac">os.getinitmemory</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el total de RAM. (Calculada al iniciar LuaDEV).  <a href="#gaaf8f8b9976eeba06f549d41f4e9691ac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga25110eb7aa9185cde2595c2c147013c4">os.getfreememory</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el total de RAM disponible.  <a href="#ga25110eb7aa9185cde2595c2c147013c4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga74a2e6958b25fbb86bf7ae5f740a6bb9">os.md5</a> (string data)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve la codificación MD5 de los datos.  <a href="#ga74a2e6958b25fbb86bf7ae5f740a6bb9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga253634897d7ab6aaf75d680d811e1536">os.sha1</a> (string data)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve la codificación SHA1 de los datos.  <a href="#ga253634897d7ab6aaf75d680d811e1536"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga40e395e4b243ac649827a59c35f575af">os.nick</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nick de usuario.  <a href="#ga40e395e4b243ac649827a59c35f575af"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gaac0ef65e4abaf28ab70e76336a2ca5c9">os.language</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Nick de usuario.  <a href="#gaac0ef65e4abaf28ab70e76336a2ca5c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga655bbd37026229040922458687fff7ac">os.message</a> (string texto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra un mensaje en pantalla. Sólo se puede aceptar.  <a href="#ga655bbd37026229040922458687fff7ac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gabaf02f0157144a7e200fb6e86f8db6d9">os.message</a> (string texto, int modo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra un mensaje en pantalla. Opcion para SI o NO.  <a href="#gabaf02f0157144a7e200fb6e86f8db6d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga1936e702037b396dd26fa3eac1e57018">os.message</a> (string texto, int modo, imagen logo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Muestra un mensaje en pantalla. Opcion para SI o NO. Con LOGO.  <a href="#ga1936e702037b396dd26fa3eac1e57018"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga3dde29b5e456d087d324be7c2f82cb3e">os.message</a> (string texto, int modo, function bottom, function top)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Version avanzada de message.  <a href="#ga3dde29b5e456d087d324be7c2f82cb3e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gac209ab5f6c67f774e991f14998a4eb74">os.osk</a> (string desc, string init, int maxsize, int lines, int modo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Teclado original en pantalla.  <a href="#gac209ab5f6c67f774e991f14998a4eb74"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac5a6f523321027b5580df3cbb0f7615b"></a><!-- doxytag: member="OS.hbl" ref="gac5a6f523321027b5580df3cbb0f7615b" args="" -->
+const boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gac5a6f523321027b5580df3cbb0f7615b">os.hbl</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Indica si estamos en hbl. Ejemplo: if os.hbl then ... end. <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Aquí encontrarás funciones variadas, que manejarán un poco el sistema operativo.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Tareas pendientes:</a></b></dt><dd>Mejorar OSK. Añadir más cosas variopintas.</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga1a1b5118bc72e19d7ab7059fcec23860"></a><!-- doxytag: member="os.clock" ref="ga1a1b5118bc72e19d7ab7059fcec23860" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.clock </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tiempo desde que LuaDEV se inició en segundos. </p>
+<p>Este número no es entero, si no que contiene decimales, así que también podrás extraer los milisegundos por ejemplo. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un número con el número de segundos transcurridos desde el inicio de LuaDEV (incluyendo splash). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadedecc40fef96d031bf190bfdcd502dd"></a><!-- doxytag: member="os.time" ref="gadedecc40fef96d031bf190bfdcd502dd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.time </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tiempo actual en segundos (Desde 1990). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el tiempo actual en segundos. Válido para usar con las demas funciones de fecha y hora. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gafd3487dab63930ab9fa55f954738168e"></a><!-- doxytag: member="os.time" ref="gafd3487dab63930ab9fa55f954738168e" args="(tabla fecha)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.time </td>
+          <td>(</td>
+          <td class="paramtype">tabla&nbsp;</td>
+          <td class="paramname"> <em>fecha</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tiempo en segundos de la fecha especificada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fecha</em>&nbsp;</td><td>Una tabla, con los campos year, month y day como minimo. hour, min, sec y isdst opcionales. Véase <em><a class="el" href="group___o_s.html#ga82b4bcdd9432dabbbc77d55469e676fc" title="Fecha y hora.">os.date()</a></em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el tiempo en segundos de la fecha entrada. Válido para usar con las demas funciones de fecha y hora. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga82b4bcdd9432dabbbc77d55469e676fc"></a><!-- doxytag: member="os.date" ref="ga82b4bcdd9432dabbbc77d55469e676fc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.date </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fecha y hora. </p>
+<p>Esto equivale a os.date("%c") </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una string, con la fecha y la hora. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7ab88e6231eae7dca3de259247bffc7d"></a><!-- doxytag: member="os.date" ref="ga7ab88e6231eae7dca3de259247bffc7d" args="(string formato)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.date </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>formato</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fecha y hora con formato. </p>
+<p>Ejemplo de formato: "%d/%m/%y" </p>
+<ul>
+<li><code>a</code> Nombre del día, abreviado: Thu </li>
+<li><code>A</code> Nombre del día, completo: Thursday </li>
+<li><code>b</code> Nombre del mes, abreviado: Aug </li>
+<li><code>B</code> Nombre del mes, completo: August </li>
+<li><code>c</code> Representación general de fecha y hora: Thu Aug 23 14:55:02 2001 </li>
+<li><code>d</code> Dia del mes (01-31): 23 </li>
+<li><code>H</code> Hora en formato 24h (00-23) : 14 </li>
+<li><code>I</code> Hora en formato 12h (01-12) : 02 </li>
+<li><code>j</code> Dia del año (001-366) : 235 </li>
+<li><code>m</code> Mes como número decimal (01-12): 08 </li>
+<li><code>M</code> Minuto (00-59): 55 </li>
+<li><code>p</code> AM o PM : PM </li>
+<li><code>S</code> Segundo (00-61) : 02 </li>
+<li><code>U</code> Número de semana con el primer domingo como primer dia de la semana uno (00-53) : 33 </li>
+<li><code>w</code> Día de la semana como número decimal, domingo = 0. (0-6) : 4 </li>
+<li><code>W</code> Número de semana con el primer lunes como primer dia de la semana uno (00-53) : 34 </li>
+<li><code>x</code> Representación de fecha : 08/23/01 </li>
+<li><code>X</code> Representación de hora: 14:55:02 </li>
+<li><code>y</code> Año, últimos 2 dígitos (00-99) : 01 </li>
+<li><code>Y</code> Año : 2001 </li>
+<li><code>Z</code> La zona horaria abreviada. </li>
+<li><code>%%</code> Un símbolo de porcentaje.</li>
+</ul>
+<p>Si el formato comienza con ! el tiempo se formatea de acuerdo al tiempo universal coordinado. UTC. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>formato</em>&nbsp;</td><td>El formato a usar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una string, formateada de acuerdo al formato pasado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga619dc96a03d1f7adb58d9be313035755"></a><!-- doxytag: member="os.date" ref="ga619dc96a03d1f7adb58d9be313035755" args="(string formato)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table os.date </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>formato</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Fecha y hora en tabla. </p>
+<p>La tabla devuelta contiene los siguientes campos: </p>
+<ul>
+<li><code>year</code> (2001) </li>
+<li><code>month</code> (1-12) </li>
+<li><code>day</code> (1-31) </li>
+<li><code>hour</code> (0-23) </li>
+<li><code>min</code> (0-59) </li>
+<li><code>sec</code> (0-59) </li>
+<li><code>wday</code> (1-7) Dia de la semana. El domingo es 1 </li>
+<li><code>yday</code> Dia dentro del año </li>
+<li><code>isdst</code> Booleano. Horario de verano. </li>
+<li><code>leap</code> Booleano. El año es bisiesto. </li>
+<li><code>nodim</code> Numero de dias en el mes. <dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>formato</em>&nbsp;</td><td>Usar "*t" como formato, para recibir una tabla en vez de un string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una tabla como la descrita anteriormente. </dd></dl>
+</li>
+</ul>
+</div>
+</div>
+<a class="anchor" id="ga39346175ce10868be9223986ea3f6794"></a><!-- doxytag: member="os.date" ref="ga39346175ce10868be9223986ea3f6794" args="(string formato, number tiempo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.date </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>formato</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tiempo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Formatear un tiempo (no el actual). </p>
+<p>Véase <em><a class="el" href="group___o_s.html#ga82b4bcdd9432dabbbc77d55469e676fc" title="Fecha y hora.">os.date()</a></em> para los formatos y <em><a class="el" href="group___o_s.html#gadedecc40fef96d031bf190bfdcd502dd" title="Tiempo actual en segundos (Desde 1990).">os_time()</a></em> para el tiempo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>formato</em>&nbsp;</td><td>El formato a usar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tiempo</em>&nbsp;</td><td>El tiempo a formatear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una string, formateada de acuerdo al formato pasado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6bd80bab39e6f249374f60bf93267f1c"></a><!-- doxytag: member="os.date" ref="ga6bd80bab39e6f249374f60bf93267f1c" args="(string formato, number tiempo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table os.date </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>formato</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tiempo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Formatear un tiempo en tabla (no el actual). </p>
+<p>Véase <em><a class="el" href="group___o_s.html#gadedecc40fef96d031bf190bfdcd502dd" title="Tiempo actual en segundos (Desde 1990).">os.time()</a></em> para el tiempo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>formato</em>&nbsp;</td><td>Usar "*t" como formato, para recibir una tabla en vez de un string. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tiempo</em>&nbsp;</td><td>El tiempo a formatear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una tabla como la descrita anteriormente. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga4912dfdf9b0501f5c58199ff62a5ac57"></a><!-- doxytag: member="os.difftime" ref="ga4912dfdf9b0501f5c58199ff62a5ac57" args="(number tiempo2, number tiempo1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.difftime </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tiempo2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tiempo1</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Diferencia de tiempos. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>tiempo2</em>&nbsp;</td><td>Tiempo final </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tiempo1</em>&nbsp;</td><td>Tiempo inicial </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve t2 - t1. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga381a22609b6f7753a1b2e2b2ddd374c2"></a><!-- doxytag: member="os.tmpfile" ref="ga381a22609b6f7753a1b2e2b2ddd374c2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.tmpfile </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Archivo temporal. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un nombre válido para usar como archivo temporal. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2afc15d86033bb9cd51878cd2cfd8f54"></a><!-- doxytag: member="os.remove" ref="ga2afc15d86033bb9cd51878cd2cfd8f54" args="(string ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.remove </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Acceso directo a <em><a class="el" href="group___f_i_l_e_s.html#ga9090bf8978edca58f29b3f6725f9007d" title="Elimina un archivo o carpeta.">files.remove()</a></em> . Elimina un archivo / carpeta. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>Archivo o carpeta a eliminar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga18b5176987a30dfe547f167ecbf67d32"></a><!-- doxytag: member="os.rename" ref="ga18b5176987a30dfe547f167ecbf67d32" args="(string origen, string destino)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.rename </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>origen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>destino</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Acceso directo a <em><a class="el" href="group___f_i_l_e_s.html#ga8d76e23fd9c8dc85c6741c14471d164b" title="Renombra un archivo / carpeta.">files.rename()</a></em> . Cambia el nombre a un archivo / carpeta. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>origen</em>&nbsp;</td><td>Ruta origen. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>destino</em>&nbsp;</td><td>Ruta destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7a28da0ba7d0f25a31563229a47236c1"></a><!-- doxytag: member="os.getenv" ref="ga7a28da0ba7d0f25a31563229a47236c1" args="(cualquier_tipo variable)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.getenv </td>
+          <td>(</td>
+          <td class="paramtype">cualquier_tipo&nbsp;</td>
+          <td class="paramname"> <em>variable</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Valor asignado a la variable de entorno variable. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>variable</em>&nbsp;</td><td>Una variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El valor asignado o nil si no está definida. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac825f15b76d88cec01c3a2a6b60e77c6"></a><!-- doxytag: member="os.quit" ref="gac825f15b76d88cec01c3a2a6b60e77c6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.quit </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Salir al XMB. </p>
+<p>Sale al XMB. Si hay callback de salida, se ejecuta. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0d1c8212ee16f5f4ac4ccc619fb21057"></a><!-- doxytag: member="os.exit" ref="ga0d1c8212ee16f5f4ac4ccc619fb21057" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.exit </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Acceso directo a <em><a class="el" href="group___o_s.html#gac825f15b76d88cec01c3a2a6b60e77c6" title="Salir al XMB.">os.quit()</a></em>. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacd61ffe4848c0658696c52af09f10665"></a><!-- doxytag: member="os.cpu" ref="gacd61ffe4848c0658696c52af09f10665" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int os.cpu </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Velocidad actual de la cpu. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un entero con el valor actual de la cpu (1-333) </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga23cd61ee2932b8cb81588ab06f7e3e70"></a><!-- doxytag: member="os.cpu" ref="ga23cd61ee2932b8cb81588ab06f7e3e70" args="(int speed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.cpu </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>speed</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cambiar velocidad de la cpu. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>speed</em>&nbsp;</td><td>Nueva velocidad de reloj (1-333) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacebc8a77b73e1c9fc3575f02537d8ccc"></a><!-- doxytag: member="os.autofps" ref="gacebc8a77b73e1c9fc3575f02537d8ccc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.autofps </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Desactiva el auto-ajuste de la cpu. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga372249f44af4cc5af4779b1f157965cf"></a><!-- doxytag: member="os.autofps" ref="ga372249f44af4cc5af4779b1f157965cf" args="(int fps)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.autofps </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>fps</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa el auto-ajuste de la cpu, para mantener un framerate constante. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>fps</em>&nbsp;</td><td>Framerate deseado (1-120) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaac2a2c83ef26c9f7458dac907257f592"></a><!-- doxytag: member="os.runeboot" ref="gaac2a2c83ef26c9f7458dac907257f592" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.runeboot </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Ejecuta otro EBOOT.PBP. (En HBL esta función devuelve -1). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta del nuevo eboot. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve -1 si no se pudo ejecutar. No da tiempo a que devuelva nada si concluye con éxito. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaef853e64537c2f27dd47cc32b6958d49"></a><!-- doxytag: member="os.runiso" ref="gaef853e64537c2f27dd47cc32b6958d49" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.runiso </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Ejecuta una ISO o una CSO. (En HBL esta función devuelve -1). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta de la ISO o CSO a ejecutar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve -1 si no se pudo ejecutar. No da tiempo a que devuelva nada si concluye con éxito. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6e005d89d309da3f920e10f274f11a03"></a><!-- doxytag: member="os.startPSX" ref="ga6e005d89d309da3f920e10f274f11a03" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.startPSX </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Ejecuta un juego de PSX. (En HBL esta función devuelve -1). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta del juego de PSX. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve -1 si no se pudo ejecutar. No da tiempo a que devuelva nada si concluye con éxito. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaaf8f8b9976eeba06f549d41f4e9691ac"></a><!-- doxytag: member="os.getinitmemory" ref="gaaf8f8b9976eeba06f549d41f4e9691ac" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.getinitmemory </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve el total de RAM. (Calculada al iniciar LuaDEV). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el número de bytes de RAM. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga25110eb7aa9185cde2595c2c147013c4"></a><!-- doxytag: member="os.getfreememory" ref="ga25110eb7aa9185cde2595c2c147013c4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.getfreememory </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve el total de RAM disponible. </p>
+<p>Observaciones: <br/>
+ Para saber el valor de la ram en porcentaje, sería: ( ( <a class="el" href="group___o_s.html#ga25110eb7aa9185cde2595c2c147013c4" title="Devuelve el total de RAM disponible.">os.getfreememory()</a> * 100 ) / <a class="el" href="group___o_s.html#gaaf8f8b9976eeba06f549d41f4e9691ac" title="Devuelve el total de RAM. (Calculada al iniciar LuaDEV).">os_getinitmemory()</a> ) </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el número de bytes de RAM disponible. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga74a2e6958b25fbb86bf7ae5f740a6bb9"></a><!-- doxytag: member="os.md5" ref="ga74a2e6958b25fbb86bf7ae5f740a6bb9" args="(string data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.md5 </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve la codificación MD5 de los datos. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>Datos para calcular su llave MD5. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve la llave MD5. Estilo: fad539fabc30459deadc0345f9a8c02b </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga253634897d7ab6aaf75d680d811e1536"></a><!-- doxytag: member="os.sha1" ref="ga253634897d7ab6aaf75d680d811e1536" args="(string data)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.sha1 </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>data</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve la codificación SHA1 de los datos. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>data</em>&nbsp;</td><td>Datos para calcular su llave SHA1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve la llave SHA1. Estilo: 0345f9a459deadc8c02bc6fad539fab27c30 </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga40e395e4b243ac649827a59c35f575af"></a><!-- doxytag: member="os.nick" ref="ga40e395e4b243ac649827a59c35f575af" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.nick </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Nick de usuario. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el nick configurado en la PSP. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaac0ef65e4abaf28ab70e76336a2ca5c9"></a><!-- doxytag: member="os.language" ref="gaac0ef65e4abaf28ab70e76336a2ca5c9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.language </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Nick de usuario. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el lenguaje actual de la PSP, uno de los siguientes: <ul>
+<li><code>"japanese"</code> </li>
+<li><code>"english"</code> </li>
+<li><code>"french"</code> </li>
+<li><code>"spanish"</code> </li>
+<li><code>"german"</code> </li>
+<li><code>"italian"</code> </li>
+<li><code>"dutch"</code> </li>
+<li><code>"portuguese"</code> </li>
+<li><code>"russian"</code> </li>
+<li><code>"korean"</code> </li>
+<li><code>"chinese traditional"</code> </li>
+<li><code>"chinese simplified"</code> </li>
+<li><code>"unknown"</code> &lt;- En caso de error. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga655bbd37026229040922458687fff7ac"></a><!-- doxytag: member="os.message" ref="ga655bbd37026229040922458687fff7ac" args="(string texto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil os.message </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra un mensaje en pantalla. Sólo se puede aceptar. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>El texto a mostrar en pantalla. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gabaf02f0157144a7e200fb6e86f8db6d9"></a><!-- doxytag: member="os.message" ref="gabaf02f0157144a7e200fb6e86f8db6d9" args="(string texto, int modo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.message </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>modo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra un mensaje en pantalla. Opcion para SI o NO. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>El texto a mostrar en pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Posibles valores: </p>
+<ul>
+<li><code>1</code> - Modo: Si No. </li>
+<li><code>0</code> - Modo: Aceptar. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Si el modo de ejecución es Si No, devuelve: <ul>
+<li><code>1</code> - Si </li>
+<li><code>0</code> - No </li>
+<li><code>-1</code> - Cancelado (redonda) En otro caso no devuelve nada. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1936e702037b396dd26fa3eac1e57018"></a><!-- doxytag: member="os.message" ref="ga1936e702037b396dd26fa3eac1e57018" args="(string texto, int modo, imagen logo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.message </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>modo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">imagen&nbsp;</td>
+          <td class="paramname"> <em>logo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Muestra un mensaje en pantalla. Opcion para SI o NO. Con LOGO. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>El texto a mostrar en pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Posibles valores: </p>
+<ul>
+<li><code>1</code> - Modo: Si No. </li>
+<li><code>0</code> - Modo: Aceptar. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>logo</em>&nbsp;</td><td>Imagen que se mostrará en la esquina superior izquierda. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Si el modo de ejecución es Si No, devuelve: <ul>
+<li><code>1</code> - Si </li>
+<li><code>0</code> - No </li>
+<li><code>-1</code> - Cancelado (redonda) En otro caso no devuelve nada. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3dde29b5e456d087d324be7c2f82cb3e"></a><!-- doxytag: member="os.message" ref="ga3dde29b5e456d087d324be7c2f82cb3e" args="(string texto, int modo, function bottom, function top)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number os.message </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>modo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&nbsp;</td>
+          <td class="paramname"> <em>bottom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">function&nbsp;</td>
+          <td class="paramname"> <em>top</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Version avanzada de message. </p>
+<p>Observaciones: Si las funciones bottom y top dibujan algo en pantalla, NO usar screen.flip(). Puesto que se llama automáticamente. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>El texto a mostrar en pantalla. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Posibles valores: </p>
+<ul>
+<li><code>1</code> - Modo: Si No. </li>
+<li><code>0</code> - Modo: Aceptar. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bottom</em>&nbsp;</td><td>Función que se ejecutará ANTES de dibujar el mensaje. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>top</em>&nbsp;</td><td>Función que se ejecutará DESPUES de dibujar el menaje. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Si el modo de ejecución es Si No, devuelve: <ul>
+<li><code>1</code> - Si </li>
+<li><code>0</code> - No </li>
+<li><code>-1</code> - Cancelado (redonda) En otro caso no devuelve nada. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac209ab5f6c67f774e991f14998a4eb74"></a><!-- doxytag: member="os.osk" ref="gac209ab5f6c67f774e991f14998a4eb74" args="(string desc, string init, int maxsize, int lines, int modo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string os.osk </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>init</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>maxsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>lines</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>modo</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Teclado original en pantalla. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>desc</em>&nbsp;</td><td>Descripción. Sale abajo a la derecha. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>init</em>&nbsp;</td><td>Texto inicial. Puede ser "". </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>maxsize</em>&nbsp;</td><td>Máximo número de carácteres a poder entrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>lines</em>&nbsp;</td><td>Máximo número de líneas a poder entrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Tipo del teclado en pantalla, uno de los siguientes: </p>
+<ul>
+<li><code>--</code> En desarrollo. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El texto introducido, más un número de entre éstos: <ul>
+<li><code>0</code> - No se ha cambiado nada. </li>
+<li><code>1</code> - Se ha cambiado el texto que había. </li>
+<li><code>-1</code> - Se ha cancelado. </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

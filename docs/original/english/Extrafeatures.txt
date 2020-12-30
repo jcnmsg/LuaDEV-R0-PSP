@@ -1,0 +1,12 @@
+ 
+Functions:
+
+image.chipload () - would be a load of the internal image of the logo of chipmunks
+ 
+image.gearload () - ditto above, using sphash wheel of LUADev
+ 
+image.logoload () idem above logo LUADev
+ 
+image.luaload () - LUA logo
+ 
+logoload: zblit (x, y, z, Angx, Angy, angz) - 3D blit (experimental, fails pretty) 

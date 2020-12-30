@@ -1,0 +1,12 @@
+﻿threadman: Multitasking processes.
+Functions
+
+table list ()
+  Lists the current threads.
+************************************************** ******************************
+Function Documentation
+
+threadman table :: list ()
+  Lists the current threads.
+  Returns:
+  table

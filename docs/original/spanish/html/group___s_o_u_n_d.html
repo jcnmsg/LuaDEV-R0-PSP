@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: sound : Objetos de sonido.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>sound : Objetos de sonido.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">sonido&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga878d6c9e207803ba5cbcaaea3a5805b1">sound.load</a> (string filename)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carga un sonido (Sólo MP3, AT3, BGM y WAV).  <a href="#ga878d6c9e207803ba5cbcaaea3a5805b1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga3cc532b00244ae12f73fe61e754e2286">sound.play</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reproduce un objeto de sonido en el canal por defecto.  <a href="#ga3cc532b00244ae12f73fe61e754e2286"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga54c4d0c713a9e4d49b15335de835b7cb">sound.play</a> (sonido objeto, int canal)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reproduce un objeto de sonido.  <a href="#ga54c4d0c713a9e4d49b15335de835b7cb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gab595c5850422b7ca8d0dc1c50a9e1e73">sound.pause</a> (sonido objeto, int mode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pausa un objeto de sonido.  <a href="#gab595c5850422b7ca8d0dc1c50a9e1e73"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga01d704fc463ebc5bc40d8568e270e157">sound.volume</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Volumen de un sonido.  <a href="#ga01d704fc463ebc5bc40d8568e270e157"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gab1fcea6cdb5fd67b6435225587ad0333">sound.volume</a> (sonido objeto, int volumen)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Establece el volumen de un sonido.  <a href="#gab1fcea6cdb5fd67b6435225587ad0333"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga617436b486076a26eca56835868d13f5">sound.volume</a> (sonido objeto, int volumenL, int volumenR)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Establece el volumen de un sonido, canales por separado.  <a href="#ga617436b486076a26eca56835868d13f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga7a7a09e1cc703203bd313a697fe4ebc0">sound.stop</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detiene un objeto de sonido.  <a href="#ga7a7a09e1cc703203bd313a697fe4ebc0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga3d2347e10a4ee888aeab473be386b783">sound.free</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Libera un objeto de sonido.  <a href="#ga3d2347e10a4ee888aeab473be386b783"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gacb5f94efb2b2a32b96b65811c0b77200">sound.playing</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve si un sonido se está reproduciendo o no.  <a href="#gacb5f94efb2b2a32b96b65811c0b77200"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga5663564d0a1051097001cfd2782cbd56">sound.loop</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detiene el sonido en modo loop.  <a href="#ga5663564d0a1051097001cfd2782cbd56"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga840866b5386943876be9c014db373f90">sound.loop</a> (string ruta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reproduce un archivo en modo loop.  <a href="#ga840866b5386943876be9c014db373f90"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga586ed506e531524890f21e107e6739ab">sound.id3</a> (string ruta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Información ID3 (Sólo MP3).  <a href="#ga586ed506e531524890f21e107e6739ab"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga53a11cc8fc897609a935870ec4b9c8d4">sound.cover</a> (string ruta)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Carátula ID3 (Sólo MP3).  <a href="#ga53a11cc8fc897609a935870ec4b9c8d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gab71df982eb9dc259bd83f012ad5ee509">sound.position</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Posición de un sonido. (Sólo MP3, [en desarrollo los otros formatos]).  <a href="#gab71df982eb9dc259bd83f012ad5ee509"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga41e4bfd1b2f14f5eeab53f4d9fd97bcb">sound.duration</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Duración de un sonido. (Sólo MP3, [en desarrollo los otros formatos]).  <a href="#ga41e4bfd1b2f14f5eeab53f4d9fd97bcb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gaf771ff154ca84447689ec78b4f0f50a6">sound.percent</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve el porcentaje reproducido de un sonido.  <a href="#gaf771ff154ca84447689ec78b4f0f50a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga517d2d6c098314886584da93dc5255cb">sound.percent</a> (sonido objeto, number percent)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setea el porcentaje reproducido de un sonido (Cambia la posición).  <a href="#ga517d2d6c098314886584da93dc5255cb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">tabla&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga23f94efe8916a36504d882978ede9387">sound.vis</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Interfaz interno al visualizador.  <a href="#ga23f94efe8916a36504d882978ede9387"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">tabla&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga1d36bfe75edd125509ffce1e9544e2c8">sound.fft</a> (sonido objeto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Interfaz interno al FFT (Fast Fourier Tranform).  <a href="#ga1d36bfe75edd125509ffce1e9544e2c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">tabla&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gaa3df82a5fae33d63adc60143ca8b7bc0">sound.blit</a> (sonido objeto, string tipo, number x, number y, number w, number h, color base)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja una forma de onda o espectómetro (barritas del winamp).  <a href="#gaa3df82a5fae33d63adc60143ca8b7bc0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">tabla&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#gaa06f97c5078afdb61bb3ad6850a17e01">sound.blit</a> (sonido objeto, string tipo, number x, number y, number w, number h, color arriba, color abajo, color pico)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja un espectómetro, pero con gradientes.  <a href="#gaa06f97c5078afdb61bb3ad6850a17e01"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">tabla&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_o_u_n_d.html#ga33826392e9ccf468dcb81dc4d973efb7">sound.blit</a> (sonido objeto, string tipo, number x, number y, number w, number h, color fondo_arriba, color fondo_abajo, color barra_arriba, color barra_abajo, color pico, number espaciado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Dibuja un espectómetro de barras. (Estilo Winamp).  <a href="#ga33826392e9ccf468dcb81dc4d973efb7"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Con este módulo se cargará / reproducirá / controlará los sonidos en LuaDEV.<br/>
+ Formatos soportados: <em> MP3, AT3, BGM, WAV </em></p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL no se reproducirán ni los MP3, ni los AT3, pero están protegidos. Es decir, todas las funciones "funcionarán" pero de un modo "falso". O sea, puedes programar tranquilo una versión para CFW, que en HBL funcionará de igual modo, pero sin que se reproduzca el audio en cuestión. </td></tr>
+  </table>
+  </dd>
+</dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga878d6c9e207803ba5cbcaaea3a5805b1"></a><!-- doxytag: member="sound.load" ref="ga878d6c9e207803ba5cbcaaea3a5805b1" args="(string filename)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sonido sound.load </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>filename</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carga un sonido (Sólo MP3, AT3, BGM y WAV). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>Ruta del archivo a cargar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo sonido. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3cc532b00244ae12f73fe61e754e2286"></a><!-- doxytag: member="sound.play" ref="ga3cc532b00244ae12f73fe61e754e2286" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.play </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reproduce un objeto de sonido en el canal por defecto. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido a reproducir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga54c4d0c713a9e4d49b15335de835b7cb"></a><!-- doxytag: member="sound.play" ref="ga54c4d0c713a9e4d49b15335de835b7cb" args="(sonido objeto, int canal)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.play </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>canal</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reproduce un objeto de sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido a reproducir. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>canal</em>&nbsp;</td><td>Canal dónde se reproducirá. Canal de 1 a 8. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab595c5850422b7ca8d0dc1c50a9e1e73"></a><!-- doxytag: member="sound.pause" ref="gab595c5850422b7ca8d0dc1c50a9e1e73" args="(sonido objeto, int mode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.pause </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>mode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pausa un objeto de sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido a pausar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>mode</em>&nbsp;</td><td>Tipo de pausa, uno de los siguientes: </p>
+<ul>
+<li><code>-1</code> - Automática. Si no está pausado se pausa, si está pausado se resume. </li>
+<li><code>0</code> - Resume el sonido (si está pausado). </li>
+<li><code>1</code> - Pausa el sonido (si se está reproduciendo). </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga01d704fc463ebc5bc40d8568e270e157"></a><!-- doxytag: member="sound.volume" ref="ga01d704fc463ebc5bc40d8568e270e157" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number sound.volume </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Volumen de un sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>2 numeros. Volumen canal izquierdo y volumen canal derecho. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab1fcea6cdb5fd67b6435225587ad0333"></a><!-- doxytag: member="sound.volume" ref="gab1fcea6cdb5fd67b6435225587ad0333" args="(sonido objeto, int volumen)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.volume </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>volumen</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Establece el volumen de un sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>volumen</em>&nbsp;</td><td>Un número. Entre 0 y 199. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga617436b486076a26eca56835868d13f5"></a><!-- doxytag: member="sound.volume" ref="ga617436b486076a26eca56835868d13f5" args="(sonido objeto, int volumenL, int volumenR)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.volume </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>volumenL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>volumenR</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Establece el volumen de un sonido, canales por separado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>volumenL</em>&nbsp;</td><td>Volumen canal izquierdo. Un número. Entre 0 y 199. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>volumenR</em>&nbsp;</td><td>Volumen canal derecho. Un número. Entre 0 y 199. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7a7a09e1cc703203bd313a697fe4ebc0"></a><!-- doxytag: member="sound.stop" ref="ga7a7a09e1cc703203bd313a697fe4ebc0" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.stop </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Detiene un objeto de sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido a detener. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3d2347e10a4ee888aeab473be386b783"></a><!-- doxytag: member="sound.free" ref="ga3d2347e10a4ee888aeab473be386b783" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.free </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Libera un objeto de sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido a liberar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacb5f94efb2b2a32b96b65811c0b77200"></a><!-- doxytag: member="sound.playing" ref="gacb5f94efb2b2a32b96b65811c0b77200" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean sound.playing </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve si un sonido se está reproduciendo o no. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True si está reproduciendo, false en caso contrario. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5663564d0a1051097001cfd2782cbd56"></a><!-- doxytag: member="sound.loop" ref="ga5663564d0a1051097001cfd2782cbd56" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.loop </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Detiene el sonido en modo loop. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga840866b5386943876be9c014db373f90"></a><!-- doxytag: member="sound.loop" ref="ga840866b5386943876be9c014db373f90" args="(string ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.loop </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Reproduce un archivo en modo loop. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>La ruta del archivo a reproducir como loop. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga586ed506e531524890f21e107e6739ab"></a><!-- doxytag: member="sound.id3" ref="ga586ed506e531524890f21e107e6739ab" args="(string ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table sound.id3 </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Información ID3 (Sólo MP3). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>La ruta del archivo MP3. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con los siguientes campos: <ul>
+<li><code>title</code> (string) </li>
+<li><code>artist</code> (string) </li>
+<li><code>album</code> (string) </li>
+<li><code>year</code> (string) </li>
+<li><code>comment</code> (string) </li>
+<li><code>genrecode</code> (string) </li>
+<li><code>genre</code> (string) </li>
+<li><code>track</code> (string) </li>
+<li><code>tracknumber</code> (number) </li>
+<li><code>length</code> (number) (en segundos) </li>
+<li><code>cover</code> (boolean) (si tiene o no imagen) </li>
+<li><code>imagetype</code> (string) [ "JPG" \ "PNG" ] </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga53a11cc8fc897609a935870ec4b9c8d4"></a><!-- doxytag: member="sound.cover" ref="ga53a11cc8fc897609a935870ec4b9c8d4" args="(string ruta)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen sound.cover </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>ruta</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Carátula ID3 (Sólo MP3). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>ruta</em>&nbsp;</td><td>La ruta del archivo MP3. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una imagen si existe, o nil. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab71df982eb9dc259bd83f012ad5ee509"></a><!-- doxytag: member="sound.position" ref="gab71df982eb9dc259bd83f012ad5ee509" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number sound.position </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Posición de un sonido. (Sólo MP3, [en desarrollo los otros formatos]). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número. Indicando la posición en segundos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga41e4bfd1b2f14f5eeab53f4d9fd97bcb"></a><!-- doxytag: member="sound.duration" ref="ga41e4bfd1b2f14f5eeab53f4d9fd97bcb" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number sound.duration </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Duración de un sonido. (Sólo MP3, [en desarrollo los otros formatos]). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número. Indicando la duración en segundos. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf771ff154ca84447689ec78b4f0f50a6"></a><!-- doxytag: member="sound.percent" ref="gaf771ff154ca84447689ec78b4f0f50a6" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number sound.percent </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve el porcentaje reproducido de un sonido. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número. Indicando el porcentaje. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga517d2d6c098314886584da93dc5255cb"></a><!-- doxytag: member="sound.percent" ref="ga517d2d6c098314886584da93dc5255cb" args="(sonido objeto, number percent)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil sound.percent </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>percent</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Setea el porcentaje reproducido de un sonido (Cambia la posición). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>percent</em>&nbsp;</td><td>Un número. Indicando el porcentaje. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga23f94efe8916a36504d882978ede9387"></a><!-- doxytag: member="sound.vis" ref="ga23f94efe8916a36504d882978ede9387" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tabla sound.vis </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Interfaz interno al visualizador. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con los valores de la forma de onda en ese preciso instante. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1d36bfe75edd125509ffce1e9544e2c8"></a><!-- doxytag: member="sound.fft" ref="ga1d36bfe75edd125509ffce1e9544e2c8" args="(sonido objeto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tabla sound.fft </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Interfaz interno al FFT (Fast Fourier Tranform). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con los valores de potencias separados en frecuencias. (16 rangos). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa3df82a5fae33d63adc60143ca8b7bc0"></a><!-- doxytag: member="sound.blit" ref="gaa3df82a5fae33d63adc60143ca8b7bc0" args="(sonido objeto, string tipo, number x, number y, number w, number h, color base)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tabla sound.blit </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>base</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja una forma de onda o espectómetro (barritas del winamp). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tipo</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>"wave"</code> - Forma de onda (tipo KIT, de el coche fantástico) </li>
+<li><code>"waveline"</code> - Forma de onda (sólo la línea, tipo Winamp) </li>
+<li><code>"spectrum_lines"</code> - Espectómetro. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>base</em>&nbsp;</td><td>Color de la forma de onda o espectómetro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa06f97c5078afdb61bb3ad6850a17e01"></a><!-- doxytag: member="sound.blit" ref="gaa06f97c5078afdb61bb3ad6850a17e01" args="(sonido objeto, string tipo, number x, number y, number w, number h, color arriba, color abajo, color pico)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tabla sound.blit </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>arriba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>abajo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>pico</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja un espectómetro, pero con gradientes. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tipo</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>"spectrum_gradlines"</code> - Forma de onda (tipo KIT, de el coche fantástico) </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>arriba</em>&nbsp;</td><td>Color de la barra arriba. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>abajo</em>&nbsp;</td><td>Color de la barra abajo. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pico</em>&nbsp;</td><td>Color del pico. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga33826392e9ccf468dcb81dc4d973efb7"></a><!-- doxytag: member="sound.blit" ref="ga33826392e9ccf468dcb81dc4d973efb7" args="(sonido objeto, string tipo, number x, number y, number w, number h, color fondo_arriba, color fondo_abajo, color barra_arriba, color barra_abajo, color pico, number espaciado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tabla sound.blit </td>
+          <td>(</td>
+          <td class="paramtype">sonido&nbsp;</td>
+          <td class="paramname"> <em>objeto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>tipo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>fondo_arriba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>fondo_abajo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>barra_arriba</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>barra_abajo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>pico</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>espaciado</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Dibuja un espectómetro de barras. (Estilo Winamp). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>objeto</em>&nbsp;</td><td>Objeto de sonido. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tipo</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>"spectrum_bars"</code> - Forma de onda (tipo KIT, de el coche fantástico) </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto en píxels. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fondo_arriba</em>&nbsp;</td><td>Color de la barra del fondo arriba. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>fondo_abajo</em>&nbsp;</td><td>Color de la barra del fondo abajo. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>barra_arriba</em>&nbsp;</td><td>Color de la barra arriba. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>barra_abajo</em>&nbsp;</td><td>Color de la barra abajo. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pico</em>&nbsp;</td><td>Color del pico. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>espaciado</em>&nbsp;</td><td>Espaciado vertical (para crear cuadritos). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

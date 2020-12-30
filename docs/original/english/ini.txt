@@ -1,0 +1,145 @@
+﻿ini: Configuration Files.
+Functions
+
+ini.load inifile (string path)
+
+ini.load inifile (string path, boolean autosave)
+
+ini.read string (string path, string section, string key, string default)
+ Read an entry in a file. Ini.
+
+ini.read string (string path, string key, string default)
+ Read an entry in a file. INI (no section).
+
+ini.read string (inifile ini, string section, string key, string default)
+ Read an entry in a file. Ini.
+
+ini.read string (inifile ini, string key, string default)
+ Read an entry in a file. INI (no section).
+
+ini.write nil (string path, string section, string key, string data)
+ Write data to a file. Ini.
+
+ini.write nil (inifile ini, string section, string key, string data)
+ Write data to a file. Ini.
+
+ini.write nil (string path, string key, string data)
+ Write data to a file. INI (no section).
+
+ini.write nil (inifile ini, string key, string data)
+ Write data to a file. INI (no section).
+
+ini.free nil (inifile ini)
+ Libera (and saved if he was ready for it) ini object.
+************************************************** ******************************
+Function Documentation
+
+ini.load inifile (string path)
+ Open the ini file and saves it in cache, returning this object. If the file does not exist, create a new one.
+ Parameters:
+ The path of the file path. ini
+ Returns:
+ Ini object.
+ Example:
+ inis.lua.
+
+ini.load inifile (string path, boolean autosave)
+ Open the ini file and saves it in cache, returning this object. If the file does not exist, create a new one.
+ Parameters:
+ The path of the file path. ini
+ Adding autosave parameter true, the object is self-saved ini to remove.
+ Returns:
+ Ini object.
+
+ini.read string (string path, string section, string key, string default)
+ Read an entry in a file. Ini.
+ Can not find the entry, returns the default
+ Parameters:
+ The path of the file path. ini
+ section Section.
+ key The key name.
+ Default The default value if the key is not in the file.
+ Returns:
+ The value found, or the default value.
+ Example:
+ inis.lua.
+
+ini.read string (string path, string key, string default)
+ Read an entry in a file. INI (no section).
+ Can not find the entry, returns the default
+ Parameters:
+ The path of the file path. ini
+ key The key name.
+ Default The default value if the key is not in the file.
+ Returns:
+ The value found, or the default value.
+
+ini.read string (inifile ini, string section, string key, string default)
+ Read an entry in a file. Ini.
+ Can not find the entry, returns the default
+ Parameters:
+ ini ini object caching.
+ section Section.
+ key The key name.
+ Default The default value if the key is not in the file.
+ Returns:
+ The value found, or the default value.
+
+ini.read string (inifile ini, string key, string default)
+ Read an entry in a file. INI (no section).
+ Can not find the entry, returns the default
+ Parameters:
+ ini ini object caching.
+ key The key name.
+ Default The default value if the key is not in the file.
+ Returns:
+ The value found, or the default value.
+
+ini.write nil (string path, string section, string key, string data)
+ Write data to a file. Ini.
+ Parameters:
+ The path of the file path. ini
+ section Section.
+ key The key name.
+ Data to store data.
+ Returns:
+ Nothing.
+ Examples:
+ inis.lua.
+
+ini.write nil (inifile ini, string section, string key, string data)
+ Write data to a file. Ini.
+ Parameters:
+ ini ini object caching.
+ section Section.
+ key The key name.
+ Data to store data.
+ Returns:
+ Nothing.
+
+ini.write nil (string path, string key, string data)
+ Write data to a file. INI (no section).
+ Parameters:
+ The path of the file path. ini
+ key The key name.
+ Data to store data.
+ Returns:
+ Nothing.
+
+ini.write nil (inifile ini, string key, string data)
+ Write data to a file. INI (no section).
+ Parameters:
+ ini ini object caching.
+ key The key name.
+ Data to store data.
+ Returns:
+ Nothing.
+
+ini.free nil (inifile ini)
+ Libera (and saved if he was ready for it) ini object.
+ Parameters:
+ ini ini object caching.
+ Returns:
+ Nothing.
+ Example:
+ inis.lua.

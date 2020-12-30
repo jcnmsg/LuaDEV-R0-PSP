@@ -1,0 +1,245 @@
+﻿controls: Use of controls.
+Functions
+
+Controls.read nil ()
+ Reading performs controls.
+
+controls.up boolean ()
+ D-PAD up.
+
+controls.down boolean ()
+ D-PAD down.
+
+controls.right boolean ()
+ D-PAD right.
+
+controls.left boolean ()
+ D-PAD left.
+
+controls.l boolean ()
+ L. Button
+
+controls.r boolean ()
+ R. Button
+
+controls.triangle boolean ()
+ Triangle button.
+
+controls.circle boolean ()
+ Circle button.
+
+controls.cross boolean ()
+ Cross button.
+
+controls.square boolean ()
+ Square Button.
+
+controls.home boolean ()
+ Home Button.
+
+controls.hold boolean ()
+ Hold. (Lock controls).
+
+controls.start boolean ()
+ Start Button.
+
+controls.select boolean ()
+ Select button.
+
+controls.wlan boolean ()
+ WLAN switch.
+
+controls.analogx number ()
+ Analog Joystick, X axis
+
+controls.analogy number ()
+ Analog Joystick, Y axis
+
+controls.press boolean (string key)
+ Freshly pressed button.
+
+controls.release boolean (string key)
+ Button just released.
+
+controls.waitforkey number ()
+ Wait until you press any button.
+
+controls.homepopup nil (int on)
+ Enable / disable message Home (Quit Game).
+
+nil controls.analogtodigital (int distance)
+ Joystick analog converter -> digital.
+************************************************** ******************************
+Function Documentation
+
+Controls.read nil ()
+ Reading performs controls.
+ Returns:
+ Nothing.
+
+controls.up boolean ()
+ D-PAD up.
+ Returns:
+ true / false. As if pressed up on the D-PAD.
+
+controls.down boolean ()
+ D-PAD down.
+ Returns:
+ true / false. As if pressed down on the D-PAD.
+
+controls.right boolean ()
+ D-PAD right.
+ Returns:
+ true / false. As if pressed right on the D-PAD.
+
+controls.left boolean ()
+ D-PAD left.
+ Returns:
+ true / false. As if pressed left on the D-PAD.
+
+controls.l boolean ()
+ L. Button
+ Returns:
+ true / false. Depending on whether the button is L.
+
+controls.r boolean ()
+ R. Button
+ Returns:
+ true / false. As if the button R.
+
+controls.triangle boolean ()
+ Triangle button.
+ Returns:
+ true / false. As if pressed the triangle button.
+
+controls.circle boolean ()
+ Circle button.
+ Returns:
+ true / false. As if pressed the circle button.
+
+controls.cross boolean ()
+ Cross button.
+ Returns:
+ true / false. As if pressed the cross button.
+
+controls.square boolean ()
+ Square Button.
+ Returns:
+ true / false. As if pressed the square button.
+
+controls.home boolean ()
+ Home Button.
+ Returns:
+ true / false. As if pressed the Home button.
+
+controls.hold boolean ()
+ Hold. (Lock controls).
+ Returns:
+ true / false. As if Hold is enabled.
+
+controls.start boolean ()
+ Start Button.
+ Returns:
+ true / false. As if the start button is pressed.
+
+controls.select boolean ()
+ Select button.
+ Returns:
+ true / false. As if pressed the Select button.
+
+controls.wlan boolean ()
+ WLAN switch.
+ Returns:
+ true / false. As if enabled WLAN switch.
+
+controls.analogx number ()
+ Analog Joystick, X axis
+ Returns:
+ A number of the range (-128: left, +127: right).
+
+controls.analogy number ()
+ Analog Joystick, Y axis
+ Returns:
+ A number of the range (-128: above +127: below).
+
+controls.press boolean (string key)
+ Freshly pressed button.
+ Parameters:
+ A string of key among the following:
+ "Up" D-PAD up.
+ "Down" D-PAD down.
+ "Left" D-PAD left.
+ "Right" right D-PAD.
+ "L" Button L.
+ "R" button R.
+ "Triangle" triangle button.
+ "Cross" cross button.
+ "Circle" circle button.
+ "Square" square button.
+ "Start" button start.
+ "Select" button select.
+ "Hold" HOLD switch.
+ "Home" button Home.
+ Returns:
+ true / false depending on whether the button is just pressed.
+
+controls.release boolean (string key)
+ Button just released.
+ Parameters:
+ A string of key among the following:
+ "Up" D-PAD up.
+ "Down" D-PAD down.
+ "Left" D-PAD left.
+ "Right" right D-PAD.
+ "L" Button L.
+ "R" button R.
+ "Triangle" triangle button.
+ "Cross" cross button.
+ "Circle" circle button.
+ "Square" square button.
+ "Start" button start.
+ "Select" button select.
+ "Hold" HOLD switch.
+ "Home" button Home.
+ Returns:
+ true / false depending on whether the button is newly released.
+
+controls.waitforkey number ()
+ Wait until you press any button.
+ LuaDEV stops running until you press any button, and return the button pressed.
+ Returns:
+ A number of the following:
+ 1 (select button)
+ 4 (START)
+ 5 (D-PAD up)
+ 6 (D-PAD right)
+ 7 (D-PAD down)
+ 8 (D-PAD left)
+ 9 (L button)
+ 10 (R button)
+ 13 (Triangle)
+ 14 (Circle)
+ 15 (Cross)
+ 16 (Square)
+ 17 (Home)
+ 18 (Hold)
+
+controls.homepopup nil (int on)
+ Enable / disable message Home (Quit Game).
+ Parameters:
+ On one of the following:
+ 0 - Disable the menu "Quit Game".
+ 1 - Enable the menu "Quit Game".
+ Returns:
+ Nothing.
+ Exceptions:
+ In HBL, this function does nothing.
+
+nil controls.analogtodigital (int distance)
+ Joystick analog converter -> digital.
+ The joystick receives values ​​between -128 and 127. With this function, you will pass some distance from the center (0), also activates its counterpart in the D-PAD. That is, if we apply a distance of 60, moving the analog stick in any direction, from more or less halfway activates his counterpart. For example, if you move the analog stick up and left, controls.up () and controls.left () will also true.
+ To turn off the converter, use distance = 0.
+ Parameters:
+ distance from the distance which activates the corresponding D-PAD.
+ Returns:
+ Nothing.

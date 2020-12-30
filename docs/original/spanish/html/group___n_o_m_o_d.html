@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: Sin módulo, funciones básicas.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>Sin módulo, funciones básicas.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___n_o_m_o_d.html#ga9af752562f77dcf7d37a7e16740a4f0f">assert</a> (chunk v, string message)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa un mensaje de error cuando su argumento es falso.  <a href="#ga9af752562f77dcf7d37a7e16740a4f0f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___n_o_m_o_d.html#ga57190db8bb6616d4d1dd51493c8bfa3c">collectgarbage</a> (string opcion, int longitud)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Manejo del liberador de memoria.  <a href="#ga57190db8bb6616d4d1dd51493c8bfa3c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___n_o_m_o_d.html#ga2d9cffcaea1e84a0c53543459af13868">dofile</a> (string archivo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Ejecuta el fichero como un archivo Lua.  <a href="#ga2d9cffcaea1e84a0c53543459af13868"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___n_o_m_o_d.html#ga4f825b4ca4de7da98664b28d97fede53">error</a> (string mensaje, int nivel)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Invoca un error Lua.  <a href="#ga4f825b4ca4de7da98664b28d97fede53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">chunk&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___n_o_m_o_d.html#ga25c0089f13813d9f504f9ea1ecde7793">loadstring</a> (string codigo, string nombre)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Similar a load, pero obtiene el chunk del string especificado.  <a href="#ga25c0089f13813d9f504f9ea1ecde7793"></a><br/></td></tr>
+</table>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga9af752562f77dcf7d37a7e16740a4f0f"></a><!-- doxytag: member="nomod.java::assert" ref="ga9af752562f77dcf7d37a7e16740a4f0f" args="(chunk v, string message)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil assert </td>
+          <td>(</td>
+          <td class="paramtype">chunk&nbsp;</td>
+          <td class="paramname"> <em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>message</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa un mensaje de error cuando su argumento es falso. </p>
+<p>En caso contrario retorna todos sus argumentos. El mensaje de error por defecto es: "assertion failed". Este comando se suele utilizar en conjunto con loadstring, load y loadfile para ejecutar fragmentos de código Lua.<br/>
+<br/>
+ Para ejecutar código además, se utilizarán paréntesis al final del assert para asegurar su llamada.<br/>
+ Ejemplo: </p>
+<div class="fragment"><pre class="fragment"><a class="code" href="group___n_o_m_o_d.html#ga9af752562f77dcf7d37a7e16740a4f0f" title="Activa un mensaje de error cuando su argumento es falso.">assert</a>(<a class="code" href="group___n_o_m_o_d.html#ga25c0089f13813d9f504f9ea1ecde7793" title="Similar a load, pero obtiene el chunk del string especificado.">loadstring</a>(<span class="stringliteral">&quot;mivariable = 23&quot;</span>))();
+</pre></div> <dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>v</em>&nbsp;</td><td>Trozo de código. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>message</em>&nbsp;</td><td>El mensaje del error, si no se especifica se usará el mensaje de error por defecto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga57190db8bb6616d4d1dd51493c8bfa3c"></a><!-- doxytag: member="nomod.java::collectgarbage" ref="ga57190db8bb6616d4d1dd51493c8bfa3c" args="(string opcion, int longitud)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil collectgarbage </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>opcion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>longitud</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Manejo del liberador de memoria. </p>
+<p>El liberador de memoria se ejecuta automáticamente en cualquier aplicación Lua, usar tan sólo éstos comandos si necesitais tener un control extremo de la liberación de la memoria. (Esto sólo afecta a las variables y objetos Lua, los objetos LuaDEV se liberarán manualmente, y a parte). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>opcion</em>&nbsp;</td><td>Una de las siguientes: </p>
+<ul>
+<li><code>"stop"</code> : Detiene el liberador de memoria. </li>
+<li><code>"restart"</code> : Reinicia el liberador de memoria. </li>
+<li><code>"collect"</code> : Realiza un ciclo completo de liberación de memoria. </li>
+<li><code>"step"</code> : Realiza un paso de liberación de memoria. El tamaño del paso se debe afinar experimentalmente. Devuelve true si el paso acaba un ciclo de liberación completo. </li>
+<li><code>"steppause"</code> : Establece como pausa el argumento tamaño / 100. </li>
+<li><code>"setstepmul"</code> : Establece como multiplicador del paso el tamaño / 100. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>longitud</em>&nbsp;</td><td>Tamaño para las opciones "step", "steppause" y "setstepmul". </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada o true, en caso de "step". </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2d9cffcaea1e84a0c53543459af13868"></a><!-- doxytag: member="nomod.java::dofile" ref="ga2d9cffcaea1e84a0c53543459af13868" args="(string archivo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... dofile </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>archivo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Ejecuta el fichero como un archivo Lua. </p>
+<p>Cuando se ejecuta sin argumentos, ejecuta el contenido de la entrada estándard <em>stdin</em>.<br/>
+<br/>
+ Si el archivo a ejecutar, contiene un <b>return</b> con argumentos, éstos serán retornados por dofile. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>archivo</em>&nbsp;</td><td>Archivo a ejecutar. (Opcional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve todos los argumentos retornados por el trózo de código. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga4f825b4ca4de7da98664b28d97fede53"></a><!-- doxytag: member="nomod.java::error" ref="ga4f825b4ca4de7da98664b28d97fede53" args="(string mensaje, int nivel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil error </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>mensaje</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nivel</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Invoca un error Lua. </p>
+<p>Termina la función llamada, estableciendo mensaje como el mensaje del error. El nivel cambia el apuntador a la linea de error. </p>
+<ul>
+<li>Nivel 1 (por defecto) apunta a la linea dónde se llamó a error. </li>
+<li>Nivel 2 apunta a la llamada a la función que contenia error. </li>
+<li>Niveles superiores apuntan a las llamadas que ejecutaron la funcion que contenia error y así sucesivamente.</li>
+</ul>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensaje</em>&nbsp;</td><td>El mensaje del error. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>nivel</em>&nbsp;</td><td>El nivel dónde se encontró el error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga25c0089f13813d9f504f9ea1ecde7793"></a><!-- doxytag: member="nomod.java::loadstring" ref="ga25c0089f13813d9f504f9ea1ecde7793" args="(string codigo, string nombre)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">chunk loadstring </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>codigo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>nombre</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Similar a load, pero obtiene el chunk del string especificado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>codigo</em>&nbsp;</td><td>Código Lua. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>nombre</em>&nbsp;</td><td>Nombre para identificar el chunk en los errores. OPCIONAL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El "chunk" resultante del código pasado. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

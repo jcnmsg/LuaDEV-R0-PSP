@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: hprm : Manejo del hprm (remote)</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>hprm : Manejo del hprm (remote)</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga9673099ccd5e7d2cd3cbdf1218d95079">hprm.headphones</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cascos conectados.  <a href="#ga9673099ccd5e7d2cd3cbdf1218d95079"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga0da54227a266796717de53367956f9fe">hprm.microphone</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Microfono conectado.  <a href="#ga0da54227a266796717de53367956f9fe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga58c057b759e9e5d00d0971f0d1b7e58f">hprm.remote</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Remote conectado.  <a href="#ga58c057b759e9e5d00d0971f0d1b7e58f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga80c237ab547294f5b99b79638e306381">hprm.read</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la lectura de los controles.  <a href="#ga80c237ab547294f5b99b79638e306381"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#gadc9057a1a04137aded9e02c983a8ee66">hprm.playpause</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Play / Pause.  <a href="#gadc9057a1a04137aded9e02c983a8ee66"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga95c071805a22d84b999caceb8657f972">hprm.forward</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Forward.  <a href="#ga95c071805a22d84b999caceb8657f972"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#gaceb95174730728fc0c90305b2f9afac0">hprm.back</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Back.  <a href="#gaceb95174730728fc0c90305b2f9afac0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#gafdbab4154fa4e2bb4168bd4ba885d4a2">hprm.hold</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Interruptor Hold.  <a href="#gafdbab4154fa4e2bb4168bd4ba885d4a2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga06fd7fe461ea492364ded1084b121826">hprm.press</a> (string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón recién presionado.  <a href="#ga06fd7fe461ea492364ded1084b121826"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_p_r_m.html#ga4eb5a7153df9f4fc5d32f89f76ceb7c4">hprm.release</a> (string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón recién soltado.  <a href="#ga4eb5a7153df9f4fc5d32f89f76ceb7c4"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con el remote del audio (HPRM). La parte de los botones del HPRM es muy parecida a controls. Es decir, primero un <a class="el" href="group___h_p_r_m.html#ga80c237ab547294f5b99b79638e306381" title="Realiza la lectura de los controles.">hprm.read()</a> , y luego comprobar los botones. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga9673099ccd5e7d2cd3cbdf1218d95079"></a><!-- doxytag: member="hprm.headphones" ref="ga9673099ccd5e7d2cd3cbdf1218d95079" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.headphones </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cascos conectados. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false, según si los cascos están conectados. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0da54227a266796717de53367956f9fe"></a><!-- doxytag: member="hprm.microphone" ref="ga0da54227a266796717de53367956f9fe" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.microphone </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Microfono conectado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false, según si el micrófono está conectado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga58c057b759e9e5d00d0971f0d1b7e58f"></a><!-- doxytag: member="hprm.remote" ref="ga58c057b759e9e5d00d0971f0d1b7e58f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.remote </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Remote conectado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false, según si el remote está conectado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga80c237ab547294f5b99b79638e306381"></a><!-- doxytag: member="hprm.read" ref="ga80c237ab547294f5b99b79638e306381" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil hprm.read </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Realiza la lectura de los controles. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadc9057a1a04137aded9e02c983a8ee66"></a><!-- doxytag: member="hprm.playpause" ref="gadc9057a1a04137aded9e02c983a8ee66" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.playpause </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Play / Pause. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está presionado este botón. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga95c071805a22d84b999caceb8657f972"></a><!-- doxytag: member="hprm.forward" ref="ga95c071805a22d84b999caceb8657f972" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.forward </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Forward. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está presionado este botón. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaceb95174730728fc0c90305b2f9afac0"></a><!-- doxytag: member="hprm.back" ref="gaceb95174730728fc0c90305b2f9afac0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.back </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Back. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está presionado este botón. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gafdbab4154fa4e2bb4168bd4ba885d4a2"></a><!-- doxytag: member="hprm.hold" ref="gafdbab4154fa4e2bb4168bd4ba885d4a2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.hold </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Interruptor Hold. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está activado el hold. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga06fd7fe461ea492364ded1084b121826"></a><!-- doxytag: member="hprm.press" ref="ga06fd7fe461ea492364ded1084b121826" args="(string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.press </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón recién presionado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>"playpause"</code> - Botón Play / Pause. </li>
+<li><code>"forward"</code> - Botón Forward. </li>
+<li><code>"back"</code> - Botón Back. </li>
+<li><code>"hold"</code> - Interruptor Hold. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está recién presionado el botón. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga4eb5a7153df9f4fc5d32f89f76ceb7c4"></a><!-- doxytag: member="hprm.release" ref="ga4eb5a7153df9f4fc5d32f89f76ceb7c4" args="(string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean hprm.release </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón recién soltado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>"playpause"</code> - Botón Play / Pause. </li>
+<li><code>"forward"</code> - Botón Forward. </li>
+<li><code>"back"</code> - Botón Back. </li>
+<li><code>"hold"</code> - Interruptor Hold. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>true / false, según si está recién soltado el botón. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,70 @@
+batt: Handling the battery.
+
+Functions
+
+batt.exists boolean ()
+  Battery connected (within the PSP).
+
+batt.charging boolean ()
+  Battery charging.
+
+batt.chargingstatus number ()
+  State of battery charge.
+
+batt.islow boolean ()
+  Low battery.
+
+batt.percent number ()
+Percentage remaining.
+
+batt.time number (void)
+  Estimated duration.
+
+batt.temp number (void)
+  Battery temperature.
+
+batt.volt number ()
+Battery voltage.
+************************************************** ******************************
+dETAILED DESCRIPTION
+This module incorporates all battery related functions.
+Function Documentation
+************************************************** ******************************
+batt.exists boolean ()
+  Battery connected (within the PSP).
+  Returns:
+  true / false, depending on whether the battery is present.
+batt.charging boolean ()
+  Battery charging.
+  Returns:
+  true / false, depending on whether the battery is charging.
+
+batt.chargingstatus number ()
+  State of battery charge.
+  Returns:
+  Number of x to xx, indicating the charging status.
+
+batt.islow boolean ()
+  Low battery.
+  Returns:
+  true / false, depending on whether the battery is low.
+
+batt.percent number ()
+  Percentage remaining.
+  Returns:
+  [0-100], remaining battery percentage.
+
+batt.time number (void)
+  Estimated duration.
+  Returns:
+  Number of minutes of estimated battery.
+
+batt.temp number (void)
+  Battery temperature.
+  Returns:
+  Battery temperature in degrees xxx.
+
+batt.volt number ()
+  Battery voltage.
+  Returns:
+  Battery voltage in volts.

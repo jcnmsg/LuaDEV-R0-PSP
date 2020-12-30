@@ -1,0 +1,323 @@
+
+image : Image handling.
+Functions
+
+image image.load(string filename)
+ Load an image.
+
+image image.loadsprite(string filename, int width, int height)
+ Load an image, and divide into "frames" or "sprites".
+
+image image.loadfrommemory(string data, string filetype)
+ Load an image from data in memory.
+
+image image.create(int width, int height, color col)
+ Create a new image.
+
+nil image.clear(image img, color col)
+ Clear an image. (Fill with the color).
+
+nil image.blit(image img, number x, number y)
+ Displays an image (whole).
+
+nil image.blit(image img, number x, number y, number ximage, number yimage, number width, number height)
+ Displays an image (part of the image).
+
+nil image.blitsprite(image img, number x, number y, int frame, int alpha)
+ Displays a sprite.
+
+nil image.setframe(image img, int frame)
+ Choose the frame of a sprite.
+
+nil image.blend(image img, number x, number y, int alpha)
+ Like the basic blit, but with transparency.
+
+nil image.fxadd(image img, number x, number y, int alpha)
+ Like the basic blit, but with color effects added.
+
+nil image.fxsub(image img, number x, number y, int alpha)
+ Like the basic blit, but with color effects subtracted.
+
+nil image.fxtint(image img, number x, number y, color col)
+ Like the basic blit, but with tinted image effect.
+
+nil image.resize(image img, int width, int height)
+ Resize an image.
+
+nil image.rotate(image img, number angle)
+ Rotates an image around its center.
+
+nil image.rotate(image img, number x, number y, number angle)
+ Rotates an image on one point.
+
+nil image.factorscale(image img, number factor)
+ Scale an image in proportion to a rescaling factor.
+
+nil image.pixel(image img, number x, number y, color col)
+ Change the color of a pixel in an image.
+
+color image.pixel(image img, number x, number y)
+ Returns the color of a pixel in an image.
+
+nil image.save(image img, string path)
+ Save an object image as a PNG file.
+
+number image.width(image img)
+ Width of an image.
+
+number image.height(image img)
+ Height of an image.
+
+nil image.center(image img, number x, number y)
+ Specifies the center of an image.
+
+nil image.reset(image img)
+ Resets the modified properties. (Scale, rotation...)
+
+nil image.free(image img)
+ Free an image object.
+********************************************************************************
+Function documentation
+
+image image.load(string filename)
+ Load an image.
+ Parameters:
+ filename File path to load.
+ Returns:
+ An object of type image.
+
+image image.loadsprite(string filename, int width, int height)
+ Load an image, and divide into "frames" or "sprites".
+ Ideal for characters, or icons,
+ since in the same image are introduced all the positions and effects.
+ Example:
+ testimage = image.load("test.png",10,10);
+ Load the image test.png, and divide into squares of 10x10 pixels.
+ From left to right and top to bottom.
+ By drawing this picture, draw only one of the pictures, not the whole picture.
+ To change the picture, use image.setframe();
+ Note:
+ The box is like a picture, so any resizing, rotation, or anything,
+ will affect only the picture. Regardless of which we catch.
+ Parameters:
+ filename Path of the image to load.
+ width Width of the box cut.
+ height Height of the box cut.
+ Returns:
+ An object of type image.
+
+image image.loadfrommemory(string data, string filetype)
+ Load an image from data in memory.
+ Parameters:
+ data The image data, JPG, PNG or GIF format.
+ filetype one of the following:
+ "JPG" - The data is a JPG image.
+ "PNG" - The data is a PNG image.
+ "GIF" - The data is a GIF image.
+ This parameter is optional. The default is "PNG".
+ Returns:
+ An object of type image.
+
+image image.create(int width, int height, color col)
+ Create a new image.
+ Parameters:
+ width Width of the image in pixels.
+ height Height of the image in pixels.
+ col Initial color of the image. Optional. The default is black.
+ Returns:
+ An object of type image.
+
+nil image.clear(image img, color col)
+ Clear an image. (Fill with the color).
+ Parameters:
+ img Image to clear.
+ col Color to use.
+ Returns:
+ Nothing.
+
+nil image.blit(image img, number x, number y)
+ Displays an image (whole).
+ Parameters:
+ img Image object to display.
+ x Coordinate of X.
+ y Coordinate of Y.
+ Returns:
+ Nothing.
+
+nil image.blit(image img, number x, number y, number ximage, number yimage, number width, number height)
+ Displays an image (part of the image).
+ Parameters:
+ img Image object to display.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ ximage Coordinate of X on the image.
+ yimage Coordinate of Y on the image.
+ width Width to display.
+ height Height to display.
+ Returns:
+ Nothing.
+
+nil image.blitsprite(image img, number x, number y, int frame, int alpha)
+ Displays a sprite.
+ Parameters:
+ img Image object to display.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ frame Frame number to display. (From 0 to NUMFRAMES)
+ alpha Transparency. Optional Default is 255.
+ Returns:
+ Nothing.
+
+nil image.setframe(image img, int frame)
+ Choose the frame in a sprite.
+ Parameters:
+ img Image object.
+ frame Frame number to choose.
+ Returns:
+ Nothing.
+
+nil image.blend(image img, number x, number y, int alpha)
+ Like the basic blit, but with transparency.
+ Parameters:
+ img Image object.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ alpha Transparency. Optional Default is 255.
+ Returns:
+ Nothing.
+
+nil image.fxadd(image img, number x, number y, int alpha)
+ Like the basic blit, but color effects added.
+ Parameters:
+ img Image object.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ alpha Transparency. Optional Default is 255.
+ Returns:
+ Nothing.
+
+nil image.fxsub(image img, number x, number y, int alpha)
+ Like the basic blit, but color effects subtracted.
+ Parameters:
+ img Image object.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ alpha Transparency. Optional Default is 255.
+ Returns:
+ Nothing.
+
+nil image.fxtint(image img, number x, number y, color col)
+ Like the basic blit, but with tinted image effect.
+ Parameters:
+ img Image object.
+ x Coordinate of X on the screen.
+ y Coordinate of Y on the screen.
+ col Color to use in tinting.
+ Returns:
+ Nothing.
+
+nil image.resize(image img, int width, int height)
+ Resize an image.
+ Parameters:
+ img Image object.
+ width New width.
+ height New height.
+ Returns:
+ Nothing.
+
+nil image.rotate(image img, number angle)
+ Rotates an image around its center.
+ Parameters:
+ img Image object.
+ angle Angle in degrees.
+ Returns:
+ Nothing.
+
+nil image.rotate(image img, number x, number y, number angle)
+ Rotate an image on one point.
+ Parameters:
+ img Image object.
+ x Position of center in X.
+ y Position of center in Y.
+ angle Angle in degrees.
+ Returns:
+ Nothing.
+
+nil image.factorscale(image img, number factor)
+ Rescale an image in proportion to a rescaling factor.
+ Example: factor 200 = 200% of size. (double) factor 50 = 50% of size. (half)
+ Parameters:
+ img Image object.
+ factor Factor in %.
+ Returns:
+ Nothing.
+
+nil image.pixel(image img, number x, number y, color col)
+ Change the color of a pixel in an image.
+ Parameters:
+ img Image object.
+ x Position of the pixel in X.
+ y Position of the pixel in Y.
+ col New color for the pixel.
+ Returns:
+ Nothing.
+
+color image.pixel(image img, number x, number y)
+ Returns the color of a pixel in an image.
+ Parameters:
+ img Image object.
+ x Position of the pixel in X.
+ y Position of the pixel in Y.
+ Returns:
+ The color of the pixel at that position.
+
+nil image.save(image img, string path)
+ Save the image object in a PNG file.
+ Parameters:
+ img Image object.
+ path Path of file destination.
+ Returns:
+ Nothing.
+
+number image.width(image img)
+ Width of an image.
+ Parameters:
+ img Image object.
+ Returns:
+ Returns the width of the image in pixels.
+
+number image.height(image img)
+ Height of an image.
+ Parameters:
+ img Image object.
+ Returns:
+ Returns the height of the image in pixels.
+
+nil image.center(image img, number x, number y)
+ Specifies the center of an image.
+ If not specified in x, or y, uses the image center.
+ By default, an image is centered at 0,0.
+ Parameters:
+ img Image object.
+ x Position of center in X.
+ y Position of center in Y.
+ Returns:
+ Nothing.
+
+nil image.reset(image img)
+ Resets the modified properties. (Scale, rotation...).
+ Parameters:
+ img Image object.
+ Returns:
+ Nothing.
+
+nil image.free(image img)
+ Free an image object.
+ Parameters:
+ img Image object to free.
+ Returns:
+ Nothing.
+
+
+
+

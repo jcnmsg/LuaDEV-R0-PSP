@@ -1,0 +1,23 @@
+#!/bin/sh
+
+LARGE=24
+SMALL=16
+STRETCH=h1.0a1.0
+
+mkdir fontmod 2>/dev/null
+./ttf2pgf $1 fontmod/ltn0.pgf ${LARGE}${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn1.pgf ${LARGE}${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn2.pgf ${LARGE}i${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn3.pgf ${LARGE}i${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn4.pgf ${LARGE}b${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn5.pgf ${LARGE}b${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn6.pgf ${LARGE}bi${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn7.pgf ${LARGE}bi${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn8.pgf ${SMALL}${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn9.pgf ${SMALL}${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn10.pgf ${SMALL}i${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn11.pgf ${SMALL}i${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn12.pgf ${SMALL}b${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn13.pgf ${SMALL}b${STRETCH} b3.0i1.2
+./ttf2pgf $1 fontmod/ltn14.pgf ${SMALL}bi${STRETCH} b3.0i1.2
+./ttf2pgf $2 fontmod/ltn15.pgf ${SMALL}bi${STRETCH} b3.0i1.2

@@ -1,0 +1,14 @@
+true A 1 4 
+B 1 6
+true A 2 5 
+B 2 7
+true A 3 6 
+B 3 8
+true A 4 7 
+B 4 9
+true A 5 8 
+B 5 10
+true A 6 9 
+nil nil nil
+true A 7 10 
+ERROR! Cannot resume dead couroutine

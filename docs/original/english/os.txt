@@ -1,0 +1,422 @@
+os: Properties and functions operating system.
+Functions
+
+ years. sleep (seconds)
+ years. luadevsplash () - shows the splash LUADev
+ years. luasplash () - shows the splash of LUA 
+
+number os.clock ()
+ Time since LuaDEV started in seconds.
+
+number os.time ()
+ Current time in seconds (since 1990).
+
+number os.time (table date)
+ Time in seconds of the specified date.
+
+string os.date ()
+ Data and Time.
+
+string os.date (string format)
+ Date and time format.
+
+table os.date (string format)
+ Date and time table.
+
+string os.date (string format, number time)
+ Formatting a time (not current).
+
+table os.date (string format, number time)
+ Format a time table (not current).
+
+number os.difftime (number time2, number time1)
+ Time difference.
+
+string os.tmpfile ()
+ Temporary file.
+
+nil os.remove (string path)
+ Direct access to files.remove (). Deletes to file / folder.
+
+nil os.rename (string source, string destination)
+ Direct access to files.rename (). Rename a file / folder.
+
+nil os.getenv (anytype variable)
+ Value Assigned to the environment variable variable.
+
+nil os.quit ()
+ Exit to XMB.
+
+nil os.exit ()
+ Direct access to os.quit ().
+
+int os.cpu ()
+ Current speed of cpu.
+
+nil os.cpu (int speed)
+ Change the cpu speed.
+
+nil os.autofps ()
+ Disables auto-adjusting cpu.
+
+nil os.autofps (int fps)
+ Enables auto-setting cpu to Maintain a constant framerate.
+
+number os.runeboot (string path)
+ Executes an EBOOT.PBP. (In HBL this function returns -1).
+
+number os.runiso (string path)
+ Executes an ISO or to CSO. (In HBL this function returns -1).
+
+number os.startPSX (string path)
+ Executes to PSX game. (In HBL this function returns -1).
+
+number os.getinitmemory ()
+ Returns the Total RAM. (Calculated at start of LuaDEV).
+
+number os.getfreememory ()
+ Returns the Total available RAM.
+
+string os.md5 (string data)
+ Returns the MD5 encryption of the data.
+
+string os.sha1 (string data)
+ Returns the SHA1 encryption of the data.
+
+string os.nick ()
+ User nickname.
+
+string os.language ()
+ User language.
+
+nil os.message (string text)
+ Displays a message on the screen. You can only accept.
+
+number os.message (string text, int mode)
+ Displays a message on the screen. Option to YES or NO.
+
+number os.message (string text, int mode, image logo)
+ Displays a message on the screen. Option to YES or NO. With LOGO.
+
+number os.message (string text, int mode, function bottom, function top)
+ Advanced version message.
+
+string os.osk (string desc, string init, int maxsize, int lines, int mode)
+ Original keyboard on the screen.
+
+Variables
+
+const boolean os.hbl
+ Whether we are in hbl. Example: if os.hbl then ... end.
+************************************************** ******************************
+Function Documentation
+
+number os.clock ()
+ Time since LuaDEV started in seconds.
+ This number is not integer, but it contains decimal places, so you can Also extract the milliseconds for example.
+ Returns:
+ Returns to number with the number of seconds since the start of LuaDEV (including splash).
+
+number os.time ()
+ Current time in seconds (since 1990).
+ Returns:
+ Returns the current time in seconds. Suitable for use With Other date and time functions.
+
+number os.time (Table date)
+ Time in seconds of the specified date.
+ Parameters:
+ A date table with the fields year, month and day minimum. hour, min, sec and isdst optional. See os.date ()
+ Returns:
+ Returns the time in seconds of the entry date. Suitable for use With Other date and time functions.
+
+string os.date ()
+ Date and time.
+ This equates to os.date ("% c")
+ Returns:
+ Returns to string with date and time.
+
+string os.date (string format)
+ Date and time format.
+ Example of format: "% d /% m /% y"
+ a Name of the day, abbreviated: Thu
+ A Name of the day, complete: Thursday
+ b Name of the month, abbreviated: Aug
+ B Name of the month, Complete: August
+ c General representation of date and time: Thu Aug 23 14:55:02 2001
+ d Day of month (01-31): 23
+ H Hour in 24h format (00-23): 14
+ I Hour in 12h format (01-12): 02
+ j Day of year (001-366): 235
+ m Month as decimal number (01-12): 08
+ M Minute (00-59): 55
+ p AM or PM: PM
+ S Second (00-59): 02
+ U Number of weeks With The first Sunday ace first day of week one (00-53): 33
+ w Weekday as a decimal, Sunday = 0. (0-6): 4
+ W Number of weeks the first Monday as first day of week one (00-53): 34
+ x Representation of date: 08/23/01
+ X Representation of Time: 14:55:02
+ and Year, last 2 digits (00-99): 01
+ And Year: 2001
+ Z The time zone abbreviated.
+ %% A percent sign.
+ If the format begins with! time is formatted According To Universal Coordinated Time. UTC.
+ Parameters:
+ format The format to use
+ Returns:
+ Returns to string, formatted According To the format switch.
+
+table os.date (string format)
+ Date and time table.
+ The table returned Contains the following fields:
+ year (2001)
+ month (1-12)
+ day (1-31)
+ hour (0-23)
+ min (0-59)
+ sec (0-59)
+ wday (1-7) Day of the week. Sunday is 1
+ yday Day Within one year
+ isdst Boolean. Daylight Saving Time.
+ leap Boolean. The year is leap year.
+ nodim Number days in the month.
+ Parameters:
+ Use format "* t" as the format, to get a table instead of a string.
+ Returns:
+ Returns a table as described above.
+
+string os.date (string format, number time)
+ Formatting a time (not current).
+ See os.date () to the formats and os_time () for time.
+ Parameters:
+ format The format to use.
+ time Time to format.
+ Returns:
+ Returns a string, formatted ACCORDING to the format switch.
+
+table os.date (string format, number time)
+ Format to time table (not current).
+ See os.time () for time.
+ Parameters:
+ Use format "* t" ace the format, to get a table instead of a string.
+ time Time to format
+ Returns:
+ Returns a table as described above.
+
+number os.difftime (number time2, number time1)
+ Time difference.
+ Parameters:
+ time2 End time
+ time1 Start time
+ Returns:
+ Returns t2 - t1.
+
+string os.tmpfile ()
+ Temporary file.
+ Returns:
+ Returns to valid name to use ace to temporary file.
+
+nil os.remove (string path)
+ Direct access to files.remove (). Deletes a file / folder.
+ Parameters:
+ path File or folder to delete.
+ Returns:
+ Nothing.
+
+nil os.rename (string source, string destination)
+ Direct access to files.rename (). Rename a file / folder.
+ Parameters:
+ source Path source
+ destination Path destination.
+ Returns:
+ Nothing.
+
+nil os.getenv (anytype variable)
+ Value Assigned to the environment variable variable
+ Parameters:
+ variable A variable.
+ Returns:
+ The value Assigned or nil if not defined.
+
+nil os.quit ()
+ Exit to XMB.
+ Exits to XMB. If output callback is Executed.
+ Returns:
+ Nothing.
+
+nil os.exit ()
+ Direct access to os.quit ().
+ Returns:
+ Nothing.
+
+int os.cpu ()
+ Current speed of the cpu.
+ Returns:
+ An integer With The current value of the cpu (1-333)
+
+nil os.cpu (int speed)
+ Change the cpu speed.
+ Parameters:
+ speed New clock speed (1-333)
+ Returns:
+ Nothing.
+
+nil os.autofps ()
+ Disables auto-adjusting cpu.
+ Returns:
+ Nothing.
+
+nil os.autofps (int fps)
+ Enables auto-setting cpu to MAINTAIN to constant framerate.
+ Parameters:
+ fps Framerate Desired (1-120)
+ Returns:
+ Nothing.
+
+number os.runeboot (string path)
+ Executes other EBOOT.PBP. (In HBL this function returns -1).
+ Parameters:
+ path Path of the new eboot.
+ Returns:
+ Returns -1 if failed to execute. There is no time to return anything if it Concludes successfully.
+
+number os.runiso (string path)
+ Executes an ISO or to CSO. (In HBL this function returns -1).
+ Parameters:
+ path Path to the ISO or CSO to execute.
+ Returns:
+ Returns -1 if failed to execute. There is no time to return anything if it Concludes successfully.
+
+number os.startPSX (string path)
+ Executes a PSX game. (In HBL this function returns -1).
+ Parameters:
+ path Path to the PSX game.
+ Returns:
+ Returns -1 if failed to execute. There is no time to return anything if it Concludes successfully.
+
+number os.getinitmemory ()
+ Returns the full RAM. (Calculated at start of LuaDEV).
+ Returns:
+ Returns the number of bytes of RAM.
+
+number os.getfreememory ()
+ Returns the Total available RAM.
+ Note:
+ To find the value of the RAM ace to percentage, is:
+ ((Os.getfreememory () * 100) / os_getinitmemory ())
+ Returns:
+ Returns the number of bytes of RAM available.
+
+string os.md5 (string data)
+ Returns the MD5 encryption of the data.
+ Parameters:
+ dating The dating to calculate its MD5 key.
+ Returns:
+ Returns the MD5 key. Style: fad539fabc30459deadc0345f9a8c02b
+
+string os.sha1 (string data)
+ Returns the SHA1 encryption of the data.
+ Parameters:
+ data The data to calculate its SHA1 key.
+ Returns:
+ Returns the SHA1 key. Style: 0345f9a459deadc8c02bc6fad539fab27c30
+
+string os.nick ()
+ User nickname.
+ Returns:
+ Returns the nickname set in. PSP.
+ Example:
+ inis.lua.
+
+string os.language ()
+ User language.
+ Returns:
+ Returns the current language of the PSP, one of the Following:
+ "Japanese"
+ "Inglés"
+ "French"
+ "Spanish"
+ "German"
+ "Italian"
+ "Dutch"
+ "Portuguese"
+ "Russian"
+ "Korean"
+ "Chinese traditional"
+ "Chinese simplified"
+ "Unknown" <- In case of mistake.
+
+nil os.message (string text)
+ Displays a message on the screen. You can only accept.
+ Parameters:
+ text The text to display on the screen.
+ Returns:
+ Nothing.
+ Example:
+ savedatas.lua.
+
+number os.message (string text, int mode)
+ Displays a message on the screen.
+ Option to YES or NO.
+ Parameters:
+ text The text to display on the screen.
+ mode Possible values:
+ 1 - Mode: Yes No.
+ 0 - Mode: OK.
+ Returns:
+ If the mode of execution is Yes No, returns:
+ 1 - Yes
+ 0 - No
+ -1 - Cancelled (circle) Otherwise it returns nothing.
+
+number os.message (string text, int mode, image logo)
+ Displays a message on the screen. Option to YES or NO. With LOGO.
+ Parameters:
+ text The text to display on the screen.
+ mode Possible values:
+ 1 - Mode: Yes No.
+ 0 - Mode: OK.
+ logo Image to be displayed in the upper left corner.
+ Returns:
+ If the mode of execution is Yes No, returns:
+ 1 - Yes
+ 0 - No
+ -1 - Cancelled (circle) Otherwise it returns nothing.
+
+number os.message (string text, int mode, function bottom, function top)
+ Advanced version message.
+ Note:
+ If the functions bottom and top draw to the screen, DO NOT use screen.flip ().
+ Since it is called automatically.
+ Parameters:
+ text The text to display on the screen.
+ mode Possibles values:
+ 1 - Mode: Yes No.
+ 0 - Mode: OK.
+ bottom Function to be performed before drawing the message.
+ top Function to be performed after drawing the message.
+ Returns:
+ If the mode of execution is Yes No, returns:
+ 1 - Yes
+ 0 - No
+ -1 - Cancelled (circle) Otherwise it returns nothing.
+
+string os.osk (string desc, string init, int maxsize, int lines, int mode)
+ Original keyboard on the screen.
+ Parameters:
+ desc Description. Appears on the bottom right.
+ init Initial text. Can be "".
+ maxsize Maximum number of characters to enter.
+ lines Maximum number of lines to enter.
+ mode The type of text to display, Reviews one of the Following:
+ 0 - Any input (digits + symbols + letters ...)
+ 1 - Only digits (0123456789)
+ 2 - Only uppercase (ABCD ..)
+ 3 - Only lowercase (ABCD ..)
+ 4 - Only symbols.
+ 5 - Combination digits + symbols.
+ Returns:
+ The Entered text, plus a number from Among These:
+ 0 - Not changed anything.
+ 1 - Text've been entered.
+ -1 - Has been canceled.

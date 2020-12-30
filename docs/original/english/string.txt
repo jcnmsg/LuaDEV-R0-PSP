@@ -1,0 +1,442 @@
+﻿string: Functions for handling text.
+Functions
+
+... string.byte (string str)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+
+... string.byte (string str, int i)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+
+... string.byte (string str, int i, int j)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+
+string.char string (int. ..)
+ String.byte reverse function (). Receive 0 or more integers.
+
+... string.find (string str, string pattern)
+ Search function using patterns.
+
+... string.find (string str, string pattern, int i)
+ Search function using patterns, starting at a given position.
+
+... string.find (string str, string pattern, int i, boolean up)
+ Search Function using plain text, starting at a given position.
+
+string.format string (string format, ... data)
+ Returns a formatted version of their arguments. (Functions like printf in C).
+
+string.gmatch function (string s, string pattern)
+ Search iterator function catches.
+
+string.gsub string (string s, string pattern,. replacement)
+ Replace a string.
+
+string.len number (string str)
+ Length of a string.
+
+string.lower string (string str)
+ Skip to lowercase.
+
+String.match string (string str, string pattern)
+ Check catches.
+
+String.match string (string str, string pattern, int start)
+ Check traps from the specified start.
+
+string.rep string (string s, number times)
+ Returns a string that is the concatenation of many copies of the string s and times indicated.
+
+string.reverse string (string s)
+ Returns a string that is the original s invested.
+
+string.sub string (string s, number i)
+ Returns a suffix string.
+
+string.sub string (string s, number i, j number)
+ Returns a piece of string.
+
+String.Upper string (string str)
+ Skip to uppercase.
+
+string.explode table (string str, string token)
+ Cleave table. ("Explode" a string).
+
+string.explode table (string str, string token, number few)
+ Cleave table. ("Explode" a string). Ask for a certain number of pieces.
+
+string.implode string (table table)
+ Joining in string. Inverse function to explode.
+
+string.implode string (Table table, string token)
+ Joining in with separator string. Inverse function to explode.
+
+string.implode string (Table table, string token, start number)
+ Joining in string separator, start at X. Inverse function to explode.
+
+string.implode string (Table table, string token, start number, number order)
+ Joining in with separator string, starting at X and ending in Y. Inverse function to explode.
+
+string.levenhstein number (string a, string b)
+ Levenhstein distance.
+
+string.substrcount number (string s, string sub)
+ Count the number of occurrences of the substring in the string.
+
+string.numtok number (string s, string token)
+ Count the number of pieces that come out of separate s using the token.
+
+string.gettok string (string s, string token, number num)
+ Returns the bit number "num" of the text string, using the separator token.
+************************************************** ******************************
+DETAILED DESCRIPTION
+Character classes:
+Character classes are used to represent character sets. Following combinations are permitted to describe a character class:
+
+x: (where x is not one of the magic characters ^ $ ()%. [] * + -?) represents the character x itself.
+
+.: (One point) represents any character.
+
+a: represents any letter.
+
+c: represents any control character.
+
+d: represents any digit.
+
+l: represents all lowercase.
+
+p: represents all punctuation character.
+
+s: represents any space character.
+
+u: represents any capital letter.
+
+w: represents any alphanumeric character.
+
+x: represents any hexadecimal digit.
+
+z: represents the character with internal value 0 (zero).
+
+x: (where x is any non-alphanumeric character) represents the character x. This is the standard way to "escape" the magic characters. Any punctuation character (even the non magic) can be preceded by a percent sign'' when you want to represent themselves in the pattern.
+
+[Set]: represents the class that is the union of all the characters in the set. A range of characters can be specified by separating the character from the beginning and end with a hyphen '-'. All classes of type x described above can also be used as components of the assembly. All other characters in the set are representing themselves. For example, [w_] (or [_w]) represents any alphanumeric character or the underscore, [0-7] represents an octal digit, and [0-7l-] represents an octal digit, a lowercase letter or character '- '. The interaction between ranges and classes is not defined. Therefore, patterns like [az] or [a-%%] have no meaning.
+
+[^ Set]: represents the complement of a group, where assembly is interpreted as indicated above.
+
+For all classes represented by single letters (a, c, etc..) The corresponding capital letters represent the complementary class. For example, S represents any non space.
+
+The definitions of letter, space, and other character groups depend on the local system. In particular, the class [az] may not be equivalent to l. Elements of a pattern
+
+Each element of a pattern can be
+
+single character class, which matches any single character in the class;
+
+single character class followed by '*', which is equal to 0 or more repetitions of characters in the class. These repeat elements always equivalent to the character string as long as possible;
+
+one single character class followed by '+', which is equivalent to 1 or more repetitions of characters in the class. These repeat elements always equivalent to the character string as long as possible;
+
+one single character class followed by '-', which is also equal to 0 or more repetitions of characters in the class. Unlike '*' These repeat elements always be equal to the character sequence as short as possible;
+
+single character class followed by '?', equal to 0 or 1 occurrences of a character in the class;
+
+n, for n between 1 and 9, this is equivalent to a substring element equal to the trapping number n;
+
+bxy, where x and y are two different characters, this element corresponds to strings that start with x, end with y, x and y being balanced. This means that, starting a counter to 0 if the string is read from left to right, adding +1 for each x appears and -1 for every y, the ending y is the first where the count reaches 0. For example, the element b () corresponds to a matched parenthesized expression.
+
+Pattern
+
+A pattern is a sequence of pattern elements. A '^' at the beginning of a pattern search pattern anchor the beginning of the string in which the search occurs. '$' In the end of a search pattern of the pattern anchor end of the string in which the search occurs. In other positions '^' and '$' have no special meaning and represent themselves.
+
+Screenshots
+
+A pattern can contain sub-patterns enclosed in parentheses describing catches. When a match occurs between a pattern and a string given the substrings that match indicated in parentheses in the pattern are stored (captured) for future use. Captures are numbered according to their left parentheses. For example, in the pattern "(a * (.)% W (% s *))", the part of the string that matches "a * (.)% W (% s *)" is stored in the first capture (and therefore has number 1), which matches the character "." is captured with number 2, and the part that is consistent with "% s *" has number 3.
+
+As a special case, the empty capture () returns the current position in the string (a number). For example, if you apply the pattern "() aa ()" to the string "flaaap", give two captures: 3 and 5.
+
+A pattern can not contain zero. Wear z instead.
+************************************************** ******************************
+Function Documentation
+
+... string.byte (string str)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+ Parameters:
+ String str characters.
+ Returns:
+ (Length) numbers.
+
+... string.byte (string str, int i)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+ But in this case starting at character number i.
+ Parameters:
+ String str characters.
+ i character in which to start.
+ Returns:
+ (Length - i) numbers.
+
+... string.byte (string str, int i, int j)
+ Spend ASCII character to its internal numeric code. (Example: A = 65).
+ But in this case starting at character number i and ending at the jth character.
+ Parameters:
+ String str characters.
+ i character in which to start.
+ j Characteristic in which end.
+ Returns:
+ (J-i) numbers.
+
+string.char string (int. ..)
+ String.byte reverse function (). Receive 0 or more integers.
+ Parameters:
+ ... 0 or more integers.
+ Returns:
+ A text string of length equal to the whole number received.
+
+... string.find (string str, string pattern)
+ Search function using patterns.
+ Parameters:
+ Text string str.
+ Patron patron for.
+ Returns:
+ In case you find the pattern, returns two numbers. Where it starts and where it ends the pattern. Otherwise, it returns nil. If the pattern has captures, after the two indices, these catches were returned.
+
+... string.find (string str, string pattern, int i)
+ Search function using patterns, starting at a given position.
+ Parameters:
+ Text string str.
+ Patron patron for.
+ i Character from where search pattern.
+ Returns:
+ In case you find the pattern, returns two numbers. Where it starts and where it ends the pattern. Otherwise, it returns nil. If the pattern has captures, after the two indices, these catches were returned.
+
+... string.find (string str, string pattern, int i, boolean up)
+ Search Function using plain text, starting at a given position.
+ Parameters:
+ Text string str.
+ Patron patron for.
+ i Character from where search pattern.
+ Indicate true plane as fourth parameter to disable the search for patterns.
+ Returns:
+ If it finds the text, it returns two numbers. Where it starts and where just the found text. Otherwise, it returns nil.
+
+string.format string (string format, data)
+ Returns a formatted version of their arguments. (Functions like printf in C).
+ Parameters:
+ format description format to use. The format will use the type:% [flag] [width] [. Precision] option Choices are: c: Character. Example: a
+ d or i: signed decimal integer. Example: 392
+ e: scientific notation, using the character e. Example: 3.9265e +2
+ E: Scientific notation, using the character E. Example: 3.9265E +2
+ f: Number with decimals. Example: 392.65
+ g: Use the shorter of e and f. Example: 392.65
+ G: Use the shorter of E and f. Example: 392.65
+ or: Octal integer. Example: 610
+ s: A string. Example: test
+ u: unsigned decimal. Example: 7235
+ x: Unsigned hexadecimal. Example: 7fa
+ X: Unsigned hexadecimal uppercase. Example: 7FA
+ q: a string, but adapted such that it can be re-read by Lua. (Comillas changed by \ ", newlines by \ n, etc. ..)
+ %: A% followed by another% character will write%.
+ Some options allow a flag, a width and precision, which are optional, but follow this rule:
+ Flags:
+ -: Left Justify, requires the width parameter. [The default is right justification].
+ +: Force the appearance of the sign in front (+ / -). By default this sign only appears in front of negative numbers.
+ (Space): If there is to be written sign is changed by a space.
+ #: Used with options or, x X, the value is preceded by "0", "0x" or "0X" respectively for non-zero values. Used with e, E f, the output force containing a decimal point even if no digits after. By default, if no digits after the decimal point is not written. Used with g or G, the result is the same as with e and E but trailing zeros are not removed.
+ 0: Add zeros so that the length of the number matches the width.
+ Width:
+ (Number): Minimum number of characters to print. If the value is shorter than this number is padded with spaces.
+ Accuracy:
+ (Number): For options with integers (d, i, o, u, x, X): precision specifies the minimum number and characters to print. If the number to escribier is less than this number, the result will be aligned with zeros. For options (e, E, f): This is the number of digits to be printed after the decimal point. For options (g, G): This is the maximum number of significant digits. For the option (s): Maximum number of characters to print. for option (c): No effect.
+ Parameters:
+ Other data arguments passed to format.
+ Returns:
+ A string or a number, using the format specified.
+
+string.gmatch function (string s, string pattern)
+ Search iterator function catches.
+ Parameters:
+ s text string.
+ Patron patron for. For this function, a '^' at the beginning of a pattern does not work as an anchor, but also prevents the iteration.
+ Returns:
+ Returns an iterator function that, each time it is invoked, returns the following pattern catches the string s.
+
+string.gsub string (string s, string pattern,. replacement)
+ Replace a string.
+ Parameters:
+ s text string.
+ Patron patron for.
+ A replacement type among the following:
+ "String" - its value is used in the substitution. The character% works as an escape character: any sequence in replacement of the form n, with n between 1 and 9, means the value of the catch in the substring number n. The sequence 0 means the entire match. The sequence%% means a percent sign%.
+ "Table" - In each catch is returned to the table element key is the first capture, if the employer does not provide the entire match then everyone capture is used as a key.
+ "Function" - It is invoked whenever there is a catch with all captured substrings passed as arguments in the same order, if there are no catches then the whole match is passed as a single argument. If the value returned by the table or by the function call is a string or a number, is then used as replacement string, otherwise if false or nil, then no substitution is not performed (ie, the coincidence original is kept in the string).
+ Returns:
+ Returns a copy of s in which all occurrences of the pattern are replaced by the replacement specified. Also returns, the second value, the total number of matches detected.
+ Example:
+ strings.lua.
+
+string.len number (string str)
+ Length of a string.
+ Parameters:
+ Text string str.
+ Returns:
+ Returns the length in characters of the text string.
+
+string.lower string (string str)
+ Skip to lowercase.
+ Parameters:
+ Text string str.
+ Returns:
+ Returns the lowercase text.
+
+String.match string (string str, string pattern)
+ Check catches.
+ Find the first occurrence of the pattern in the string str. If it finds one, then match returns the capture of the pattern, otherwise returns nil. If the employer does not produce then captures the entire match is returned.
+ Parameters:
+ Text string str.
+ Pattern pattern for.
+ Returns:
+ Returns a capture, complete or nil coinciencia.
+
+String.match string (string str, string pattern, int start)
+ Check traps from the specified start.
+ Find the first occurrence of the pattern in the string str. If it finds one, then match returns the capture of the pattern, otherwise returns nil. If the employer does not produce then captures the entire match is returned.
+ Parameters:
+ Text string str.
+ Pattern pattern for.
+ Where to begin looking home. (Can be negative).
+ Returns:
+ Returns a capture, complete or nil coinciencia.
+
+string.rep string (string s, number times)
+ Returns a string that is the concatenation of many copies of the string s and times indicated.
+ Parameters:
+ s text string.
+ Times times to repeat the string.
+ Returns:
+ Returns a string, which will be repeated entry as many times as specified.
+
+string.reverse string (string s)
+ Returns a string that is the original s invested.
+ Parameters:
+ s text string.
+ Returns:
+ Returns a string, which is the original s invested.
+
+string.sub string (string s, number i)
+ Returns a suffix string.
+ Parameters:
+ s text string.
+ i Letter to start the. If it is positive, it starts counting from the beginning, if it is negative it starts counting from the end.
+ Returns:
+ Returns a piece of the original string.
+
+string.sub string (string s, number i, j number)
+ Returns a piece of string.
+ Parameters:
+ s text string.
+ i Letter to start. If it is positive, it starts counting from the beginning, if it is negative it starts counting from the end.
+ Letter j end. If it is positive, it starts counting from the beginning, if it is negative it starts counting from the end.
+ Returns:
+ Returns a piece of the original string.
+
+String.Upper string (string str)
+ Skip to uppercase.
+ Parameters:
+ Text string str.
+ Returns:
+ Returns the uppercase text.
+
+string.explode table (string str, string token)
+ Cleave table. ("Explode" a string).
+ This function works the same way it does its counterpart in PHP. Part a text string whenever it finds a separator. Returns a table with all pieces ordered.
+ Parameters:
+ Text string str.
+ token string that serves as a separator.
+ Returns:
+ Returns a table.
+ Example:
+ savedatas.lua.
+
+string.explode table (string str, string token, number few)
+ Cleave table. ("Explode" a string). Ask for a certain number of pieces.
+ This function works the same way it does its counterpart in PHP. Part a text string whenever it finds a separator. Returns a table with all pieces ordered. Specifying a negative number, you count from the end.
+ Parameters:
+ Text string str.
+ token string that serves as a separator.
+ how many number chunks to return.
+ Returns:
+ Returns a table.
+
+string.implode string (table table)
+ Joining in string. Inverse function to explode.
+ No more arguments, returns a string that is the concatenation of all table entries.
+ Parameters:
+ Table Table to "unite".
+ Returns:
+ Returns the text after all inputs together.
+ Example:
+ savedatas.lua.
+
+string.implode string (Table table, string token)
+ Joining in with separator string. Inverse function to explode.
+ Between piece and piece specified separator is used.
+ Parameters:
+ Table Table to "unite".
+ token separator to use between inputs.
+ Returns:
+ Returns the text after join all inputs, using the separator.
+
+string.implode string (Table table, string token, start number)
+ Joining in string separator, start at X. Inverse function to explode.
+ Between piece and piece specified separator is used.
+ Parameters:
+ Table Table to "unite".
+ token separator to use between inputs.
+ Home Start in table [home] until the end of the table.
+ Returns:
+ Returns the text after joining the inputs, using the separator.
+
+string.implode string (Table table, string token, start number, number order)
+ Joining in with separator string, starting at X and ending in Y. Inverse function to explode.
+ Between piece and piece specified separator is used.
+ Parameters:
+ Table Table to "unite".
+ token separator to use between inputs.
+ Home Start in table [start].
+ And finally finish table [order].
+ Returns:
+ Returns the text after joining the inputs, using the separator.
+
+string.levenhstein number (string a, string b)
+ Levenhstein distance.
+ Levenhstein The distance is the number of basic issues necessary for two text strings are completely equal. For example, the distance between "home" and "street" is 3.
+ Home -> Creek (change 's' to 'l')
+ cove -> silent (insert 'l' between 'l' and 'a')
+ street -> (change 'a' to 'e') This algorithm is often used in spelling correctors for example. Or the mythical "perhaps you meant" of Google.
+ Parameters:
+ a text string A.
+ b Text string B.
+ Returns:
+ Levenhstein returns the distance between the chains A and B.
+
+string.substrcount number (string s, string sub)
+ Count the number of occurrences of the substring in the string.
+ Parameters:
+ Full Text string s.
+ sub text string to search the entire string.
+ Returns:
+ Returns the number of occurrences of sub in s.
+
+string.numtok number (string s, string token)
+ Count the number of pieces that come out of separate s using the token.
+ Parameters:
+ Full Text string s.
+ Text string token used as a separator.
+ Returns:
+ Returns the number of bits resulting from dividing s using the token.
+
+string.gettok string (string s, string token, number num)
+ Returns the bit number "num" of the text string, using the separator token.
+ Parameters:
+ Full Text string s.
+ Text string token used as a separator.
+ num Number of the division to return.
+ Returns:
+ Returns the num division of s, using separator token.

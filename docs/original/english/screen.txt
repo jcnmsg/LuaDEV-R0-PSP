@@ -1,0 +1,445 @@
+
+screen : Management of the screen.
+Functions
+
+nil screen.flip()
+ Updates the display showing the changes.
+ Changes made in the rendering buffer will be displayed in the current screen,
+ and the rendering buffer will be cleared again (black).
+
+nil screen.clear(color col)
+ Clears the screen.
+
+nil screen.clip(int x, int y, int w, int h)
+ Limits the drawing area.
+
+nil screen.clip()
+ Removes the limitation of the drawing area.
+
+nil screen.print(number x, number y, string text)
+ Display text. (White, normal size, default font).
+
+nil screen.print(font font, number x, number y, string text)
+ Display text. (White, normal size, loaded font).
+
+nil screen.print(number x, number y, string text, color col)
+ Display text. (Color, normal size, default font).
+
+nil screen.print(font font, number x, number y, string text, color col)
+ Display text. (Color, normal size, loaded font).
+
+nil screen.print(number x, number y, string text, number size, color letters, color shadow)
+ Display text with color and shadow, adjustable size, default font.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow)
+ Display text with color and shadow, adjustable size, loaded font.
+
+nil screen.print(number x, number y, string text, number size, color letters, color sombra, string align)
+ Display text with color and shadow, adjustable size, align, default font.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string align)
+ Display text with color and shadow, adjustable size, align, loaded font.
+
+nil screen.print(number x, number y, string text, number size, color letters, color shadow, string align, int width)
+ Display text with color and shadow, adjustable size, align, width, default font.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string align, int width)
+ Display text with color and shadow, adjustable size, align, width, loaded font.
+
+number screen.print(number x, number y, string text, number size, color letters, color shadow, string scroll, int width)
+ Automatic scrolling text, default font.
+
+number screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string scroll, int width)
+ Automatic scrolling text, loaded font.
+
+number screen.textwidth(string text, number size)
+ Calculate text width with default font.
+
+number screen.textwidth(font font, string text, number size)
+ Calculate text width with loaded font.
+
+image screen.toimage()
+ Screenshot.
+
+image screen.buffertoimage()
+ Screenshot. (The buffer).
+
+nil screen.waitvblank()
+ Wait until the end of vertical refresh.
+
+nil screen.waitvblankstart()
+ Wait until the start of vertical refresh.
+
+nil screen.enable()
+ Enable the screen.
+ Exceptions:
+ In HBL this function does nothing.
+
+nil screen.disable()
+ Disable the screen.
+ Exceptions:
+ In HBL this function does nothing.
+
+number screen.brightness()
+ Get the brightness of the screen.
+ Exceptions:
+ In HBL this function returns -1.
+
+nil screen.brightness(int brightness)
+ Set the brightness of the screen.
+
+nil screen.sync()
+ Synchronizes internal GU list.
+
+nil screen.frameskip(int frames)
+ Enables the frameskip.
+
+nil screen.frameskip()
+ Disables the frameskip.
+
+nil screen.dithering(int activate)
+ Enable / disable dithering.
+
+nil screen.bilinear(int activate)
+ Enable / disable bilinear filtering.
+
+nil screen.fps()
+ Current framerate.
+********************************************************************************
+Function documentation
+
+nil screen.flip()
+ Updates the display showing the changes.
+ Changes to the display buffer is drawn on the current screen,
+ and the rendering buffer will be completely cleared again (black).
+ Returns:
+ Nothing.
+
+nil screen.clear(color col)
+ Clears the screen.
+ Parameters:
+ col Color to use to clear the screen. If not specified it clears to black by default.
+ Returns:
+ Nothing.
+
+nil screen.clip(int x, int y, int w, int h)
+ Limits the drawing area.
+ Any command to draw something on the screen,
+ you can change the rectangle defined by x,y,w,h.
+ Any change outside of this rectangle is omitted.
+ Parameters:
+ x Position X.
+ y Position Y.
+ w Width.
+ h Height.
+ Returns:
+ Nothing.
+
+nil screen.clip()
+ Removes the limitation of the drawing area.
+ This function is the same as making screen.clip(0,0,480,272)
+ Returns:
+ Nothing.
+
+nil screen.print(number x, number y, string text)
+ Display text. (White, normal size, default font).
+ Parameters:
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ Returns:
+ Nothing.
+
+nil screen.print(font font, number x, number y, string text)
+ Display text. (White, normal size, loaded font).
+ Parameters:
+ font A font object.
+ x Coordinate of X.
+ y Coordinate of Y.
+ texto Text to display.
+ Returns:
+ Nothing.
+
+nil screen.print(number x, number y, string text, color col)
+ Display text. (Color, normal size, default font).
+ Parameters:
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ col Text color.
+ Returns:
+ Nothing.
+
+nil screen.print(font font, number x, number y, string text, color col)
+ Display text. (Color, normal size, loaded font).
+ Parameters:
+ font A font object.
+ x Coordinate of X.
+ y Coordinate of Y.
+ texto Text to display.
+ col Text color.
+ Returns:
+ Nothing.
+
+nil screen.print(number x, number y, string text, number size, color letters, color shadow)
+ Display text with color and shadow, adjustable size, default font.
+ Parameters:
+ x Coordenada X.
+ y Coordenada Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ Returns:
+ Nothing.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow)
+ Display text with color and shadow, adjustable size, loaded font.
+ Parameters:
+ font A font object.
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ Returns:
+ Nothing.
+
+nil screen.print(number x, number y, string text, number size, color letters, color shadow, string align)
+ Display text with color and shadow, adjustable size, align, default font.
+ Parameters:
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ align One of the following:
+ "left" - Align to the left (default)
+ "center" - Align center.
+ "right" - Align to the right.
+ "full" - Full adjustment.
+ Returns:
+ Nothing.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string align)
+ Display text with color and shadow, adjustable size, align, loaded font.
+ Parameters:
+ font A font object.
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ align One of the following:
+ "left" - Align to the left. (default)
+ "center" - Align Center.
+ "right" - Align to the right.
+ "full" - Full adjustment.
+ Returns:
+ Nothing.
+
+nil screen.print(number x, number y, string text, number size, color letters, color shadow, string align, int width)
+ Display text with color and shadow, adjustable size, align, width, default font.
+ Parameters:
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ align One of the following:
+ "left" - Align to the left. (default)
+ "center" - Align Center.
+ "right" - Align to the right.
+ "full" - Full adjustment.
+ width The text is written in a block set by this parameter.
+ Returns:
+ Nothing.
+
+nil screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string align, int width)
+ Display text with color and shadow, adjustable size, align, width, loaded font.
+ Parameters:
+ font A font object.
+ x Coordinate of X.
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ align One of the following:
+ "left" - Align to the left. (default)
+ "center" - Align Center.
+ "right" - Align to the right.
+ "full" - Full adjustment.
+ width The text is written in a block set by this parameter.
+ Returns:
+ Nothing.
+
+number screen.print(number x, number y, string text, number size, color letters, color shadow, string scroll, int width)
+ Automatic scrolling text, default font.
+ Example:
+ x = 10; -- initiation.
+ while true do
+ x = screen.print(x,10,"text",0.77,color.new(255,0,0),color.new(0,0,0),"scroll_through",300);
+ screen.flip();
+ end
+ Parameters:
+ x Coordinate of X. (Use to output of the function at the next call).
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ scroll One of the following:
+ "scroll_left" - Letters shift to the left.
+ "scroll_right" - Letters shift to the right.
+ "scroll_through" - Letters shift to the left, through. Winamp style.
+ width The width of the scroller.
+ Returns:
+ A number, which must be passed again as X coordinate.
+
+number screen.print(font font, number x, number y, string text, number size, color letters, color shadow, string scroll, int width)
+ Automatic scrolling text, loaded font.
+ Parameters:
+ font A font object.
+ x Coordinate of X. (Use to output of the function at the next call).
+ y Coordinate of Y.
+ text Text to display.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ letters Text color.
+ shadow Shadow color of the text.
+ scroll One of the following:
+ "scroll_left" - Letters shift to the left.
+ "scroll_right" - Letters shift to the right.
+ "scroll_through" - Letters shift to the left, through. Winamp style.
+ width The width of the scroller.
+ Returns:
+ A number, which must be passed again as X coordinate.
+
+number screen.textwidth(string text, number size)
+ Calculate text width with the default font.
+ Parameters:
+ text Text to calculate.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ Returns:
+ The width in pixels, to occupy in this text display.
+
+number screen.textwidth(font font, string text, number size)
+ Calculate text width with a loaded font.
+ Parameters:
+ font A font object.
+ text Text to calculate.
+ size A number representing the size of the font. Recommended values between 0.5 and 1.5
+ Returns:
+ The width in pixels, to occupy in this text display.
+
+image screen.toimage()
+ Screenshot.
+ Returns an image with what you see on screen.
+ Returns:
+ Returns an image, the image module, which is currently on the screen.
+ An object of type image.
+
+image screen.buffertoimage()
+ Screenshot. (The buffer)
+ Returns an image, so you do not see on screen. (The buffer)
+ The buffer contains all changes made to the screen from the last flip done.
+ Returns:
+ Returns an image, the image module, which is currently in the buffer.
+ That is, what's between screen.flip() and this function,
+ any changes made to the screen, but not updated, it remains in the buffer.
+ Returns:
+ An object of type image.
+
+nil screen.waitvblank()
+ Wait until the end of vertical refresh.
+ Returns:
+ Nothing.
+
+nil screen.waitvblankstart()
+ Wait until the start of vertical refresh.
+ Returns:
+ Nothing.
+
+nil screen.enable()
+ Enable the screen.
+ Exceptions:
+ In HBL this function does nothing.
+ Returns:
+ Nothing.
+
+nil screen.disable()
+ Disable the screen.
+ Exceptions:
+ In HBL this function does nothing.
+ Returns:
+ Nothing.
+
+number screen.brightness()
+ Get the brightness of the screen.
+ Exceptions:
+ In HBL this function returns -1.
+ Returns:
+ A number with the value of the brightness of the screen.
+
+nil screen.brightness(int brightness)
+ Set the brightness of the screen.
+ Parameters:
+ brightness The new brightness of the screen. (10 to 90 are appropriate values)
+ Exceptions:
+ In HBL this function does nothing.
+ Returns:
+ Nothing.
+
+nil screen.sync()
+ Synchronizes internal GU list.
+ This function is not required, nor their use is common.
+ Should only be used when drawing various 3D models with large quantities of polygons,
+ and the current list is not large enough to paint it.
+ That is, if after several model.blit crashes,
+ but do not hang separately, shall be inserted a screen.sync() between blits.
+ Returns:
+ Nothing.
+
+nil screen.frameskip(int frames)
+ Enables the frameskip.
+ Only recommended if your game is graphically slow,
+ and not increasing the cpu get to go fast.
+ This function will skip frames sufficient to run homebrew again at high speed.
+ Parameters:
+ frames Maximum number of frames to skip.
+ Returns:
+ Nothing.
+
+nil screen.frameskip()
+ Disable the frameskip.
+ Returns:
+ Nothing.
+
+nil screen.dithering(int activate)
+ Enable / disable dithering.
+ Use this function only for display modes below RGBA8888. (32 bits)
+ Parameters:
+ activate Pass 1 to enable, 0 to disable.
+ Returns:
+ Nothing.
+
+nil screen.bilinear(int activate)
+ Enable / disable bilinear filtering.
+ This function will smooth images to rotate.
+ Parameters:
+ activate Pass 1 to enable, 0 to disable.
+ Returns:
+ Nothing.
+
+nil screen.fps()
+ Current framerate.
+ Returns:
+ Returns the number of frames per second.
+
+
+
+

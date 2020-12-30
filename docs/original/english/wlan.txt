@@ -1,0 +1,64 @@
+﻿WLAN: Wi-Fi
+Functions
+
+ wlan.connected () - returns true or false depending on whether we are connected to a network or not
+ 
+ wlan.getconfigs () - returns a table with the configured connections.  the table contains the fields name and ssid for each network
+ 
+ wlan.init () - returns 1 if the connection was successful and another value if it failed
+ - [[ 
+  * Can be called with no arguments, in which case selection dialog appears XMB networks, blocking the execution of the program until the connection is made ​​(or encounter an error xD). 
+  * You can call a number as argument, in such a case would connect to the specified network (connection 1 for 1st, 2 for 2nd and so on) without blocking the program cycle (say it is the advanced mode connection). 
+  * Finally, you can call with two arguments (both numbers).  The 1st argument indicates the network that will connect and the 2nd indicates a maximum wait in seconds before it stops attempting to connect (in the XMB when time just says "timed out" would be something like that).  This mode displays the connection dialog XMB but automatically connects to the network specified (blocks script execution) 
+  ]] -
+ 
+ wlan.ip () - returns the IP you were assigned
+ 
+ wlan.mac () - returns our direción physical MAC PSP
+ 
+ wlan.scan () - returns a table with active connections.
+ - [[ 
+  ssid: ssid the connection 
+  dtim:? 
+  bssid: bssid connection 
+  rate: Connection Information 
+  bsstype: Connection Type 
+  rssi: connection strength 
+  info: the connection information 
+  channel: channel that emits 
+  Atim:? 
+  localtime:? 
+  timestamp:?? 
+  beacon:?? 
+  ]] -
+ 
+ wlan.status () - depending on the network status devuelbe number
+ - [[ 
+  0 offline 
+  One scanning 
+  Two connecting 
+  3 obtaining IP 
+  4 connected 
+  5 authorizing 
+  6 key exchange 
+  ]] -
+ 
+ wlan.statustext () - same as wlan.status () but instead of the strings devolber devuelbe numbers above
+
+ wlan.strength () - from 0 to 100 the signal level
+
+boolean wlan_init (config)
+  Connect to a wireless access point.
+
+
+************************************************** ******************************
+Function Documentation
+
+boolean wlan.init (config)
+  Connect to a wireless access point.
+  parameters:
+  config connection number to use. If you specify a number, use the connection previously configured on the PSP. When using the connection number 0, connections dialog opens and the user choose the preferred connection.
+  Unless you use the dialog, this function returns immediately, thus attempting to connect immediately after using this function would give error, because it takes a few seconds to connect. You can check the status of the connection using the function xxxxxxx.
+  Returns:
+  True if connected or started connecting, otherwise false.
+

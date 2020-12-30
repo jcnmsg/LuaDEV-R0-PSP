@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: corutinas.lua</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<h1>corutinas.lua</h1>  </div>
+</div>
+<div class="contents">
+<div class="fragment"><pre class="fragment">function func_a ( valor_inicial )
+        for i=1, 10 do <a name="a0"></a><a class="code" href="group___c_o_r_o_u_t_i_n_e.html#ga7216ce352b8dd665cf55e80702f5744a" title="Suspende la ejecución de una corutina.">coroutine.yield</a>( &quot;A&quot; , i , valor_inicial + i ); end
+end
+function func_b ( valor_inicial )
+        for i=1,5 do <a class="code" href="group___c_o_r_o_u_t_i_n_e.html#ga7216ce352b8dd665cf55e80702f5744a" title="Suspende la ejecución de una corutina.">coroutine.yield</a>( &quot;B&quot; , i , valor_inicial+i ); end
+end
+usb:on();
+--Inicio del programa:
+co1 = <a name="a1"></a><a class="code" href="group___c_o_r_o_u_t_i_n_e.html#ga5f463d7f020f5b588e3889e7ca42103e" title="Crea una nueva corutina.">coroutine.create</a>( func_a );
+fu2 = <a name="a2"></a><a class="code" href="group___c_o_r_o_u_t_i_n_e.html#ga088b54318bdbca1ae78781b461c1f04d" title="Crea una nueva corutina, convertida a función.">coroutine.wrap</a>( func_b );
+tempfile = <a name="a3"></a><a class="code" href="group___i_o.html#gac2efb39d5be14ced260decefe866773f" title="Abrir archivo en cualquier modo.">io.open</a>( &quot;tempf.txt&quot; , &quot;w&quot; );
+while <a name="a4"></a><a class="code" href="group___c_o_r_o_u_t_i_n_e.html#gad54c0bc634bc7e4c6e578511cdb5f56a" title="Estado de una corutina.">coroutine.status</a>( co1 ) ~= &quot;dead&quot; do
+        res, co, num, val = <a name="a5"></a><a class="code" href="group___c_o_r_o_u_t_i_n_e.html#ga29fb2aa35fad3f0682502a1190b0da0e" title="Resume o comienza a ejecutar una corutina.">coroutine.resume</a>( co1 , 3 );
+        tempfile:<a name="a6"></a><a class="code" href="group___i_o.html#gaf67b9b5563720fea34715b104f254bdf" title="Escribe datos en un archivo.">write</a>( res , co , num , val , &quot;\n&quot; );
+        co, num, val = fu2( 5 );
+        tempfile:<a class="code" href="group___i_o.html#gaf67b9b5563720fea34715b104f254bdf" title="Escribe datos en un archivo.">write</a>( co , num , val , &quot;\n&quot; );
+end
+tempfile:flush();
+tempfile:close();
+-- <span class="comment">// Salida obtenida:</span>
+true    A       1       4       
+B       1       6       
+true    A       2       5       
+B       2       7       
+true    A       3       6       
+B       3       8       
+true    A       4       7       
+B       4       9       
+true    A       5       8       
+B       5       10      
+true    A       6       9       
+nil     nil     nil     
+true    A       7       10      
+input:28: cannot resume dead coroutine
+</pre></div> </div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

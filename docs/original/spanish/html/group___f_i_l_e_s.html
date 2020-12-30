@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: files : Manejo del sistema de archivos.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>files : Manejo del sistema de archivos.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga01c4e78062682bc98c3432044bdefec3">files.cdir</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cambia la carpeta de trabajo actual a la especificada.  <a href="#ga01c4e78062682bc98c3432044bdefec3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gae4f64e1001e131a758d300cdb3a500f8">files.cdir</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve la carpeta de trabajo actual.  <a href="#gae4f64e1001e131a758d300cdb3a500f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gaecc67f9ee4038fc38c119da80ac1964f">files.list</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista un directorio.  <a href="#gaecc67f9ee4038fc38c119da80ac1964f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga7a4bb57a71197055ea55518ff7363b4f">files.listfiles</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista un directorio, mostrando sólo los archivos.  <a href="#ga7a4bb57a71197055ea55518ff7363b4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">table&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gaa5b5cab24857f25c22854b387ddcac6a">files.listdirs</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Lista un directorio, mostrando sólo las carpetas.  <a href="#gaa5b5cab24857f25c22854b387ddcac6a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gaa3ad24b803cd668dcccb2337ed8447b2">files.mkdir</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una carpeta.  <a href="#gaa3ad24b803cd668dcccb2337ed8447b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga9090bf8978edca58f29b3f6725f9007d">files.remove</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina un archivo o carpeta.  <a href="#ga9090bf8978edca58f29b3f6725f9007d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gaa3b5f3e9d9c2fbf4b81af64658225211">files.remove</a> (string path, boolean recursive)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Elimina un archivo o carpeta.  <a href="#gaa3b5f3e9d9c2fbf4b81af64658225211"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga61e0624ef2e05ff1efdfa046909a6f9b">files.copy</a> (string source, string dest)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copia un archivo o carpeta.  <a href="#ga61e0624ef2e05ff1efdfa046909a6f9b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gae1b9bba8fe15f417e2511869caec4e82">files.copy</a> (string source, string dest, boolean recursive)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copia un archivo o carpeta. Recursivo.  <a href="#gae1b9bba8fe15f417e2511869caec4e82"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gacee21a3178563342fc5b69436f100018">files.copy</a> (string source, string dest, boolean recursive, boolean overwrite)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Copia un archivo o carpeta. Recursivo.  <a href="#gacee21a3178563342fc5b69436f100018"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga8d76e23fd9c8dc85c6741c14471d164b">files.rename</a> (string name, string newname)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Renombra un archivo / carpeta.  <a href="#ga8d76e23fd9c8dc85c6741c14471d164b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga10d8060e2a1339de2b848d28e62a7992">files.exists</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Determina si existe un archivo / carpeta.  <a href="#ga10d8060e2a1339de2b848d28e62a7992"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga5b8119cda761dfd7802e47ebf4578da9">files.nopath</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Quita la carpeta a una ruta.  <a href="#ga5b8119cda761dfd7802e47ebf4578da9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gae3b0803c250a313e997bbd7d061d2b91">files.nofile</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Quita el archivo a una ruta.  <a href="#gae3b0803c250a313e997bbd7d061d2b91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga5f900a6bd1207fec78179d54b9f022fc">files.ext</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve la extensión en <em>minúsculas</em>.  <a href="#ga5f900a6bd1207fec78179d54b9f022fc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga221dcf91a8a75d71ce35d42d667d1e91">files.size</a> (string path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tamaño de un archivo. En bytes.  <a href="#ga221dcf91a8a75d71ce35d42d667d1e91"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga72a66f326e77b0b5e1d070b914a89727">files.sizeformat</a> (number bytes)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Da formato a un tamaño de archivo.  <a href="#ga72a66f326e77b0b5e1d070b914a89727"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#ga9988146b0dbade3dcd322a421a3349eb">files.freespace</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espacio libre de la memory stick.  <a href="#ga9988146b0dbade3dcd322a421a3349eb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_i_l_e_s.html#gac4ea878b3260119a08d32434ee63c3db">files.totalspace</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espacio total de la memory stick.  <a href="#gac4ea878b3260119a08d32434ee63c3db"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con el manejo de archivos.</p>
+<p>Este módulo trabaja bajo el hipervisor de LuaDEV. Es decir, sólo puede trabajar de manera normal, dentro de la carpeta en la que se encuentre el EBOOT (su espacio de trabajo). Fuera de este espacio, requerirá el consentimiento del usuario para poder modificar archivos. (Accediendo en sólo lectura no requiere permiso). </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga01c4e78062682bc98c3432044bdefec3"></a><!-- doxytag: member="files.cdir" ref="ga01c4e78062682bc98c3432044bdefec3" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.cdir </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cambia la carpeta de trabajo actual a la especificada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta de la nueva carpeta de trabajo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae4f64e1001e131a758d300cdb3a500f8"></a><!-- doxytag: member="files.cdir" ref="gae4f64e1001e131a758d300cdb3a500f8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string files.cdir </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve la carpeta de trabajo actual. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una string, con la carpeta actual. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaecc67f9ee4038fc38c119da80ac1964f"></a><!-- doxytag: member="files.list" ref="gaecc67f9ee4038fc38c119da80ac1964f" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table files.list </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lista un directorio. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La carpeta a listar. Si no se especifica, se listará la actual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con sus entradas listadas numéricamente.<br/>
+ Cada entrada, será una tabla con las siguientes claves: <ul>
+<li><em>"name"</em> (string) La ruta <b>completa</b> del archivo. </li>
+<li><em>"size"</em> (number) Su tamaño en bytes. </li>
+<li><em>"ctime"</em> (table) Tabla con la fecha de creación del archivo. </li>
+<li><em>"atime"</em> (table) Tabla con la fecha del último acceso. </li>
+<li><em>"mtime"</em> (table) Tabla con la fecha de la última modificación del archivo. </li>
+<li><em>"directory"</em> (boolean) Indica si la entrada es un directorio o no.</li>
+</ul>
+Las tablas con las fechas, són tablas con los siguientes campos: <ul>
+<li><em>"day"</em> (number) Día. </li>
+<li><em>"month"</em> (number) Mes. </li>
+<li><em>"year"</em> (number) Año. </li>
+<li><em>"hour"</em> (number) Hora. </li>
+<li><em>"minute"</em> (number) Minutos. </li>
+<li><em>"second"</em> (number) Segundos.</li>
+</ul>
+No se tendrán en cuenta los archivos "." y ".."<br/>
+ </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7a4bb57a71197055ea55518ff7363b4f"></a><!-- doxytag: member="files.listfiles" ref="ga7a4bb57a71197055ea55518ff7363b4f" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table files.listfiles </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lista un directorio, mostrando sólo los archivos. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La carpeta a listar. Si no se especifica, se listará la actual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con el mismo formato que <em><a class="el" href="group___f_i_l_e_s.html#gaecc67f9ee4038fc38c119da80ac1964f" title="Lista un directorio.">files.list()</a></em> pero sin "carpetas". </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa5b5cab24857f25c22854b387ddcac6a"></a><!-- doxytag: member="files.listdirs" ref="gaa5b5cab24857f25c22854b387ddcac6a" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">table files.listdirs </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lista un directorio, mostrando sólo las carpetas. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La carpeta a listar. Si no se especifica, se listará la actual. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una tabla, con el mismo formato que <em><a class="el" href="group___f_i_l_e_s.html#gaecc67f9ee4038fc38c119da80ac1964f" title="Lista un directorio.">files.list()</a></em> pero sin "archivos". </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa3ad24b803cd668dcccb2337ed8447b2"></a><!-- doxytag: member="files.mkdir" ref="gaa3ad24b803cd668dcccb2337ed8447b2" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.mkdir </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea una carpeta. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta a la carpeta a crear. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga9090bf8978edca58f29b3f6725f9007d"></a><!-- doxytag: member="files.remove" ref="ga9090bf8978edca58f29b3f6725f9007d" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.remove </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Elimina un archivo o carpeta. </p>
+<p>Sólo puede eliminar carpetas que estén vacías. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta del archivo / carpeta a borrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa3b5f3e9d9c2fbf4b81af64658225211"></a><!-- doxytag: member="files.remove" ref="gaa3b5f3e9d9c2fbf4b81af64658225211" args="(string path, boolean recursive)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.remove </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&nbsp;</td>
+          <td class="paramname"> <em>recursive</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Elimina un archivo o carpeta. </p>
+<p>Si se especifica recursive como <em>true</em>, y la ruta a eliminar es un directorio, éste se eliminará de manera recursiva, es decir, primero se vaciará y luego se eliminará. Además, si hay más carpetas dentro de ésta, también serán vaciadas y eliminadas. Si no se especifica como recursive, esta función sólo puede eliminar directorios que estén completamente vacíos.<br/>
+<br/>
+ </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>La ruta del archivo / carpeta a borrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>recursive</em>&nbsp;</td><td>Eliminar de manera recursiva. (true = recursivo, false = no recursivo ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga61e0624ef2e05ff1efdfa046909a6f9b"></a><!-- doxytag: member="files.copy" ref="ga61e0624ef2e05ff1efdfa046909a6f9b" args="(string source, string dest)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.copy </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>dest</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia un archivo o carpeta. </p>
+<p>Copiar archivos o carpetas. No recursivo. No sobreescribe. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>source</em>&nbsp;</td><td>La ruta del archivo / carpeta a copiar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>dest</em>&nbsp;</td><td>La ruta del archivo / carpeta de destino. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae1b9bba8fe15f417e2511869caec4e82"></a><!-- doxytag: member="files.copy" ref="gae1b9bba8fe15f417e2511869caec4e82" args="(string source, string dest, boolean recursive)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.copy </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&nbsp;</td>
+          <td class="paramname"> <em>recursive</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia un archivo o carpeta. Recursivo. </p>
+<p>Copia un archivo o una carpeta. Recursivo, copia todos los contenidos de todas las carpetas de la ruta source, a la ruta dest. No sobreescibe. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>source</em>&nbsp;</td><td>La ruta del archivo / carpeta a copiar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>dest</em>&nbsp;</td><td>La ruta del archivo / carpeta de destino. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>recursive</em>&nbsp;</td><td>Copiar de manera recursiva. (true = recursivo, false = no recursivo ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacee21a3178563342fc5b69436f100018"></a><!-- doxytag: member="files.copy" ref="gacee21a3178563342fc5b69436f100018" args="(string source, string dest, boolean recursive, boolean overwrite)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.copy </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&nbsp;</td>
+          <td class="paramname"> <em>recursive</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&nbsp;</td>
+          <td class="paramname"> <em>overwrite</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Copia un archivo o carpeta. Recursivo. </p>
+<p>Copia un archivo o una carpeta. Recursivo, copia todos los contenidos de todas las carpetas de la ruta source, a la ruta dest. Sobreescribe los archivos en la carpeta destino. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>source</em>&nbsp;</td><td>La ruta del archivo / carpeta a copiar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>dest</em>&nbsp;</td><td>La ruta del archivo / carpeta de destino. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>recursive</em>&nbsp;</td><td>Copiar de manera recursiva. (true = recursivo, false = no recursivo ) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>overwrite</em>&nbsp;</td><td>Sobreescribir. (true = si, false = no ) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8d76e23fd9c8dc85c6741c14471d164b"></a><!-- doxytag: member="files.rename" ref="ga8d76e23fd9c8dc85c6741c14471d164b" args="(string name, string newname)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil files.rename </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>newname</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Renombra un archivo / carpeta. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Archivo / carpeta a renombrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>newname</em>&nbsp;</td><td>Nuevo nombre </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga10d8060e2a1339de2b848d28e62a7992"></a><!-- doxytag: member="files.exists" ref="ga10d8060e2a1339de2b848d28e62a7992" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean files.exists </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Determina si existe un archivo / carpeta. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo / carpeta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false, según si existe o no el archivo o carpeta especificada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5b8119cda761dfd7802e47ebf4578da9"></a><!-- doxytag: member="files.nopath" ref="ga5b8119cda761dfd7802e47ebf4578da9" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string files.nopath </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Quita la carpeta a una ruta. </p>
+<p>Ejemplo: "ms0:/PSP/GAME/bla/archiv.txt" --&gt; "archiv.txt" </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo / carpeta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El nombre del archivo completo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae3b0803c250a313e997bbd7d061d2b91"></a><!-- doxytag: member="files.nofile" ref="gae3b0803c250a313e997bbd7d061d2b91" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string files.nofile </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Quita el archivo a una ruta. </p>
+<p>Ejemplo: "ms0:/PSP/GAME/bla/archiv.txt" --&gt; "ms0:/PSP/GAME/bla/" </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo / carpeta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El nombre de la ruta sin el archivo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5f900a6bd1207fec78179d54b9f022fc"></a><!-- doxytag: member="files.ext" ref="ga5f900a6bd1207fec78179d54b9f022fc" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string files.ext </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve la extensión en <em>minúsculas</em>. </p>
+<p>Ejemplo: "ms0:/PSP/GAME/bla/archiv.txt" --&gt; "txt" <br/>
+<br/>
+ Realmente són las 3 últimas letras del texto pasado, en minúsculas. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo / carpeta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>La extensión en minúsculas del archivo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga221dcf91a8a75d71ce35d42d667d1e91"></a><!-- doxytag: member="files.size" ref="ga221dcf91a8a75d71ce35d42d667d1e91" args="(string path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number files.size </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Tamaño de un archivo. En bytes. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Ruta al archivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El número de bytes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga72a66f326e77b0b5e1d070b914a89727"></a><!-- doxytag: member="files.sizeformat" ref="ga72a66f326e77b0b5e1d070b914a89727" args="(number bytes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string files.sizeformat </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>bytes</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Da formato a un tamaño de archivo. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>bytes</em>&nbsp;</td><td>Número de bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una string, con el tamaño y la unidad. (Ejemplo: "3.43 MB") </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga9988146b0dbade3dcd322a421a3349eb"></a><!-- doxytag: member="files.freespace" ref="ga9988146b0dbade3dcd322a421a3349eb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int files.freespace </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Espacio libre de la memory stick. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el espacio libre de la memory stick en bytes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac4ea878b3260119a08d32434ee63c3db"></a><!-- doxytag: member="files.totalspace" ref="gac4ea878b3260119a08d32434ee63c3db" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int files.totalspace </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Espacio total de la memory stick. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el espacio total de la memory stick en bytes. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

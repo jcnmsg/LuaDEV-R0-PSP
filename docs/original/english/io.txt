@@ -1,0 +1,155 @@
+﻿io: Input / output, file management.
+Functions
+
+io.open file (string path, string mode)
+ Open file in any way.
+
+io.open file (string path)
+ Open file in read mode.
+
+io.close nil (fd file)
+ Closes a file.
+
+io.read string (file fd, string format)
+ Reads data from a file.
+
+io.read string (fd file)
+ Reads a line from a file.
+
+io.lines function (string path)
+ Iterator function, line by line.
+
+nil io.write (fd file, ....)
+ Write data to a file.
+
+io.flush nil (fd file)
+ Save the data written to the file.
+
+io.seek nil (file fd, string where)
+ Sets or returns the current position of a file pointer.
+
+io.seek nil (file fd, string where, int offset)
+ Move the pointer position in a file.
+
+io.setvbuf nil (file fd, string mode)
+ Sets the mode on how the data will be written to a file.
+************************************************** ******************************
+Function Documentation
+
+io.open file (string path, string mode)
+ Open file in any way.
+ Notes:
+ If you open in read / write mode, it is recommended to write immediately after reading, or vice versa, it would be filing a seek involved.
+ Parameters:
+ path The path of the file to open.
+ One mode of the following:
+ "R" - read mode. (Default)
+ "W" - write mode.
+ "A" - adding mode.
+ "R +" - Read / Write. Pointer to the beginning, pre-existing data is preserved.
+ "W +" - Read / Write. Pointer to the beginning, pre-existing data are removed.
+ "A +" - Read / Write. Pointer to the end of the file, pre-existing data is preserved.
+ "Rb" - Reading binary data (data files).
+ "Wb" - Writing, binary data (data files).
+ "Ab" - Addition, binary data (data files).
+ Returns:
+ A file descriptor, or nil on error, more error message.
+ Example:
+ corutinas.lua.
+
+io.open file (string path)
+ Open file in read mode.
+ Parameters:
+ path The path of the file to open.
+ Returns:
+ A file descriptor, or nil on error, more error message.
+
+io.close nil (fd file)
+ Closes a file.
+ Parameters:
+ fd file descriptor previously opened.
+ Returns:
+ Nothing.
+ Example:
+ corutinas.lua.
+
+io.read string (file fd, string format)
+ Reads data from a file.
+ Parameters:
+ fd file descriptor previously opened.
+ data format read type, one of the following:
+ "* N" - Read a number. Using this format type returns a number, not string.
+ "* A" - Read the rest of the entire file, starting from the current position.
+ "* L" - Read the next line. This is the default format.
+ A number - If you specify a number, this number of bytes read or characters.
+ Returns:
+ The data read, or nil if data could not be read or there are no more data.
+
+io.read string (fd file)
+ Reads a line from a file.
+ Parameters:
+ fd file descriptor previously opened.
+ Returns:
+ The data read, or nil if data could not be read or there are no more data.
+
+io.lines function (string path)
+ Iterator function, line by line.
+ Parameters:
+ path The path of the file to open.
+ Returns:
+ An iterator function for use in construction type for xxx in io.lines ("map")
+
+nil io.write (fd file, ....)
+ Write data to a file.
+ Parameters:
+ fd file descriptor previously opened.
+ ... Variable amount of extra arguments, which may be numbers or strings.
+ Returns:
+ Nothing.
+ Example:
+ corutinas.lua.
+
+io.flush nil (fd file)
+ Save the data written to the file.
+ Parameters:
+ fd file descriptor previously opened.
+ Returns:
+ Nothing.
+ Example:
+ corutinas.lua.
+
+io.seek nil (file fd, string where)
+ Sets or returns the current position of a file pointer.
+ Parameters:
+ fd file descriptor previously opened.
+ where one of the following:
+ "Set" - Sets the start position, and returns 0.
+ "Cur" - Returns the current position from the beginning of the file.
+ "End" - Sets the end position, and returns the file size.
+ Returns:
+ Depends on its argument.
+
+io.seek nil (file fd, string where, int offset)
+ Move the pointer position in a file.
+ For example, if used io.seek (file, "set", 20), place the pointer 20 bytes away from the start. (You will skip the first 20 bytes).
+ Parameters:
+ fd file descriptor previously opened.
+ where one of the following:
+ "Set" - From the beginning.
+ "Cur" - From the current position.
+ "End" - From the end of the file.
+ Scrolling to consider, from "where".
+ Returns:
+ Returns the position where the pointer has been told from the beginning of the file.
+
+io.setvbuf nil (file fd, string mode)
+ Sets the mode on how the data will be written to a file.
+ To ensure that the data is written, and do not take into account the write buffers, it is correct to use io.flush (file);
+ Parameters:
+ fd file descriptor previously opened.
+ One of the following manner:
+ "No" - no buffer, the data is written immediately.
+ "Full" - only write when filling the write buffer.
+ "Line" - only write each time it reaches a new line "\ n".
+ Returns:
+ Nothing.

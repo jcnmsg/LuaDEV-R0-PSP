@@ -1,0 +1,251 @@
+﻿files: File System Management.
+Functions
+
+zip.extract (directorio_del_zip, directorio_a_extraer, int_recursivo) 
+
+files.encrypt (file, Password) - encrypt a file
+
+files.decrypt (file, password) - decrypts a file 
+
+files.cdir nil (string path)
+ Changes the current working directory specified.
+
+files.cdir string ()
+ Returns the current working directory.
+
+files.list table (string path)
+ List a directory.
+
+files.listfiles table (string path)
+ List a directory, showing only the files.
+
+files.listdirs table (string path)
+ List a directory, showing only the folders.
+
+files.mkdir nil (string path)
+ Create a folder.
+
+files.remove nil (string path)
+ Deletes a file or folder.
+
+files.remove nil (string path, boolean recursive)
+ Deletes a file or folder.
+
+files.copy nil (string source, string dest)
+ Copy a file or folder.
+
+files.copy nil (string source, string dest, boolean recursive)
+ Copy a file or folder. Recursive.
+
+files.copy nil (string source, string dest, boolean recursive, boolean overwrite)
+ Copy a file or folder. Recursive.
+
+files.rename nil (string name, string newname)
+ Rename a file / folder.
+
+Files.exists boolean (string path)
+ Determines if a file / folder exists.
+
+files.nopath string (string path)
+ Remove the folder of a path.
+
+files.nofile string (string path)
+ Remove the file of a path.
+
+files.ext string (string path)
+ Returns the extension to lowercase.
+
+files.size number (string path)
+ Size of a file. In bytes.
+
+files.sizeformat string (number bytes)
+ Formats to file size.
+
+files.freespace int ()
+ Free space of the memory stick.
+
+files.totalspace int ()
+ Total space of the memory stick.
+************************************************** ******************************
+Function documentation
+
+files.cdir nil (string path)
+ Changes the current working directory specified.
+ Parameters:
+ path The path of the new working directory.
+ Returns:
+ Nothing.
+
+files.cdir string ()
+ Returns the current working directory.
+ Returns:
+ A string of the current working directory.
+
+files.list table (string path)
+ List a directory.
+ Parameters:
+ The folder path path to list. If not specified the current will be listed.
+ Returns:
+ A table of the entries listed numerically.
+ Each entry will be a table with the Following keys:
+ "Name" (string) The full path of the file.
+ "Size" (number) The size in bytes.
+ "Ctime" (table) Table with the file creation date.
+ "Atime" (table) Table with the file access date.
+ "Mtime" (table) Table with the file modification date.
+ "Directory" (boolean) Indicates Whether the entry is a directory or not.
+ Tables are tables with dates With The Following fields:
+ "Day" (number) Day.
+ "Month" (number) Month.
+ "Year" (number) Year.
+ "Hour" (number) Hour.
+ "Minute" (number) Minutes.
+ "Second" (number) Seconds.
+ The table will not return "." and ".."
+
+files.listfiles table (string path)
+ List a directory showing only the files.
+ Parameters:
+ path The path to list. If not specified, the current will be listed.
+ Returns:
+ A table with the same format as files.list () but not "folders".
+
+files.listdirs table (string path)
+ List a directory, showing only folders.
+ Parameters:
+ path The path to list. If not specified, the current will be listed.
+ Returns:
+ A table with the same format as files.list () but not "files".
+
+files.mkdir nil (string path)
+ Create a folder.
+ Parameters:
+ path The path to the folder to create.
+ Returns:
+ Nothing.
+
+files.remove nil (string path)
+ Deletes a file or folder.
+ You can only delete folders That Are empty.
+ Parameters:
+ path The path to the file / folder to remove.
+ Returns:
+ Nothing.
+
+files.remove nil (string path, boolean recursive)
+ Deletes a file or folder.
+ If recursive is specified as true,
+ and the path to delete is a directory,
+ This Will delete recursively, ie, first empty and then remove.
+ In Addition, if more folders inside it They Will Also be removed.
+ If not specified as recursive,
+ this function can only delete empty directories.
+ Parameters:
+ path The path to the file / folder to remove.
+ Remove recursive recursively. (Recursive = true, false = not recursive)
+ Returns:
+ Nothing.
+
+files.copy nil (string source, string dest)
+ Copy a file or folder.
+ Copies files or folders. Not recursive. Not overwritten.
+ Parameters:
+ The path of the source file / folder to copy.
+ dest The path of the file / folder destination.
+ Returns:
+ Nothing.
+
+files.copy nil (string source, string dest, boolean recursive)
+ Copy a file or folder. Recursive.
+ Copy a file or folder.
+ Recursive, copy all the contents of all folders in the source path,
+ to the destination path. Not overwritten.
+ Parameters:
+ The path of source file / folder to copy.
+ dest The path of file / folder destination.
+ Copy recursive recursively. (Recursive = true, false = not recursive)
+ Returns:
+ Nothing.
+
+files.copy nil (string source, string dest, boolean recursive, boolean overwrite)
+ Copy a file or folder. Recursive.
+ Copy a file or folder.
+ Recursive, copy all the contents of all folders in the source path,
+ to the destination path. Overwrite the files in the destination folder.
+ Parameters:
+ The path of source file / folder to copy.
+ dest The path of file / folder destination.
+ Copy recursive recursively. (Recursive = true, false = not recursive)
+ Overwrite overwrite. (True = yes, false = no)
+ Returns:
+ Nothing.
+
+files.rename nil (string name, string newname)
+ Rename a file / folder.
+ Parameters:
+ File name / folder to rename.
+ newname New name
+ Returns:
+ Nothing.
+
+Files.exists boolean (string path)
+ Determines if a file / folder exists.
+ Parameters:
+ path Path to the file / folder.
+ Returns:
+ true / false, depending on whether or not the specified file or folder.
+
+files.nopath string (string path)
+ Remove the folder of a path.
+ Example: "ms0 :/ PSP / GAME / bla / archiv.txt" -> "archiv.txt"
+ Parameters:
+ path Path of file / folder.
+ Returns:
+ The full file name.
+
+files.nofile string (string path)
+ Remove the file of a path.
+ Example: "ms0 :/ PSP / GAME / bla / archiv.txt" -> "ms0 :/ PSP / GAME / bla /"
+ Parameters:
+ path Path of file / folder.
+ Returns:
+ The name of the path without the file.
+
+files.ext string (string path)
+ Returns the extension in lowercase.
+ Example: "ms0 :/ PSP / GAME / bla / archiv.txt" -> "txt"
+ The last 3 letters of the text passed in lowercase.
+ Parameters:
+ path Path of file / folder.
+ Returns:
+ The file extension in lowercase.
+
+files.size number (string path)
+ Size of a file. In bytes.
+ Parameters:
+ Path of file path.
+ Returns:
+ The number of bytes.
+
+files.sizeformat string (number bytes)
+ Formats to file size.
+ Parameters:
+ bytes Number of bytes.
+ Returns:
+ A string With The size and unit. (Example: "3.43 MB")
+
+files.freespace int ()
+ Free space of the memory stick.
+ Returns:
+ Returns the free space of the memory stick in bytes.
+
+files.totalspace int ()
+ Total space of the memory stick.
+ Returns:
+ Returns the full space of the memory stick in bytes.
+
+-----------------Notes for file encrypt/decrypt------------------------ 
+
+Password: If no password is specified, the file is encrypted with the password LUADev internal.  
+An encrypted file with internal password can not be decrypted LUADev.  
+An encrypted file with a personalized password can not be used directly in LUADev (must be decrypted before use). 

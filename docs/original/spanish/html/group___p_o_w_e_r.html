@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: power : Sistema de alimentación.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<h1>power : Sistema de alimentación.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#gad101b09d3f26f65175b2eb5e40d27fcc">power.plugged</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Cable conectado.  <a href="#gad101b09d3f26f65175b2eb5e40d27fcc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#gaef1e06ccda47a03fa86da171c766eb84">power.lock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bloquea el interruptor de alimentación.  <a href="#gaef1e06ccda47a03fa86da171c766eb84"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#ga41f37024a702203eedca8e53865d2cb7">power.unlock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desbloquea el interruptor de alimentación.  <a href="#ga41f37024a702203eedca8e53865d2cb7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#gad4a8186b7ce92d6b298ad9343f34e75e">power.standby</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pone la PSP en modo "stand-by".  <a href="#gad4a8186b7ce92d6b298ad9343f34e75e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#gaa7cdcdb415c117a689aa21e3c0b4010d">power.suspend</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Pone la PSP en modo suspensión.  <a href="#gaa7cdcdb415c117a689aa21e3c0b4010d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#gac350ccc7d8f3f799e03e47b426ca2d20">power.tick</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evita que la PSP se ponga en "stand-by".  <a href="#gac350ccc7d8f3f799e03e47b426ca2d20"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#ga645926d4f5a29e1b6dede02973fa200b">power.tick</a> (int modo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Evita que la PSP se ponga en "stand-by".  <a href="#ga645926d4f5a29e1b6dede02973fa200b"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga29fb3464bac1c928e6f5aaa78a6e5975"></a><!-- doxytag: member="POWER.tick_all" ref="ga29fb3464bac1c928e6f5aaa78a6e5975" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#ga29fb3464bac1c928e6f5aaa78a6e5975">power.tick.all</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constantes para utilizar conjunto a power.tick(). <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga53dc6d69d251dd8623aafdcf73297afa"></a><!-- doxytag: member="POWER.tick_display" ref="ga53dc6d69d251dd8623aafdcf73297afa" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#ga53dc6d69d251dd8623aafdcf73297afa">power.tick.display</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constantes para utilizar conjunto a power.tick(). <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga0ec3fa8418c265bb55544e42e312df10"></a><!-- doxytag: member="POWER.tick_suspend" ref="ga0ec3fa8418c265bb55544e42e312df10" args="" -->
+const number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_o_w_e_r.html#ga0ec3fa8418c265bb55544e42e312df10">power.tick.suspend</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Constantes para utilizar conjunto a power.tick(). <br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con el sistema de alimentación.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Tareas pendientes:</a></b></dt><dd>Apagar la PSP.</dd></dl>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gad101b09d3f26f65175b2eb5e40d27fcc"></a><!-- doxytag: member="power.plugged" ref="gad101b09d3f26f65175b2eb5e40d27fcc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean power.plugged </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Cable conectado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True/false. Según si el cable está conectado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaef1e06ccda47a03fa86da171c766eb84"></a><!-- doxytag: member="power.lock" ref="gaef1e06ccda47a03fa86da171c766eb84" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.lock </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Bloquea el interruptor de alimentación. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga41f37024a702203eedca8e53865d2cb7"></a><!-- doxytag: member="power.unlock" ref="ga41f37024a702203eedca8e53865d2cb7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.unlock </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Desbloquea el interruptor de alimentación. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad4a8186b7ce92d6b298ad9343f34e75e"></a><!-- doxytag: member="power.standby" ref="gad4a8186b7ce92d6b298ad9343f34e75e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.standby </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pone la PSP en modo "stand-by". </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa7cdcdb415c117a689aa21e3c0b4010d"></a><!-- doxytag: member="power.suspend" ref="gaa7cdcdb415c117a689aa21e3c0b4010d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.suspend </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Pone la PSP en modo suspensión. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gac350ccc7d8f3f799e03e47b426ca2d20"></a><!-- doxytag: member="power.tick" ref="gac350ccc7d8f3f799e03e47b426ca2d20" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.tick </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Evita que la PSP se ponga en "stand-by". </p>
+<p>El tick es necesario enviarlo cada cierto tiempo, para que la PSP no vaya a "stand-by" automáticamente.<br/>
+ Además, si el usuario presiona cualquier tecla, el temporizador de "stand-by" vuelve a 0. (Igual que con esta función). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga645926d4f5a29e1b6dede02973fa200b"></a><!-- doxytag: member="power.tick" ref="ga645926d4f5a29e1b6dede02973fa200b" args="(int modo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil power.tick </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>modo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Evita que la PSP se ponga en "stand-by". </p>
+<p>El tick es necesario enviarlo cada cierto tiempo, para que la PSP no vaya a "stand-by" automáticamente.<br/>
+ Además, si el usuario presiona cualquier tecla, el temporizador de "stand-by" vuelve a 0. (Igual que con esta función). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>modo</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><code>power.tick.all</code> - Evita que la PSP apague la pantalla y vaya a suspensión. </li>
+<li><code>power.tick.display</code> - Evita que la PSP apague la pantalla. </li>
+<li><code>power.tick.suspend</code> - Evita que la PSP vaya a suspensión. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

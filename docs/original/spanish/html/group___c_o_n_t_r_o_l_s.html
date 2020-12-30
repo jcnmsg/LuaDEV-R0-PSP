@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: controls : Uso de los controles.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>controls : Uso de los controles.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga4930f3c0f89d43c767f06e3cb32f1f8e">controls.read</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Realiza la lectura de los controles.  <a href="#ga4930f3c0f89d43c767f06e3cb32f1f8e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga3d3bee5d560706e7ae85e9ee9a2418ad">controls.up</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">D-PAD arriba.  <a href="#ga3d3bee5d560706e7ae85e9ee9a2418ad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga35ef24bf7559b02f5917626427fa2337">controls.down</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">D-PAD abajo.  <a href="#ga35ef24bf7559b02f5917626427fa2337"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga859c938047c58f072cb42ceea99916cd">controls.right</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">D-PAD derecha.  <a href="#ga859c938047c58f072cb42ceea99916cd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gae789e4f3fba1940c96c538722c2aacde">controls.left</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">D-PAD izquierda.  <a href="#gae789e4f3fba1940c96c538722c2aacde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga0886aa4e3e6b104b885c6cb0a9638b0d">controls.l</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón L.  <a href="#ga0886aa4e3e6b104b885c6cb0a9638b0d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gaba5ac5952ca1458504d46dc2d7f634ef">controls.r</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón R.  <a href="#gaba5ac5952ca1458504d46dc2d7f634ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga59778d7abc755bfefd11e9afadea0dde">controls.triangle</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón triángulo.  <a href="#ga59778d7abc755bfefd11e9afadea0dde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga826650d3a4f85c8166f25f7ebe9b7bae">controls.circle</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón círculo.  <a href="#ga826650d3a4f85c8166f25f7ebe9b7bae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga5eccd42a2c809673d371767638329b97">controls.cross</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón cruz.  <a href="#ga5eccd42a2c809673d371767638329b97"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga798e05a35907bb207ee8a87d498dc4fa">controls.square</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón cuadrado.  <a href="#ga798e05a35907bb207ee8a87d498dc4fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gab707390179a6731dce19fcc8ad6957f4">controls.home</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Home.  <a href="#gab707390179a6731dce19fcc8ad6957f4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga204ff1157898170d1b4518c3467b9cd3">controls.hold</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Hold. (Bloqueo de controles).  <a href="#ga204ff1157898170d1b4518c3467b9cd3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga5ef331f40567119d09459ad120f9a627">controls.start</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Start.  <a href="#ga5ef331f40567119d09459ad120f9a627"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gae60a00c087cced89b4d4640054e8beb3">controls.select</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón Select.  <a href="#gae60a00c087cced89b4d4640054e8beb3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga544f7a5ae6405a6561c13e3e76ebd9ee">controls.wlan</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Interruptor Wlan.  <a href="#ga544f7a5ae6405a6561c13e3e76ebd9ee"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga41fb258c161e1f00535f0d69ee5716e5">controls.analogx</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Joystick analógico, eje X.  <a href="#ga41fb258c161e1f00535f0d69ee5716e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga8ffd5b22d86effc9e80b3cb6f676b234">controls.analogy</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Joystick analógico, eje Y.  <a href="#ga8ffd5b22d86effc9e80b3cb6f676b234"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga772a390a4994fd999842c7739b411767">controls.press</a> (string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón recién pulsado.  <a href="#ga772a390a4994fd999842c7739b411767"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga6b5a346293fb348ff469d89ecddd3bc8">controls.release</a> (string key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Botón recién soltado.  <a href="#ga6b5a346293fb348ff469d89ecddd3bc8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gad7cd3cb7d273c9cb5bcc08d89fccb35f">controls.waitforkey</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Espera hasta pulsar cualquier botón.  <a href="#gad7cd3cb7d273c9cb5bcc08d89fccb35f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#ga76527bb3abbc2ec7c365105e8c73cac1">controls.homepopup</a> (int activado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Habilita / deshabilita el mensaje de Home (Salir del juego).  <a href="#ga76527bb3abbc2ec7c365105e8c73cac1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_n_t_r_o_l_s.html#gacb3cb5126aa0351f6b1ed50d004ad5b8">controls.analogtodigital</a> (int distancia)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conversor joystick analógico -&gt; digital.  <a href="#gacb3cb5126aa0351f6b1ed50d004ad5b8"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas con los controles. En LuaDEV, no es necesario guardar variables con los controles actuales y los anteriores, pues ya se realiza internamente. Para comprobar si los botones están presionados en el momento se usará controls.xxxx(), si se desea comprobar si recién se pulsaron, controls.press("xxxx"), y para comprobar si recién se soltaron controls.release("xxxx") . En cada ciclo se usará un sólo controls.read() . Véase el ejemplo de los controles. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga4930f3c0f89d43c767f06e3cb32f1f8e"></a><!-- doxytag: member="controls.read" ref="ga4930f3c0f89d43c767f06e3cb32f1f8e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil controls.read </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Realiza la lectura de los controles. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga3d3bee5d560706e7ae85e9ee9a2418ad"></a><!-- doxytag: member="controls.up" ref="ga3d3bee5d560706e7ae85e9ee9a2418ad" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.up </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>D-PAD arriba. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado arriba en el D-PAD. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga35ef24bf7559b02f5917626427fa2337"></a><!-- doxytag: member="controls.down" ref="ga35ef24bf7559b02f5917626427fa2337" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.down </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>D-PAD abajo. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado abajo en el D-PAD. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga859c938047c58f072cb42ceea99916cd"></a><!-- doxytag: member="controls.right" ref="ga859c938047c58f072cb42ceea99916cd" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.right </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>D-PAD derecha. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado derecha en el D-PAD. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae789e4f3fba1940c96c538722c2aacde"></a><!-- doxytag: member="controls.left" ref="gae789e4f3fba1940c96c538722c2aacde" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.left </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>D-PAD izquierda. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado izquierda en el D-PAD. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0886aa4e3e6b104b885c6cb0a9638b0d"></a><!-- doxytag: member="controls.l" ref="ga0886aa4e3e6b104b885c6cb0a9638b0d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.l </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón L. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón L. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaba5ac5952ca1458504d46dc2d7f634ef"></a><!-- doxytag: member="controls.r" ref="gaba5ac5952ca1458504d46dc2d7f634ef" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.r </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón R. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón R. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga59778d7abc755bfefd11e9afadea0dde"></a><!-- doxytag: member="controls.triangle" ref="ga59778d7abc755bfefd11e9afadea0dde" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.triangle </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón triángulo. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón triángulo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga826650d3a4f85c8166f25f7ebe9b7bae"></a><!-- doxytag: member="controls.circle" ref="ga826650d3a4f85c8166f25f7ebe9b7bae" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.circle </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón círculo. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón círculo. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5eccd42a2c809673d371767638329b97"></a><!-- doxytag: member="controls.cross" ref="ga5eccd42a2c809673d371767638329b97" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.cross </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón cruz. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón cruz. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga798e05a35907bb207ee8a87d498dc4fa"></a><!-- doxytag: member="controls.square" ref="ga798e05a35907bb207ee8a87d498dc4fa" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.square </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón cuadrado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón cuadrado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab707390179a6731dce19fcc8ad6957f4"></a><!-- doxytag: member="controls.home" ref="gab707390179a6731dce19fcc8ad6957f4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.home </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Home. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón Home. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga204ff1157898170d1b4518c3467b9cd3"></a><!-- doxytag: member="controls.hold" ref="ga204ff1157898170d1b4518c3467b9cd3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.hold </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Hold. (Bloqueo de controles). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está activado el Hold. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5ef331f40567119d09459ad120f9a627"></a><!-- doxytag: member="controls.start" ref="ga5ef331f40567119d09459ad120f9a627" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.start </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Start. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón Start. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae60a00c087cced89b4d4640054e8beb3"></a><!-- doxytag: member="controls.select" ref="gae60a00c087cced89b4d4640054e8beb3" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.select </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón Select. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está presionado el botón Select. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga544f7a5ae6405a6561c13e3e76ebd9ee"></a><!-- doxytag: member="controls.wlan" ref="ga544f7a5ae6405a6561c13e3e76ebd9ee" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.wlan </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Interruptor Wlan. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false. Según si está activado el interruptor WLAN. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga41fb258c161e1f00535f0d69ee5716e5"></a><!-- doxytag: member="controls.analogx" ref="ga41fb258c161e1f00535f0d69ee5716e5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number controls.analogx </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Joystick analógico, eje X. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número del rango: (-128: izquierda, +127: derecha). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga8ffd5b22d86effc9e80b3cb6f676b234"></a><!-- doxytag: member="controls.analogy" ref="ga8ffd5b22d86effc9e80b3cb6f676b234" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number controls.analogy </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Joystick analógico, eje Y. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número del rango: (-128: arriba, +127: abajo). </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga772a390a4994fd999842c7739b411767"></a><!-- doxytag: member="controls.press" ref="ga772a390a4994fd999842c7739b411767" args="(string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.press </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón recién pulsado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Un string de entre los siguientes: </p>
+<ul>
+<li><code>"up"</code> D-PAD arriba. </li>
+<li><code>"down"</code> D-PAD abajo. </li>
+<li><code>"left"</code> D-PAD izquierda. </li>
+<li><code>"right"</code> D-PAD derecha. </li>
+<li><code>"l"</code> Botón L. </li>
+<li><code>"r"</code> Botón R. </li>
+<li><code>"triangle"</code> Botón triángulo. </li>
+<li><code>"cross"</code> Botón cruz. </li>
+<li><code>"circle"</code> Botón círculo. </li>
+<li><code>"square"</code> Botón cuadrado. </li>
+<li><code>"start"</code> Botón start. </li>
+<li><code>"select"</code> Botón select. </li>
+<li><code>"hold"</code> Interruptor Hold. </li>
+<li><code>"home"</code> Botón Home. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false según si el botón está recién pulsado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6b5a346293fb348ff469d89ecddd3bc8"></a><!-- doxytag: member="controls.release" ref="ga6b5a346293fb348ff469d89ecddd3bc8" args="(string key)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean controls.release </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>key</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Botón recién soltado. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>Un string de entre los siguientes: </p>
+<ul>
+<li><code>"up"</code> D-PAD arriba. </li>
+<li><code>"down"</code> D-PAD abajo. </li>
+<li><code>"left"</code> D-PAD izquierda. </li>
+<li><code>"right"</code> D-PAD derecha. </li>
+<li><code>"l"</code> Botón L. </li>
+<li><code>"r"</code> Botón R. </li>
+<li><code>"triangle"</code> Botón triángulo. </li>
+<li><code>"cross"</code> Botón cruz. </li>
+<li><code>"circle"</code> Botón círculo. </li>
+<li><code>"square"</code> Botón cuadrado. </li>
+<li><code>"start"</code> Botón start. </li>
+<li><code>"select"</code> Botón select. </li>
+<li><code>"hold"</code> Interruptor Hold. </li>
+<li><code>"home"</code> Botón Home. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>True / false según si el botón está recién soltado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad7cd3cb7d273c9cb5bcc08d89fccb35f"></a><!-- doxytag: member="controls.waitforkey" ref="gad7cd3cb7d273c9cb5bcc08d89fccb35f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number controls.waitforkey </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Espera hasta pulsar cualquier botón. </p>
+<p>LuaDEV detendrá su ejecución hasta que se presione cualquier botón, y devolverá el botón presionado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número de entre los siguientes: <ul>
+<li><b>1</b> (Botón select) </li>
+<li><b>4</b> (Botón start) </li>
+<li><b>5</b> (D-PAD arriba) </li>
+<li><b>6</b> (D-PAD derecha) </li>
+<li><b>7</b> (D-PAD abajo) </li>
+<li><b>8</b> (D-PAD izquierda) </li>
+<li><b>9</b> (Botón L) </li>
+<li><b>10</b> (Botón R) </li>
+<li><b>13</b> (Triángulo) </li>
+<li><b>14</b> (Círculo) </li>
+<li><b>15</b> (Cruz) </li>
+<li><b>16</b> (Cuadrado) </li>
+<li><b>17</b> (Home) </li>
+<li><b>18</b> (Hold) </li>
+</ul>
+</dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga76527bb3abbc2ec7c365105e8c73cac1"></a><!-- doxytag: member="controls.homepopup" ref="ga76527bb3abbc2ec7c365105e8c73cac1" args="(int activado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil controls.homepopup </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>activado</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Habilita / deshabilita el mensaje de Home (Salir del juego). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>activado</em>&nbsp;</td><td>Uno de los siguientes: </p>
+<ul>
+<li><b>0</b> - Deshabilitar el menú "Salir del juego". </li>
+<li><b>1</b> - Habilitar el menú "Salir del juego". </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL, esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="gacb3cb5126aa0351f6b1ed50d004ad5b8"></a><!-- doxytag: member="controls.analogtodigital" ref="gacb3cb5126aa0351f6b1ed50d004ad5b8" args="(int distancia)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil controls.analogtodigital </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>distancia</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Conversor joystick analógico -&gt; digital. </p>
+<p>El joystick recibe valores entre -128 y 127. Con esta función, haremos que pasada cierta distancia desde el centro (0), se active también su homólogo en el D-PAD. Es decir, si aplicamos una distancia de 60, al mover el joystick analógico en cualquier dirección, a partir de mas o menos la mitad del recorrido se activará su homólogo. Por ejemplo, si movemos el joystick analógico hacia arriba y izquierda, controls.up() y controls.left() darán también true.<br/>
+<br/>
+ Para volver a desactivar el conversor, utilizar distancia = 0. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>distancia</em>&nbsp;</td><td>Distancia a partir de la cual se activará el D-PAD correspondiente. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

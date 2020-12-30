@@ -1,0 +1,128 @@
+﻿table: Table Management.
+Functions
+
+table.concat string (Table t)
+ As string.implode (). Concatenates one string table.
+
+table.concat string (Table t, string separator)
+ As string.implode (). Concatenates a table separator string.
+
+table.concat string (Table t, string separator, start number)
+ As string.implode (). Concatenates a table separator string.
+
+table.concat string (Table t, string separator, start number, number order)
+ As string.implode (). Concatenates a table separator string.
+
+nil table.insert (Table t, type value)
+ Inserts an element at the end of a table.
+
+nil table.insert (Table t, position number, type, value)
+ Inserts an element into a table.
+
+table.maxn number (Table t)
+ Returns the largest positive numerical index of a given table.
+
+table.remove nil (Table t)
+ Removes the last element of the table.
+
+table.remove nil (Table t, position number)
+ Removes an item from the table.
+
+table.sort nil (Table t)
+ Order a table from highest to lowest using the comparator '<'.
+
+table.sort nil (Table t, comparator function)
+ Order a table from highest to lowest using the comparator function.
+************************************************** ******************************
+Function Documentation
+
+table.concat string (Table t)
+ As string.implode (). Concatenates one string table.
+ Parameters:
+ t Input table.
+ Returns:
+ A string type t [1] .. t [2] .. t [n]
+
+table.concat string (Table t, string separator)
+ As string.implode (). Concatenates a table separator string.
+ Parameters:
+ t Input table.
+ separator text string to be used as separator.
+ Returns:
+ A string type t [1] .. separator .. t [2] .. separator .. t [n]
+
+table.concat string (Table t, string separator, start number)
+ As string.implode (). Concatenates a table separator string.
+ Parameters:
+ t Input table.
+ separator text string to be used as separator.
+ Start input the table to begin with.
+ Returns:
+ A string type t [start] .. separator .. t [start +1] .. separator .. t [n]
+
+table.concat string (Table t, string separator, start number, number order)
+ As string.implode (). Concatenates a table separator string.
+ If start> end, it returns an empty string.
+ Parameters:
+ t Input table.
+ separator text string to be used as separator.
+ Start input the table to begin with.
+ Table Entry order in which finish
+ Returns:
+ A string type t [start] .. separator .. t [start +1] .. separator .. t [end]
+
+nil table.insert (Table t, type value)
+ Inserts an element at the end of a table.
+ Parameters:
+ t Table.
+ Object to insert value.
+ Returns:
+ Nothing.
+
+nil table.insert (Table t, position number, type, value)
+ Inserts an element into a table.
+ Scrolls forward other elements to open space if necessary.
+ Parameters:
+ t Table.
+ Position position at which to insert the object.
+ Object to insert value.
+ Returns:
+ Nothing.
+
+table.maxn number (Table t)
+ Returns the largest positive numerical index of a given table.
+ Parameters:
+ t Table.
+ Returns:
+ Returns the largest positive numerical index of a given table or zero if the table has no positive numerical indices. (To do its job this function performs a linear sweep of the entire table.)
+
+table.remove nil (Table t)
+ Removes the last element of the table.
+ Parameters:
+ t Table.
+ Returns:
+ Nothing.
+
+table.remove nil (Table t, position number)
+ Removes an item from the table.
+ Move the other elements to close gap if necessary.
+ Parameters:
+ t Table.
+ position Location of the item to delete.
+ Returns:
+ Nothing.
+
+table.sort nil (Table t)
+ Order a table from highest to lowest using the comparator '<'.
+ Parameters:
+ t Table.
+ Returns:
+ Nothing.
+
+table.sort nil (Table t, comparator function)
+ Order a table from highest to lowest using the comparator function.
+ Parameters:
+ t Table.
+ A comparator comparator function, it must be a function that takes two elements of the table, and returns true when the former is smaller than the second.
+ Returns:
+ Nothing.

@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: color : Creación y manejo de colores.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>color : Creación y manejo de colores.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga062ff5e21b2a4499d1a5582267662eb8">color.new</a> (int R, int G, int B, int A)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea un color nuevo a partir de sus componentes.  <a href="#ga062ff5e21b2a4499d1a5582267662eb8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga83d8d5e640d160632d4cc6acc3befc32">color.blend</a> (color c1, color c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mezcla dos colores.  <a href="#ga83d8d5e640d160632d4cc6acc3befc32"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#gadbf80a2be471fff3b4176f0a154e7f7a">color.mix</a> (color c1, color c2, int p1, int p2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mezcla dos colores, usando porcentajes.  <a href="#gadbf80a2be471fff3b4176f0a154e7f7a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga596edc33b68d835f0e2218411454cd3d">color.add</a> (color c1, color c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suma dos colores.  <a href="#ga596edc33b68d835f0e2218411454cd3d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">color&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga6f8f0c55020f0169b858e7f98e81e112">color.sub</a> (color c1, color c2)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suma dos colores.  <a href="#ga6f8f0c55020f0169b858e7f98e81e112"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#gacb10be512fdc690725bbbd13a506854c">color.R</a> (color c1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Componente R.  <a href="#gacb10be512fdc690725bbbd13a506854c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga63428c5428f53318505a7dc72417daef">color.G</a> (color c1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Componente G.  <a href="#ga63428c5428f53318505a7dc72417daef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga01069aa098a8e8039b810f7c0dc52149">color.B</a> (color c1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Componente B.  <a href="#ga01069aa098a8e8039b810f7c0dc52149"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_l_o_r.html#ga95210eb67e1210612cd5300301580986">color.A</a> (color c1)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Componente A.  <a href="#ga95210eb67e1210612cd5300301580986"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas los colores. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga062ff5e21b2a4499d1a5582267662eb8"></a><!-- doxytag: member="color.new" ref="ga062ff5e21b2a4499d1a5582267662eb8" args="(int R, int G, int B, int A)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color color.new </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>G</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>A</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea un color nuevo a partir de sus componentes. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>R</em>&nbsp;</td><td>Valor de su componente de color rojo (0-255). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>G</em>&nbsp;</td><td>Valor de su componente de color verde (0-255). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>B</em>&nbsp;</td><td>Valor de su componente de color azul (0-255). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>A</em>&nbsp;</td><td>Valor de transparencia (0-255). OPCIONAL. Si no se especifica por defecto es 255. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El color creado. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga83d8d5e640d160632d4cc6acc3befc32"></a><!-- doxytag: member="color.blend" ref="ga83d8d5e640d160632d4cc6acc3befc32" args="(color c1, color c2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color color.blend </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mezcla dos colores. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Otro color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el color resultante de mezclar c1 y c2. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadbf80a2be471fff3b4176f0a154e7f7a"></a><!-- doxytag: member="color.mix" ref="gadbf80a2be471fff3b4176f0a154e7f7a" args="(color c1, color c2, int p1, int p2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color color.mix </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>p2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mezcla dos colores, usando porcentajes. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Otro color. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p1</em>&nbsp;</td><td>Porcentaje color 1 [0-100]. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>p2</em>&nbsp;</td><td>Porcentaje color 2 [0-100]. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el color resultante de mezclar c1 y c2, usando los porcentajes. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga596edc33b68d835f0e2218411454cd3d"></a><!-- doxytag: member="color.add" ref="ga596edc33b68d835f0e2218411454cd3d" args="(color c1, color c2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color color.add </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Suma dos colores. </p>
+<p>Ejemplos: </p>
+<ul>
+<li>Negro (0,0,0) + Rojo (255,0,0) = Rojo(255,0,0) </li>
+<li>Verde (0,255,0) + Rojo (255,0,0) = Amarillo (255,255,0) </li>
+<li>Blanco (255,255,255) + Negro (0,0,0) = Blanco (255,255,255) <dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Otro color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el color resultante de sumar dos colores. </dd></dl>
+</li>
+</ul>
+</div>
+</div>
+<a class="anchor" id="ga6f8f0c55020f0169b858e7f98e81e112"></a><!-- doxytag: member="color.sub" ref="ga6f8f0c55020f0169b858e7f98e81e112" args="(color c1, color c2)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">color color.sub </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c2</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Suma dos colores. </p>
+<p>Ejemplos: </p>
+<ul>
+<li>Negro (0,0,0) - Rojo (255,0,0) = Negro(0,0,0) </li>
+<li>Verde (0,255,0) - Rojo (255,0,0) = Verde (255,0,0) </li>
+<li>Blanco (255,255,255) - Rojo (0,0,0) = Cyan (0,255,255) <dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c2</em>&nbsp;</td><td>Otro color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el color resultante de restar dos colores. </dd></dl>
+</li>
+</ul>
+</div>
+</div>
+<a class="anchor" id="gacb10be512fdc690725bbbd13a506854c"></a><!-- doxytag: member="color.R" ref="gacb10be512fdc690725bbbd13a506854c" args="(color c1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int color.R </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Componente R. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el valor de la componente roja. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga63428c5428f53318505a7dc72417daef"></a><!-- doxytag: member="color.G" ref="ga63428c5428f53318505a7dc72417daef" args="(color c1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int color.G </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Componente G. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el valor de la componente verde. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga01069aa098a8e8039b810f7c0dc52149"></a><!-- doxytag: member="color.B" ref="ga01069aa098a8e8039b810f7c0dc52149" args="(color c1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int color.B </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Componente B. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el valor de la componente azul. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga95210eb67e1210612cd5300301580986"></a><!-- doxytag: member="color.A" ref="ga95210eb67e1210612cd5300301580986" args="(color c1)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int color.A </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>c1</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Componente A. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c1</em>&nbsp;</td><td>Un color. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el valor de la componente de transparencia. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: coroutine : Funciones multitarea.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>coroutine : Funciones multitarea.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">thread&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#ga5f463d7f020f5b588e3889e7ca42103e">coroutine.create</a> (function f)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una nueva corutina.  <a href="#ga5f463d7f020f5b588e3889e7ca42103e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#ga29fb2aa35fad3f0682502a1190b0da0e">coroutine.resume</a> (thread corutina,....)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Resume o comienza a ejecutar una corutina.  <a href="#ga29fb2aa35fad3f0682502a1190b0da0e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">thread&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#ga234e2274eed1cf88066cfdc8fae2dd79">coroutine.running</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Devuelve la corutina que está actualmente en ejecución.  <a href="#ga234e2274eed1cf88066cfdc8fae2dd79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#gad54c0bc634bc7e4c6e578511cdb5f56a">coroutine.status</a> (thread corutina)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Estado de una corutina.  <a href="#gad54c0bc634bc7e4c6e578511cdb5f56a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">function&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#ga088b54318bdbca1ae78781b461c1f04d">coroutine.wrap</a> (function f)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Crea una nueva corutina, convertida a función.  <a href="#ga088b54318bdbca1ae78781b461c1f04d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">...&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_r_o_u_t_i_n_e.html#ga7216ce352b8dd665cf55e80702f5744a">coroutine.yield</a> (....)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Suspende la ejecución de una corutina.  <a href="#ga7216ce352b8dd665cf55e80702f5744a"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>Las corutinas pueden ser algo complejo, y posiblemente requieran de práctica y entender el lenguaje en gran medida. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="ga5f463d7f020f5b588e3889e7ca42103e"></a><!-- doxytag: member="coroutine.create" ref="ga5f463d7f020f5b588e3889e7ca42103e" args="(function f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">thread coroutine.create </td>
+          <td>(</td>
+          <td class="paramtype">function&nbsp;</td>
+          <td class="paramname"> <em>f</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea una nueva corutina. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>Función a partir de la cual se creará la nueva corutina. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>La corutina creada. </dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a1">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga29fb2aa35fad3f0682502a1190b0da0e"></a><!-- doxytag: member="coroutine.resume" ref="ga29fb2aa35fad3f0682502a1190b0da0e" args="(thread corutina,....)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... coroutine.resume </td>
+          <td>(</td>
+          <td class="paramtype">thread&nbsp;</td>
+          <td class="paramname"> <em>corutina</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">....&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Resume o comienza a ejecutar una corutina. </p>
+<p>Comienza a ejecutarse la función de la corutina, pasandole como argumentos, los argumentos extra dados al resume. Si la corutina ya está iniciada, los argumentos extra dados en el resume, serán devueltos como resultado a su coroutine.yield() </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>corutina</em>&nbsp;</td><td>Corutina a resumir / empezar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>Argumentos extra opcionales, para pasar coroutine.yield() o <em>f</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un booleano + argumentos extra recibidos de coroutine.yield(). <ul>
+<li>Si la corutina se ejecuta <em>sin</em> <em>errores</em>, devuelve <em><b>true</b> más</em> todos los argumentos pasados a coroutine.yield. </li>
+<li>Si la corutina <em>tiene</em> <em>errores</em>, devuelve <em><b>false</b> más</em> el mensaje del error </li>
+</ul>
+</dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a5">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga234e2274eed1cf88066cfdc8fae2dd79"></a><!-- doxytag: member="coroutine.running" ref="ga234e2274eed1cf88066cfdc8fae2dd79" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">thread coroutine.running </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Devuelve la corutina que está actualmente en ejecución. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve la corutina que está actualmente en ejecución o "nil" si no está dentro de ninguna corutina. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad54c0bc634bc7e4c6e578511cdb5f56a"></a><!-- doxytag: member="coroutine.status" ref="gad54c0bc634bc7e4c6e578511cdb5f56a" args="(thread corutina)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string coroutine.status </td>
+          <td>(</td>
+          <td class="paramtype">thread&nbsp;</td>
+          <td class="paramname"> <em>corutina</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Estado de una corutina. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>corutina</em>&nbsp;</td><td>Corutina a obtener el estado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve un string, con el estado de la corutina, éste puede ser: <ul>
+<li><code>"running"</code> - Se está ejecutando ahora mismo. </li>
+<li><code>"suspended"</code> - Está en espera, o acaba de ser creada. </li>
+<li><code>"normal"</code> - Está activa, pero no ejecutandose (llamó a otra corutina) </li>
+<li><code>"dead"</code> - Ha acabado, o tiene algún error. </li>
+</ul>
+</dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a4">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga088b54318bdbca1ae78781b461c1f04d"></a><!-- doxytag: member="coroutine.wrap" ref="ga088b54318bdbca1ae78781b461c1f04d" args="(function f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function coroutine.wrap </td>
+          <td>(</td>
+          <td class="paramtype">function&nbsp;</td>
+          <td class="paramname"> <em>f</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Crea una nueva corutina, convertida a función. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>f</em>&nbsp;</td><td>Función a partir de la cual se creará la nueva corutina. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Una función que, al ser llamada, hará un resume de la corutina. Cualquier argumento extra dado en esta función retornada serán pasados como argumentos extra en el resume. Devuelve lo mismo que resume, pero sin el primer booleano. En caso de error, el error se propaga. </dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a2">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga7216ce352b8dd665cf55e80702f5744a"></a><!-- doxytag: member="coroutine.yield" ref="ga7216ce352b8dd665cf55e80702f5744a" args="(....)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">... coroutine.yield </td>
+          <td>(</td>
+          <td class="paramtype">....&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Suspende la ejecución de una corutina. </p>
+<p>Los argumentos pasados a coroutine.yield() serán los resultados de la función coroutine.resume() </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>...</em>&nbsp;</td><td>Parámetros extra opcionales, para pasar a coroutine.resume() </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve los argumentos extra recibidos de coroutine.resume() </dd></dl>
+<dl><dt><b>Ejemplos: </b></dt><dd><a class="el" href="corutinas_8lua-example.html#a0">corutinas.lua</a>.</dd>
+</dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

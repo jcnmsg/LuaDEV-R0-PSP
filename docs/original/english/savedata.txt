@@ -1,0 +1,107 @@
+﻿savedata: Utility saved games.
+Functions
+
+boolean savedata.autosave (dest table, table config, string data)
+ Performs an auto-save (Save without displaying the dialog).
+
+boolean savedata.save (dest table, table config, string data)
+ Displays the Save dialog.
+
+boolean savedata.autoload (dest table)
+ Make a self-load (load without displaying the dialog) to load default Size: 2KB (2048 characters).
+
+boolean savedata.autoload (table dest, int size)
+ Make a self-load (load without displaying the dialog).
+
+boolean savedata.load (dest table)
+ Displays the load dialog. Default refresh Size: 2KB (2048 characters).
+
+boolean savedata.load (table dest, int size)
+ Displays the load dialog.
+
+boolean savedata.delete (dest table)
+ Displays the delete dialog.
+************************************************** ******************************
+Function Documentation
+
+boolean savedata.autosave (dest table, table config, string data)
+ Performs an auto-save (Save without displaying the dialog).
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - A string containing the name of the save.
+ config A table with the following fields set: title - Title to appear in the vsh, or dialog to load / save. 128 characters maximum.
+ subtitle - Subtitle, 128 characters.
+ details - details, description. 1024 characters.
+ savetext - Name that will appear in the save dialog.
+ ICON0 - Route to a PNG file, ICON0 used. (Optional)
+ icon1 - Path to a file PMF icon1 used. (Optional)
+ pic1 - Route to a PNG file, pic1 used. (Optional)
+ snd0 - Path to a file AT3, snd0 used. (Optional)
+ saveicon - Route to a PNG file, ICON0 used during the save dialog only (optional)
+ All resource files, if not specified, will be used to contain the EBOOT, if it contains them.
+ Returns:
+ Returns 2 parameters. A boolean to know if it was saved, and a string with the name of the save, which in this case will be the same as the input we put.
+
+boolean savedata.save (dest table, table config, string data)
+ Displays the Save dialog.
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - can be: A string containing the name of the save. Or: A table containing various strings, this dialogue will appear as a list, and let you choose the saved slot.
+ config A table with the following fields set: title - Title to appear in the vsh, or dialog to load / save. 128 characters maximum.
+ subtitle - Subtitle, 128 characters.
+ details - details, description. 1024 characters.
+ savetext - Name that will appear in the save dialog.
+ ICON0 - Route to a PNG file, ICON0 used. (Optional)
+ icon1 - Path to a file PMF icon1 used. (Optional)
+ pic1 - Route to a PNG file, pic1 used. (Optional)
+ snd0 - Path to a file AT3, snd0 used. (Optional)
+ saveicon - Route to a PNG file, ICON0 used during the save dialog only (optional)
+ All resource files, if not specified, will be used to contain the EBOOT, if it contains them.
+ Returns:
+ Returns 2 parameters. A boolean to know if it was saved, and a string with the name of the save slot.
+ Example:
+ savedatas.lua.
+
+boolean savedata.autoload (dest table)
+ Make a self-load (load without displaying the dialog) to load default Size: 2KB (2048 characters).
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - A string containing the name of the save.
+ Returns:
+ Returns 3 parameters. A boolean to see if it could be loaded, a string with the name of the save or nil on failure, and a string with the data loaded or nil on failure.
+
+boolean savedata.autoload (table dest, int size)
+ Make a self-load (load without displaying the dialog).
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - A string containing the name of the save.
+ size - Size of data to receive. We can (and should) set starting load size with an equal or larger than the size we expect to receive. If overdone, LuaDEV adjust the size automatically.
+ Returns:
+ Returns 3 parameters. A boolean to see if it could be loaded, a string with the name of the save or nil on failure, and a string with the data loaded or nil on failure.
+
+boolean savedata.load (dest table)
+ Displays the load dialog. Default refresh Size: 2KB (2048 characters).
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - can be: A string containing the name of the file to load. Or: A table containing various strings, this dialogue will appear as a list, and let you choose the slot loaded.
+ Returns:
+ Returns 3 parameters. A boolean to see if it could be loaded, a string with the name of the save or nil on failure, and a string with the data loaded or nil on failure.
+ Example:
+ savedatas.lua.
+
+boolean savedata.load (table dest, int size)
+ Displays the load dialog.
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - can be: A string containing the name of the file to load. Or: A table containing various strings, this dialogue will appear as a list, and let you choose the slot loaded.
+ size - Size of data to receive. We can (and should) set starting load size with an equal or larger than the size we expect to receive. If overdone, LuaDEV adjust the size automatically.
+ Returns:
+ Returns 3 parameters. A boolean to see if it could be loaded, a string with the name of the save or nil on failure, and a string with the data loaded or nil on failure.
+
+boolean savedata.delete (dest table)
+ Displays the delete dialog.
+ Parameters:
+ dest A table with the following fields set: gameid - ID of the game / save. Example: LDEV_012
+ savenames - can be: A string containing the name of the file to delete. Or: A table containing various strings, this dialogue will leave several times, erasing one on one specified slots. (Ask).
+ Returns:
+ Returns 2 parameters. A boolean to know if you could delete and string with the name of the save deleted or nil on failure.

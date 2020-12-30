@@ -1,0 +1,360 @@
+﻿math: Math functions.
+Functions
+
+math. vector.polar (x, y)
+
+math. poly.testxy ()
+
+math. poly.testlist ()
+
+math. round (número_decimal) - Returns an approximation of a decimal number, which Math.round (1.2) would return 1 and Math.round (2.8) would return 3.
+
+tonumber (string) - convert a string data type to the type number 
+
+int Math.ceil (number x)
+ Round up.
+
+int Math.floor (number x)
+ Round down.
+
+math.int int (number x)
+ Convert to integer.
+
+Math.Max ​​number (number. ..)
+ Choose the largest.
+
+Math.Min number (number. ..)
+ Choose the smallest.
+
+number math.random ()
+ Random between 0 and 1. (In decimal).
+
+int math.random (int m)
+ Random between 1 and m. (Integer).
+
+int math.random (int m, int n)
+ Random between m and n. (Integer).
+
+nil math.randomseed (number x)
+ Change seed pseudorandom number generator.
+
+number Math.abs (number x)
+ Absolute value.
+
+number Math.pow (number x, number y)
+ Power.
+
+math.sqrt number (number x)
+ Square root of x.
+
+math.log number (number x)
+ Natural logarithm.
+
+math.log10 number (number x)
+ Logarithm.
+
+math.exp number (number x)
+ Euler number raised to x.
+
+math.modf number (number x)
+ Separate into integer and fractional.
+
+math.fmod number (number x, number y)
+ Remainder of a division.
+
+math.frexp number (number x)
+ x = m * (2 ^ e)
+
+math.ldexp number (number m, int e)
+ m * (2 ^ e)
+
+math.deg number (number x)
+ Radian angle converter> degrees.
+
+math.rad number (number x)
+ Degree angle converter> radians.
+
+math.cos number (number x)
+ Cosine.
+
+Math.acos number (number x)
+ Arc cosine.
+
+math.cosh number (number x)
+ Hyperbolic cosine.
+
+math.sin number (number x)
+ Seno.
+
+Math.asin number (number x)
+ Arc sine.
+
+math.sinh number (number x)
+ Hyperbolic sine.
+
+Math.tan number (number x)
+ Tangent.
+
+Math.atan number (number x)
+ Arc tangent.
+
+Math.atan2 number (number and number x)
+ Arc tangent.
+
+math.tanh number (number x)
+ Hyperbolic tangent.
+
+Variables
+
+math.huge = const number HUGE_VAL
+ The larger value than any other.
+
+const number math.pi = 3.14159
+ The value of pi.
+
+const number Math.E = 2.71828
+ The value e (Euler's number).
+
+number math.g const = 9.81
+ Acceleration of gravity (m/s2).
+************************************************** ******************************
+Function Documentation
+
+int Math.ceil (number x)
+ Round up.
+ Parameters:
+ x A number.
+ Returns:
+ The smallest integer, but greater than or equal to x.
+
+int Math.floor (number x)
+ Round down.
+ Parameters:
+ x A number.
+ Returns:
+ The largest integer but less than or equal to x.
+
+math.int int (number x)
+ Convert to integer.
+ Parameters:
+ x A number.
+ Returns:
+ An integer. No decimal.
+
+Math.Max ​​number (number. ..)
+ Choose the largest.
+ Parameters:
+ ... Several arguments, the type number.
+ Returns:
+ The biggest argument, among the arguments received.
+
+Math.Min number (number. ..)
+ Choose the smallest.
+ Parameters:
+ ... Several arguments, the type number.
+ Returns:
+ The smallest argument, among the arguments received.
+
+number math.random ()
+ Random between 0 and 1. (In decimal).
+ Returns:
+ Returns a number that satisfies: 0 <= x <1
+
+int math.random (int m)
+ Random between 1 and m. (Integer).
+ Parameters:
+ An integer m.
+ Returns:
+ Returns an integer between 1 and m.
+
+int math.random (int m, int n)
+ Random between m and n. (Integer).
+ Parameters:
+ An integer m.
+ n An integer.
+ Returns:
+ Returns an integer between m and n.
+
+nil math.randomseed (number x)
+ Change seed pseudorandom number generator.
+ Equal seeds produce equal sequences of pseudorandom numbers.
+ In LuaDEV not necessary to give a seed to start new, then to start automatically generates a new seed.
+ Parameters:
+ x A number.
+ Returns:
+ Nothing.
+
+number Math.abs (number x)
+ Absolute value.
+ Mathematical formula: | x |
+ Parameters:
+ x A number.
+ Returns:
+ The absolute value of x.
+
+number Math.pow (number x, number y)
+ Power.
+ Mathematical formula: x ^ y
+ Parameters:
+ x A number
+ and a number
+ Returns:
+ Returns x ^ y. (You can also use the expression x ^ y to compute this value)
+
+math.sqrt number (number x)
+ Square root of x.
+ Parameters:
+ x A number.
+ Returns:
+ Returns the square root of x. You can also use x ^ 0.5 to compute this value)
+
+math.log number (number x)
+ Natural logarithm.
+ Mathematical formula: log (x)
+ Parameters:
+ x A number
+ Returns:
+ The natural logarithm of x.
+
+math.log10 number (number x)
+ Logarithm.
+ Mathematical formula: log10 (x)
+ Parameters:
+ x A number
+ Returns:
+ The logarithm (base 10) of x.
+
+math.exp number (number x)
+ Euler number raised to x.
+ Mathematical formula: e ^ x
+ Parameters:
+ x A number
+ Returns:
+ Euler number raised to the power of x.
+
+math.modf number (number x)
+ Separate into integer and fractional.
+ Parameters:
+ x A number.
+ Returns:
+ Returns two numbers, the integer and fractional parts of x.
+
+math.fmod number (number x, number y)
+ Remainder of a division.
+ Parameters:
+ x A number.
+ and a number.
+ Returns:
+ The remainder of dividing x by y.
+
+math.frexp number (number x)
+ x = m * (2 ^ e)
+ Parameters:
+ x A number.
+ Returns:
+ And m and returns such that x = m * (2 ^ e). e is an integer and the absolute value of m is in the range [0.5,1)
+
+math.ldexp number (number m, int e)
+ m * (2 ^ e)
+ Parameters:
+ m A number.
+ e An integer.
+ Returns:
+ Returns m * (2 ^ e)
+
+math.deg number (number x)
+ Radian angle converter> degrees.
+ Mathematical formula: (x * 180) / PI
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ Angle in degrees.
+
+math.rad number (number x)
+ Degree angle converter> radians.
+ Mathematical formula: (x * PI) / 180
+ Parameters:
+ x The angle, in degrees.
+ Returns:
+ The angle, in radians.
+
+math.cos number (number x)
+ Cosine.
+ Mathematical formula: cos (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The cosine of x in radians.
+
+Math.acos number (number x)
+ Arc cosine.
+ Mathematical formula: acos (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The arc cosine of x in radians.
+
+math.cosh number (number x)
+ Hyperbolic cosine.
+ Mathematical formula: cosh (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The hyperbolic cosine of x in radians.
+
+math.sin number (number x)
+ Seno.
+ Mathematical formula: sin (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The sine of x in radians.
+
+Math.asin number (number x)
+ Arc sine.
+ Mathematical formula: asin (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The arc sine of x in radians.
+
+math.sinh number (number x)
+ Hyperbolic sine.
+ Mathematical formula: sinh (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The hyperbolic sine of x in radians.
+
+Math.tan number (number x)
+ Tangent.
+ Mathematical formula: tan (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The tangent of x in radians.
+
+Math.atan number (number x)
+ Arc tangent.
+ Mathematical formula: atan (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The arc tangent of x in radians.
+
+Math.atan2 number (number and number x)
+ Arc tangent.
+ Mathematical formula: atan (y / x)
+ Parameters:
+ and a number.
+ x A number.
+ Returns:
+ Returns the arc tangent of y / x (in radians), but uses the signs of both arguments to determine the quadrant of the result. (Also handled correctly the case where x is zero.)
+
+math.tanh number (number x)
+ Hyperbolic tangent.
+ Mathematical formula: tanh (x)
+ Parameters:
+ x The angle, in radians.
+ Returns:
+ The hyperbolic tangent of x in radians.

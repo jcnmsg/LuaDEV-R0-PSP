@@ -1,0 +1,1519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>LuaDEV r0: screen : Manejo de la pantalla.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Generado por Doxygen 1.7.1 -->
+<script type="text/javascript">
+function hasClass(ele,cls) {
+  return ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+function addClass(ele,cls) {
+  if (!this.hasClass(ele,cls)) ele.className += " "+cls;
+}
+function removeClass(ele,cls) {
+  if (hasClass(ele,cls)) {
+    var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+    ele.className=ele.className.replace(reg,' ');
+  }
+}
+function toggleVisibility(linkObj) {
+ var base = linkObj.getAttribute('id');
+ var summary = document.getElementById(base + '-summary');
+ var content = document.getElementById(base + '-content');
+ var trigger = document.getElementById(base + '-trigger');
+ if ( hasClass(linkObj,'closed') ) {
+   summary.style.display = 'none';
+   content.style.display = 'block';
+   trigger.src = 'open.png';
+   removeClass(linkObj,'closed');
+   addClass(linkObj,'opened');
+ } else if ( hasClass(linkObj,'opened') ) {
+   summary.style.display = 'block';
+   content.style.display = 'none';
+   trigger.src = 'closed.png';
+   removeClass(linkObj,'opened');
+   addClass(linkObj,'closed');
+ }
+ return false;
+}
+</script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>P&aacute;gina&nbsp;principal</span></a></li>
+      <li><a href="pages.html"><span>P&aacute;ginas&nbsp;relacionadas</span></a></li>
+      <li><a href="modules.html"><span>M&oacute;dulos</span></a></li>
+      <li><a href="examples.html"><span>Ejemplos</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle">
+<h1>screen : Manejo de la pantalla.</h1>  </div>
+</div>
+<div class="contents">
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gae46b9d7c7206f3d43ee111fa2d7b2f4b">screen.flip</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Actualiza la pantalla mostrando los cambios. Los cambios realizados en el búffer de dibujado se mostrarán en la pantalla actual, y el búffer de dibujado quedará completamente limpio de nuevo (negro).  <a href="#gae46b9d7c7206f3d43ee111fa2d7b2f4b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gae0be14990d7dc620797553c51bae1f1f">screen.clear</a> (color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limpia la pantalla.  <a href="#gae0be14990d7dc620797553c51bae1f1f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga0051207898f04d51d4bec174767d312a">screen.clip</a> (int x, int y, int w, int h)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Limita el área de dibujo.  <a href="#ga0051207898f04d51d4bec174767d312a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga6f867f295fb3ed1317b5c7cb8f273b1c">screen.clip</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Quita la limitación de área de dibujo.  <a href="#ga6f867f295fb3ed1317b5c7cb8f273b1c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga4d687443ebc929365bece64f42265a86">screen.print</a> (number x, number y, string texto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto. (Blanco, tamaño normal, fuente predeterminada).  <a href="#ga4d687443ebc929365bece64f42265a86"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga2b086bbf6e3099a944a08f520380f262">screen.print</a> (fuente font, number x, number y, string texto)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto. (Blanco, tamaño normal, fuente propia).  <a href="#ga2b086bbf6e3099a944a08f520380f262"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga80211094a5d85a82dba8510c436b096d">screen.print</a> (number x, number y, string texto, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto. (Color, tamaño normal, fuente predeterminada).  <a href="#ga80211094a5d85a82dba8510c436b096d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gab2b889ff893240fbbbf9e5a498005f05">screen.print</a> (fuente font, number x, number y, string texto, color col)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto. (Color, tamaño normal, fuente propia).  <a href="#gab2b889ff893240fbbbf9e5a498005f05"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gaa7d9dd57583e3342875b2a39f555f506">screen.print</a> (number x, number y, string texto, number tam, color letras, color sombra)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, fuente predeterminada.  <a href="#gaa7d9dd57583e3342875b2a39f555f506"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gaffd03ab9149218d82e1e0e932093f5a0">screen.print</a> (fuente font, number x, number y, string texto, number tam, color letras, color sombra)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, fuente propia.  <a href="#gaffd03ab9149218d82e1e0e932093f5a0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga5c69315f653784c870a7b70c90c34abe">screen.print</a> (number x, number y, string texto, number tam, color letras, color sombra, string alineado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, alineado, fuente predeterminada.  <a href="#ga5c69315f653784c870a7b70c90c34abe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga1c0e2d0214652bb86eb0602f1036ebb3">screen.print</a> (fuente font, number x, number y, string texto, number tam, color letras, color sombra, string alineado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, alineado, fuente propia.  <a href="#ga1c0e2d0214652bb86eb0602f1036ebb3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga2d0e387189c5edbd948cc6d735fb18d5">screen.print</a> (number x, number y, string texto, number tam, color letras, color sombra, string alineado, int ancho)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, alineado, con ancho, fuente predeterminada.  <a href="#ga2d0e387189c5edbd948cc6d735fb18d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gaec0a98302cb6f653e8d339d7ebac1826">screen.print</a> (fuente font, number x, number y, string texto, number tam, color letras, color sombra, string alineado, int ancho)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mostrar texto con color y sombra, tamaño ajustable, alineado, con ancho, fuente propia.  <a href="#gaec0a98302cb6f653e8d339d7ebac1826"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga59034d786c13a4adab1c947db0ce75bd">screen.print</a> (number x, number y, string texto, number tam, color letras, color sombra, string scroll, int ancho)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Texto con scrolling automático, fuente predeterminada.  <a href="#ga59034d786c13a4adab1c947db0ce75bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gab890affdd62dcad35db85994b53db658">screen.print</a> (fuente font, number x, number y, string texto, number tam, color letras, color sombra, string scroll, int ancho)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Texto con scrolling automático, fuente propia.  <a href="#gab890affdd62dcad35db85994b53db658"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gaf1598f756f76c1823534801bb77f2651">screen.textwidth</a> (string texto, number tam)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcular ancho del texto con la fuente predeterminada.  <a href="#gaf1598f756f76c1823534801bb77f2651"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga41121f9f377f204fee6fe2284a23e5d2">screen.textwidth</a> (fuente font, string texto, number tam)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Calcular ancho del texto con una fuente propia.  <a href="#ga41121f9f377f204fee6fe2284a23e5d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga44f82905a0dceb120c6864f73c9e361c">screen.toimage</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Capturar pantalla.  <a href="#ga44f82905a0dceb120c6864f73c9e361c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">imagen&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gab453a6720c0f49677a66a74a0b670af5">screen.buffertoimage</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Capturar pantalla. (El búffer).  <a href="#gab453a6720c0f49677a66a74a0b670af5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga419e8f1697d4878868cb2212281fdb61">screen.waitvblank</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Esperar hasta que termine el refresco vertical.  <a href="#ga419e8f1697d4878868cb2212281fdb61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gacdd8e0de03c601fdd221d05109c3e007">screen.waitvblankstart</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Esperar hasta que comienze el refresco vertical.  <a href="#gacdd8e0de03c601fdd221d05109c3e007"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gad415d96445606cff6ddfaf23650387b9">screen.enable</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enciende la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+ <a href="#gad415d96445606cff6ddfaf23650387b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga582585ed0d2857bb8e24eac353e2edb6">screen.disable</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Apaga la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+ <a href="#ga582585ed0d2857bb8e24eac353e2edb6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gadcd784abd5e53c825fc38f28afe399d5">screen.brightness</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Conocer el brillo de la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función devuelve -1. </td></tr>
+  </table>
+  </dd>
+</dl>
+ <a href="#gadcd784abd5e53c825fc38f28afe399d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga48e601f137612505280c0066d9f8ec42">screen.brightness</a> (int brillo)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Setear el brillo de la pantalla.  <a href="#ga48e601f137612505280c0066d9f8ec42"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga882e66ff5ef17d00966997e5238a91b4">screen.sync</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sincroniza la lista GU interna.  <a href="#ga882e66ff5ef17d00966997e5238a91b4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga2f43e8ffd322ed68b10cc3e88df829e6">screen.frameskip</a> (int frames)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa el frameskip.  <a href="#ga2f43e8ffd322ed68b10cc3e88df829e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga208a6e3dd076249b04ae4cd5fcd95062">screen.frameskip</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Desctiva el frameskip.  <a href="#ga208a6e3dd076249b04ae4cd5fcd95062"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga00d5240122471aebbb6149afc2606f31">screen.dithering</a> (int activado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa / desactiva el suavizado.  <a href="#ga00d5240122471aebbb6149afc2606f31"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#gaef37a30cf4b4f543056afd40498f0fa3">screen.bilinear</a> (int activado)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Activa / desactiva el filtro bilinear.  <a href="#gaef37a30cf4b4f543056afd40498f0fa3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_c_r_e_e_n.html#ga7f59eddc16aa3091740705b0f7f11be4">screen.fps</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Framerate actual.  <a href="#ga7f59eddc16aa3091740705b0f7f11be4"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripci&oacute;n detallada</h2>
+<p>En este módulo se incorporan todas las funciones relacionadas la pantalla. </p>
+<hr/><h2>Documentaci&oacute;n de las funciones</h2>
+<a class="anchor" id="gae46b9d7c7206f3d43ee111fa2d7b2f4b"></a><!-- doxytag: member="screen.flip" ref="gae46b9d7c7206f3d43ee111fa2d7b2f4b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.flip </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Actualiza la pantalla mostrando los cambios. Los cambios realizados en el búffer de dibujado se mostrarán en la pantalla actual, y el búffer de dibujado quedará completamente limpio de nuevo (negro). </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gae0be14990d7dc620797553c51bae1f1f"></a><!-- doxytag: member="screen.clear" ref="gae0be14990d7dc620797553c51bae1f1f" args="(color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.clear </td>
+          <td>(</td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Limpia la pantalla. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color a utilizar para limpiar la pantalla. Si no se especifica se limpiará de negro por defecto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga0051207898f04d51d4bec174767d312a"></a><!-- doxytag: member="screen.clip" ref="ga0051207898f04d51d4bec174767d312a" args="(int x, int y, int w, int h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.clip </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>h</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Limita el área de dibujo. </p>
+<p>Cualquier comando que dibuje algo en la pantalla, sólo podrá modificar el rectángulo definido por x,y,w,h.<br/>
+ Es decir, cualquier cambio fuera de este rectángulo se omite. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Posición X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Posición Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>w</em>&nbsp;</td><td>Ancho. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>h</em>&nbsp;</td><td>Alto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga6f867f295fb3ed1317b5c7cb8f273b1c"></a><!-- doxytag: member="screen.clip" ref="ga6f867f295fb3ed1317b5c7cb8f273b1c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.clip </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Quita la limitación de área de dibujo. </p>
+<p>Esta función es lo mismo que hacer screen.clip(0,0,480,272) </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga4d687443ebc929365bece64f42265a86"></a><!-- doxytag: member="screen.print" ref="ga4d687443ebc929365bece64f42265a86" args="(number x, number y, string texto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto. (Blanco, tamaño normal, fuente predeterminada). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2b086bbf6e3099a944a08f520380f262"></a><!-- doxytag: member="screen.print" ref="ga2b086bbf6e3099a944a08f520380f262" args="(fuente font, number x, number y, string texto)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto. (Blanco, tamaño normal, fuente propia). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga80211094a5d85a82dba8510c436b096d"></a><!-- doxytag: member="screen.print" ref="ga80211094a5d85a82dba8510c436b096d" args="(number x, number y, string texto, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto. (Color, tamaño normal, fuente predeterminada). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color del texto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab2b889ff893240fbbbf9e5a498005f05"></a><!-- doxytag: member="screen.print" ref="gab2b889ff893240fbbbf9e5a498005f05" args="(fuente font, number x, number y, string texto, color col)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>col</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto. (Color, tamaño normal, fuente propia). </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>col</em>&nbsp;</td><td>Color del texto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaa7d9dd57583e3342875b2a39f555f506"></a><!-- doxytag: member="screen.print" ref="gaa7d9dd57583e3342875b2a39f555f506" args="(number x, number y, string texto, number tam, color letras, color sombra)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, fuente predeterminada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaffd03ab9149218d82e1e0e932093f5a0"></a><!-- doxytag: member="screen.print" ref="gaffd03ab9149218d82e1e0e932093f5a0" args="(fuente font, number x, number y, string texto, number tam, color letras, color sombra)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, fuente propia. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga5c69315f653784c870a7b70c90c34abe"></a><!-- doxytag: member="screen.print" ref="ga5c69315f653784c870a7b70c90c34abe" args="(number x, number y, string texto, number tam, color letras, color sombra, string alineado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>alineado</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, alineado, fuente predeterminada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alineado</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"left"</em> - Alinear a la izquierda (por defecto) </li>
+<li><em>"center"</em> - Alinear al centro. </li>
+<li><em>"right"</em> - Alinear a la derecha. </li>
+<li><em>"full"</em> - Ajuste completo. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga1c0e2d0214652bb86eb0602f1036ebb3"></a><!-- doxytag: member="screen.print" ref="ga1c0e2d0214652bb86eb0602f1036ebb3" args="(fuente font, number x, number y, string texto, number tam, color letras, color sombra, string alineado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>alineado</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, alineado, fuente propia. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alineado</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"left"</em> - Alinear a la izquierda (por defecto) </li>
+<li><em>"center"</em> - Alinear al centro. </li>
+<li><em>"right"</em> - Alinear a la derecha. </li>
+<li><em>"full"</em> - Ajuste completo. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2d0e387189c5edbd948cc6d735fb18d5"></a><!-- doxytag: member="screen.print" ref="ga2d0e387189c5edbd948cc6d735fb18d5" args="(number x, number y, string texto, number tam, color letras, color sombra, string alineado, int ancho)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>alineado</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ancho</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, alineado, con ancho, fuente predeterminada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alineado</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"left"</em> - Alinear a la izquierda (por defecto) </li>
+<li><em>"center"</em> - Alinear al centro. </li>
+<li><em>"right"</em> - Alinear a la derecha. </li>
+<li><em>"full"</em> - Ajuste completo. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ancho</em>&nbsp;</td><td>El texto se escribirá en un bloque ajustado por este parámetro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaec0a98302cb6f653e8d339d7ebac1826"></a><!-- doxytag: member="screen.print" ref="gaec0a98302cb6f653e8d339d7ebac1826" args="(fuente font, number x, number y, string texto, number tam, color letras, color sombra, string alineado, int ancho)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>alineado</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ancho</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Mostrar texto con color y sombra, tamaño ajustable, alineado, con ancho, fuente propia. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>alineado</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"left"</em> - Alinear a la izquierda (por defecto) </li>
+<li><em>"center"</em> - Alinear al centro. </li>
+<li><em>"right"</em> - Alinear a la derecha. </li>
+<li><em>"full"</em> - Ajuste completo. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ancho</em>&nbsp;</td><td>El texto se escribirá en un bloque ajustado por este parámetro. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga59034d786c13a4adab1c947db0ce75bd"></a><!-- doxytag: member="screen.print" ref="ga59034d786c13a4adab1c947db0ce75bd" args="(number x, number y, string texto, number tam, color letras, color sombra, string scroll, int ancho)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number screen.print </td>
+          <td>(</td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>scroll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ancho</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Texto con scrolling automático, fuente predeterminada. </p>
+<p>Ejemplo:<br/>
+ x = 10; -- iniciación.<br/>
+ while true do<br/>
+ x = screen.print(10,10,"texto",0.77,color.new(255,0,0),color.new(0,0,0),"scroll_through",300);<br/>
+ screen.flip();<br/>
+ end<br/>
+ </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. (utilizar la salida de la función en la próxima llamada). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>scroll</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"scroll_left"</em> - Letras se desplazan hacia la izquierda. </li>
+<li><em>"scroll_right"</em> - Letras se desplazan hacia la derecha. </li>
+<li><em>"scroll_through"</em> - Letras se desplazan hacia la izquierda, a través. Estilo Winamp. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ancho</em>&nbsp;</td><td>El ancho del scroller. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número, que deberá ser pasado de nuevo como coordenada X. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab890affdd62dcad35db85994b53db658"></a><!-- doxytag: member="screen.print" ref="gab890affdd62dcad35db85994b53db658" args="(fuente font, number x, number y, string texto, number tam, color letras, color sombra, string scroll, int ancho)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number screen.print </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>letras</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">color&nbsp;</td>
+          <td class="paramname"> <em>sombra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>scroll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ancho</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Texto con scrolling automático, fuente propia. </p>
+<p>Ejemplo:<br/>
+ x = 10; -- iniciación.<br/>
+ while true do<br/>
+ x = screen.print(10,10,"texto",0.77,color.new(255,0,0),color.new(0,0,0),"scroll_through",300);<br/>
+ screen.flip();<br/>
+ end<br/>
+ </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Coordenada X. (utilizar la salida de la función en la próxima llamada). </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Coordenada Y. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a mostrar. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>letras</em>&nbsp;</td><td>Color del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>sombra</em>&nbsp;</td><td>Color de la sombra del texto. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>scroll</em>&nbsp;</td><td>Uno de lo siguientes: </p>
+<ul>
+<li><em>"scroll_left"</em> - Letras se desplazan hacia la izquierda. </li>
+<li><em>"scroll_right"</em> - Letras se desplazan hacia la derecha. </li>
+<li><em>"scroll_through"</em> - Letras se desplazan hacia la izquierda, a través. Estilo Winamp. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>ancho</em>&nbsp;</td><td>El ancho del scroller. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número, que deberá ser pasado de nuevo como coordenada X. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaf1598f756f76c1823534801bb77f2651"></a><!-- doxytag: member="screen.textwidth" ref="gaf1598f756f76c1823534801bb77f2651" args="(string texto, number tam)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number screen.textwidth </td>
+          <td>(</td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Calcular ancho del texto con la fuente predeterminada. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a calcular. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El ancho en píxeles, que ocuparía en pantalla este texto. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga41121f9f377f204fee6fe2284a23e5d2"></a><!-- doxytag: member="screen.textwidth" ref="ga41121f9f377f204fee6fe2284a23e5d2" args="(fuente font, string texto, number tam)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number screen.textwidth </td>
+          <td>(</td>
+          <td class="paramtype">fuente&nbsp;</td>
+          <td class="paramname"> <em>font</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&nbsp;</td>
+          <td class="paramname"> <em>texto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">number&nbsp;</td>
+          <td class="paramname"> <em>tam</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Calcular ancho del texto con una fuente propia. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>font</em>&nbsp;</td><td>Un objeto de fuente. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>texto</em>&nbsp;</td><td>Texto a calcular. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>tam</em>&nbsp;</td><td>Un número representando el tamaño de la fuente. Valores recomendados entre 0.5 y 1.5 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>El ancho en píxeles, que ocuparía en pantalla este texto. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga44f82905a0dceb120c6864f73c9e361c"></a><!-- doxytag: member="screen.toimage" ref="ga44f82905a0dceb120c6864f73c9e361c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen screen.toimage </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Capturar pantalla. </p>
+<p>Devuelve una imágen, con lo que se vé en pantalla.</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una imagen, del módulo image, con lo que hay actualmente en la pantalla.</dd>
+<dd>
+Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gab453a6720c0f49677a66a74a0b670af5"></a><!-- doxytag: member="screen.buffertoimage" ref="gab453a6720c0f49677a66a74a0b670af5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">imagen screen.buffertoimage </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Capturar pantalla. (El búffer). </p>
+<p>Devuelve una imágen, con lo que no se vé en pantalla (el búffer).</p>
+<p>El búffer contiene todos los cambios realizados a la pantalla desde el último flip realizado. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve una imagen, del módulo image, con lo que hay actualmente en el búffer.</dd></dl>
+<p>Es decir, lo que hay entre un screen.flip() y esta función, cualquier cambio realizado a la pantalla, pero no actualizado, queda en el búffer. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un objeto del tipo imágen. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga419e8f1697d4878868cb2212281fdb61"></a><!-- doxytag: member="screen.waitvblank" ref="ga419e8f1697d4878868cb2212281fdb61" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.waitvblank </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Esperar hasta que termine el refresco vertical. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gacdd8e0de03c601fdd221d05109c3e007"></a><!-- doxytag: member="screen.waitvblankstart" ref="gacdd8e0de03c601fdd221d05109c3e007" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.waitvblankstart </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Esperar hasta que comienze el refresco vertical. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gad415d96445606cff6ddfaf23650387b9"></a><!-- doxytag: member="screen.enable" ref="gad415d96445606cff6ddfaf23650387b9" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.enable </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Enciende la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga582585ed0d2857bb8e24eac353e2edb6"></a><!-- doxytag: member="screen.disable" ref="ga582585ed0d2857bb8e24eac353e2edb6" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.disable </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Apaga la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gadcd784abd5e53c825fc38f28afe399d5"></a><!-- doxytag: member="screen.brightness" ref="gadcd784abd5e53c825fc38f28afe399d5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">number screen.brightness </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Conocer el brillo de la pantalla. </p>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función devuelve -1. </td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Un número con el valor del brillo de la pantalla. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga48e601f137612505280c0066d9f8ec42"></a><!-- doxytag: member="screen.brightness" ref="ga48e601f137612505280c0066d9f8ec42" args="(int brillo)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.brightness </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>brillo</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Setear el brillo de la pantalla. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>brillo</em>&nbsp;</td><td>El nuevo brillo de la pantalla. (De 10 a 90 son valores adecuados) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Excepciones:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>En</em>&nbsp;</td><td>HBL esta función no hace nada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga882e66ff5ef17d00966997e5238a91b4"></a><!-- doxytag: member="screen.sync" ref="ga882e66ff5ef17d00966997e5238a91b4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.sync </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Sincroniza la lista GU interna. </p>
+<p>Esta función no será requerida, ni su uso será frecuente. Tan sólo se debería usar cuando se dibujan diversos modelos 3D con gran cantidad de polígonos, y la lista actual no tiene el tamaño suficiente como para pintarlo. Es decir, si tras varios model.blit se cuelga, pero no se cuelgan por separado, será necesario intercalar un screen.sync() entre los blits. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga2f43e8ffd322ed68b10cc3e88df829e6"></a><!-- doxytag: member="screen.frameskip" ref="ga2f43e8ffd322ed68b10cc3e88df829e6" args="(int frames)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.frameskip </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>frames</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa el frameskip. </p>
+<p>Sólo recomendado si tu juego va lento gráficamente, y ni aumentando la cpu consigues que vaya rápido. Esta función se saltará los suficientes frames para que el homebrew corra de nuevo a gran velocidad. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>frames</em>&nbsp;</td><td>Número máximo de frames a saltar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga208a6e3dd076249b04ae4cd5fcd95062"></a><!-- doxytag: member="screen.frameskip" ref="ga208a6e3dd076249b04ae4cd5fcd95062" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.frameskip </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Desctiva el frameskip. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga00d5240122471aebbb6149afc2606f31"></a><!-- doxytag: member="screen.dithering" ref="ga00d5240122471aebbb6149afc2606f31" args="(int activado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.dithering </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>activado</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa / desactiva el suavizado. </p>
+<p>Utilizar esta función sólo con módos de pantalla inferiores a RGBA8888. (32 bits) </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>activado</em>&nbsp;</td><td>Pasar 1 para activar, 0 para desactivar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="gaef37a30cf4b4f543056afd40498f0fa3"></a><!-- doxytag: member="screen.bilinear" ref="gaef37a30cf4b4f543056afd40498f0fa3" args="(int activado)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.bilinear </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>activado</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Activa / desactiva el filtro bilinear. </p>
+<p>Esta función suavizará imágenes al rotarlas. </p>
+<dl><dt><b>Par&aacute;metros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>activado</em>&nbsp;</td><td>Pasar 1 para activar, 0 para desactivar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Nada. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="ga7f59eddc16aa3091740705b0f7f11be4"></a><!-- doxytag: member="screen.fps" ref="ga7f59eddc16aa3091740705b0f7f11be4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">nil screen.fps </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Framerate actual. </p>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>Devuelve el número de frames por segundo de media actual. </dd></dl>
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generado el Lunes, 11 de Octubre de 2010 05:23:17 para LuaDEV r0 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>
