@@ -189,6 +189,7 @@ html #mode .dark {
 .docs-sidebar .nav .nav>li>a {
     padding-left: 40px;
     font-size: 12px;
+    line-height: 1.9;
 }
 
 /* hover links */ 
