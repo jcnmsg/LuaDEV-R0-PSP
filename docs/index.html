@@ -147,6 +147,8 @@
                                     <li><a href="#mUSB">USB module</a></li>
                                     <li><a href="#mWLAN">WLAN module</a></li>
                                     <li><a href="#mChip">Chipmunk 2D module</a></li>
+                                    <li><a href="#mVideo">Video module</a></li>
+                                    <li><a href="#mUMD">UMD module</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -398,6 +400,9 @@
                                             </ol>
 
                                             <p>
+                                                To run these examples simply copy the <code>EBOOT.PBP</code> into the folder of the example and run it on your emulator (the GDP example has its own EBOOT.PBP file because it contains game images and whatnot).
+                                            </p>
+                                            <p>
                                                 Hopefully this list will grow soon as I intend to provide some more demos but feel free to submit your own if you want.
                                             </p>
                                         </div>
@@ -421,6 +426,7 @@
                                             </p>
 
                                             <pre class="brush: html">
+                                                01/12/2021: Documented video and UMD modules;
                                                 01/12/2021: Documented more of the Chipmunk API and updated the example to show gravity (WIP);
                                                 31/12/2020: Started working on documenting Chipmunk physics engine and a new example for it (WIP) 
                                                 31/12/2020: Added the complete WLAN function set to the documentation.
@@ -514,6 +520,7 @@
                                     <li>- timer <em>(userdata returned by the timer module)</em></li>
                                     <li>- body <em>(userdata returned by the chipmunk module)</em></li>
                                     <li>- space <em>(userdata returned by the chipmunk module)</em></li>
+                                    <li>- video <em>(userdata returned by the video module)</em></li>
                                 </ul>
                             </div>
                         </div>
@@ -530,7 +537,7 @@
 
                                 <p>You can also refer back to the original Lua manual. It uses <a target="_blank" href="https://www.lua.org/manual/5.1/">version 5.1</a>.</p>
 
-                                <pre class="brush: html; highlight: [1, 2, 3, 4, 5, 11, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 24, 25, 28, 29, 30, 31, 33, 40]">
+                                <pre class="brush: html; highlight: [1, 2, 3, 4, 5, 11, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 24, 25, 28, 29, 30, 31, 33, 40, 144, 145, 146, 147, 142, 143]">
                                     chipmunk
                                         body
                                             mass
@@ -2432,6 +2439,49 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="mVideo">Video module</h4>
+                                <h5><strong>Detailed description</strong></h5>
+                                <p>Video module functions. Mostly useless because there's no playback functions implemented, but you can still load a video (in AVI format) into memory.</p>
+
+                                <table class="memberdecls">
+                                    <tr><td colspan="4"><h5><a name="func-members"></a>
+                                    <strong>Functions</strong></h5></td></tr>
+                                    <tr><td class="memItemLeft" align="right" valign="top">video&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="#">video.load</a> (string path)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Load a video into memory.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="#">video.info</a> (video v)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get video info (function exists but doesn't appear to work).  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="#">video.free</a> (video v)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free a video from memory.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+                                </table>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="mUMD">UMD module</h4>
+                                <h5><strong>Detailed description</strong></h5>
+                                <p>UMD related functions.</p>
+
+                                <table class="memberdecls">
+                                    <tr><td colspan="4"><h5><a name="func-members"></a>
+                                    <strong>Functions</strong></h5></td></tr>
+                                    <tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="#">umd.present</a> ()</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Check if a UMD is inserted on the PSP.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+                                </table>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
                        
                     </section>
                 </div>
