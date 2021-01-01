@@ -421,6 +421,7 @@
                                             </p>
 
                                             <pre class="brush: html">
+                                                01/12/2021: Documented more of the Chipmunk API and updated the example to show gravity (WIP);
                                                 31/12/2020: Started working on documenting Chipmunk physics engine and a new example for it (WIP) 
                                                 31/12/2020: Added the complete WLAN function set to the documentation.
                                                 30/12/2020: Added HTTP post method to the documentation.
@@ -512,6 +513,7 @@
                                     <li>- model <em>(userdata returned by the model module)</em></li>
                                     <li>- timer <em>(userdata returned by the timer module)</em></li>
                                     <li>- body <em>(userdata returned by the chipmunk module)</em></li>
+                                    <li>- space <em>(userdata returned by the chipmunk module)</em></li>
                                 </ul>
                             </div>
                         </div>
@@ -528,7 +530,7 @@
 
                                 <p>You can also refer back to the original Lua manual. It uses <a target="_blank" href="https://www.lua.org/manual/5.1/">version 5.1</a>.</p>
 
-                                <pre class="brush: html; highlight: [1, 2, 3, 4, 5, 11, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158]">
+                                <pre class="brush: html; highlight: [1, 2, 3, 4, 5, 11, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 24, 25, 28, 29, 30, 31, 33, 40]">
                                     chipmunk
                                         body
                                             mass
@@ -2395,6 +2397,36 @@
 
                                     <tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.body.position</a> (body b)</td></tr>
                                     <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the position of a body.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">space&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.new</a> ()</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.addbody</a> (space s, body b)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add an existing body to a space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.gravity</a> (space s)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the gravity vector for a given space. <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.gravity</a> (space s, number vx, number vy)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the gravity vector for a given space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.damping</a> (space s)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get damping for a given space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.damping</a> (space s, number d, boolean update)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set damping for a given space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">number&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.idlespeedthreshold</a> (space s)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get idle speed threshold for a given space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.idlespeedthreshold</a> (space s, number spt)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set idle speed threshold for a given space.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.step</a> (space s, number step)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Run physics simulation for a specified time in seconds (eg. 1/60).  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
+
+                                    <tr><td class="memItemLeft" align="right" valign="top">nil&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="original/spanish/html/group___c_h_i_p_m_u_n_k.html#gafda97392518f486e636280583f9acbd0">chipmunk.space.free</a> (space s)</td></tr>
+                                    <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Free a space from memory.  <a href="#gafda97392518f486e636280583f9acbd0"></a><br/></td></tr>
                                 </table>
                             </div>
                             <!-- end col -->
